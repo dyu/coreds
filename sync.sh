@@ -4,4 +4,4 @@
 
 rsync -avh --progress \
       --include 'src/***' --include 'lib/***' --exclude '*' \
-      . $1/node_modules/vuets
+      . $1/node_modules/coreds
