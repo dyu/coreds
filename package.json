@@ -1,0 +1,20 @@
+{
+  "name": "coreds",
+  "version": "0.1.0",
+  "description": "core libs for protostuffdb js frontend",
+  "author": "dyu",
+  "main": "lib/index.js",
+  "typings": "lib/index",
+  "license": "Apache-2.0",
+  "README": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dyu/coreds.git"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "2.4.1"
+  }
+}
