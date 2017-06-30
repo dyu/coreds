@@ -2,7 +2,7 @@ export const hasOwnProperty = Object.prototype.hasOwnProperty
 export function noop() { return null }
 
 /**
- * Define a property that should not be observed by vue's vm.
+ * Define a property that should not be discoverable.
  * Returns the value
  */
 export function defp<T>(obj: any, prop: string, val: T): T {
