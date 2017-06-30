@@ -1,7 +1,7 @@
 export declare const hasOwnProperty: (v: string) => boolean;
 export declare function noop(): null;
 /**
- * Define a property that should not be observed by vue's vm.
+ * Define a property that should not be discoverable.
  * Returns the value
  */
 export declare function defp<T>(obj: any, prop: string, val: T): T;
