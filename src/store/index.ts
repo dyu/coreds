@@ -437,8 +437,7 @@ export class Store<T extends Entity> {
         let size = this.list.length,
             pageSize,
             start
-        if (!size) return []
-        else if (size <= (pageSize = this.pageSize)) return this.list
+        if (size === 0 || size <= (pageSize = this.pageSize)) return this.list
         else return this.list.slice((start = this.page * pageSize), start + Math.min(size - start, pageSize))
     }
 }
