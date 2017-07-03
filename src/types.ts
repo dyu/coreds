@@ -54,7 +54,7 @@ export const enum EventFlags {
 
 export const enum ChangeFlags {
     SKIP_VALIDATE = 1,
-    //CB_NEXT_TICK = 2,
+    VM_SET = 2,
     CB_ONLY_ON_SET = 4
 }
 

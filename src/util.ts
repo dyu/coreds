@@ -14,9 +14,19 @@ export function defp<T>(obj: any, prop: string, val: T): T {
 
     return val
 }
+
+/**
+ * Set a property.
+ * Returns the object
+ */
+export function setp<T>(obj: T, prop: string, val: any): T {
+    obj[prop] = val
+    return obj
+}
+
 /**
  * Nullify property.
- * Also useful for lazy observable properties that bypasses typescript's strictNullChecks config.
+ * Useful for lazy observable properties that bypasses typescript's strictNullChecks config.
  */
 export function nullp(obj: any, prop: string) {
     obj[prop] = null

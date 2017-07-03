@@ -1,6 +1,6 @@
 import { FieldType, PojoSO, PojoState, ChangeFlags } from './types'
 import {
-    bit_unset, localToUtc,
+    setp, bit_unset, localToUtc,
     regexDouble, regexInt, regexTime, regexDate, regexDateTime
 } from './util'
 import {
@@ -341,20 +341,12 @@ function validateDateTime(val: any, message: any, fd: any, fk, f: number, flag: 
 /**
  * The update arg means if existing data is modified (not creating new data).
  */
-export function $change(e, message: any, field: string|number, update: boolean, root: any, cbfn?: any, flags?: number): string|null {
+export function $change(e, fk: string, message: any, update: boolean, root: any, flags: number, cbfn?: any): string|null {
     let d = message['$d'],
-        fk = String(field),
         fd = d[fk]
     
     if (!fd || fd.t === FieldType.BYTES)
         return null
-    
-    if (!root)
-        root = message
-    
-    // normalize
-    if (flags === undefined)
-        flags = 0
     
     let message_ = message['_'] as PojoSO,
         dfbs = message_.dfbs,
@@ -434,17 +426,21 @@ export interface VM {
 }
 
 export class Form {
+    flags: number
     root: any
-    constructor(public vm: VM, public $d: any, public update: boolean, public root_key?: string) {
-        
+    constructor(public vm: VM, public $d: any, public update: boolean, public root_key: string,
+            flags?: number) {
+        this.flags = flags || 0
     }
 
-    changed(e: any, message: any, field: string|number, cbfn?: any, flags?: number) {
-        let root = this.root
-        if (!root && this.root_key) {
-            root = this.vm.get(this.root_key)
-            this.root_key = undefined
-        }
-        $change(e, message, field, this.update, root, cbfn, flags)
+    change(e: any, field: string, message?: any, flags?: number, cbfn?: any) {
+        let root = this.root || (this.root = this.vm.get(this.root_key)),
+            f = flags || this.flags,
+            ret = $change(e, field, message || root, this.update, root, f, cbfn)
+        
+        if ((f & ChangeFlags.VM_SET))
+            this.vm.set(setp({}, this.root_key, root))
+        
+        return ret
     }
 }
