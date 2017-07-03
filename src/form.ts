@@ -10,15 +10,15 @@ import {
 
 import * as numeral from 'numeral'
 
+const hasOwnProperty = Object.prototype.hasOwnProperty
+
 function addVpropsTo<T>(so: T, descriptor: any, owner: any, withVal?: boolean): T {
-    var prop
     if (descriptor.$fdf) {
         for (let k of descriptor.$fdf) {
-            prop = descriptor[k].$ || k
-            if (!withVal || owner[prop] === '') {
+            if (!withVal || owner[k] === '') {
                 so[k] = null
-                owner[prop] = null
-            } else if (Object.prototype.hasOwnProperty.call(owner, prop)) {
+                owner[k] = null
+            } else if (hasOwnProperty.call(owner, k)) {
                 so[k] = null
             }
         }
@@ -26,10 +26,9 @@ function addVpropsTo<T>(so: T, descriptor: any, owner: any, withVal?: boolean): 
 
     if (descriptor.$fdikf) {
         for (let k of descriptor.$fdikf) {
-            prop = descriptor[k].$ || k
-            if (!withVal || Object.prototype.hasOwnProperty.call(owner, prop)) {
+            if (!withVal || hasOwnProperty.call(owner, k)) {
                 so[k] = null
-                owner[prop] = null
+                owner[k] = null
             }
         }
     }
@@ -52,7 +51,7 @@ export function initObservable<T>(target: T, descriptor: any, withVal?: boolean)
 
     for (let fk of descriptor.$fmf) {
         let fd = descriptor[fk]
-        initObservable(target[fd.$], fd.d_fn(), withVal)
+        initObservable(target[fk], fd.d_fn(), withVal)
     }
     return target
 }
@@ -60,7 +59,7 @@ export function initObservable<T>(target: T, descriptor: any, withVal?: boolean)
 // =====================================
 // event handling
 
-function postValidate(message: any, fd: any, fk: string, f: number, flag: number, 
+function postValidate(message: any, fd: any, fk: string, flag: number, 
         message_: PojoSO, dfbs: number, msg, root: any, dirty: boolean) {
     let root_ = root._ as PojoSO,
         state = message_.state,
@@ -98,289 +97,289 @@ function postValidate(message: any, fd: any, fk: string, f: number, flag: number
     }
 }
 
-function validateString(val: string, message: any, fd: any, fk, f: number, flag: number, message_: PojoSO, dfbs: number, 
-        prop: string, el: any, update: boolean, root: any, cbfn: any, flags: ChangeFlags): string|null {
+function validateString(val: string, message: any, fd: any, fk: string, flag: number, message_: PojoSO, dfbs: number, 
+        el: any, update: boolean, root: any, cbfn: any, flags: ChangeFlags): string|null {
     let msg: string|null = null,
         dirty = !!val,
         v,
         sv
     if (dirty) {
         // backup data
-        if (update && (v = message[prop]) !== undefined && v !== message_[prop])
-            message_[prop] = v
+        if (update && (v = message[fk]) !== undefined && v !== message_[fk])
+            message_[fk] = v
         
         if ((flags & ChangeFlags.SKIP_VALIDATE) || !fd.vfn || !(msg = fd.vfn(val))) {
-            message[prop] = sv = val
-            dirty = !update || val !== message_[prop]
+            message[fk] = sv = val
+            dirty = !update || val !== message_[fk]
         } else {
-            message[prop] = undefined
+            message[fk] = undefined
         }
     } else if (update) {
         dirty = !!(flag & dfbs)
         // restore data
-        if ((v = message[prop]) === undefined)
-            message[prop] = message_[prop]
+        if ((v = message[fk]) === undefined)
+            message[fk] = message_[fk]
         else
             el.value = v
-    } else if ((v = message[prop]) || v === undefined) {
+    } else if ((v = message[fk]) || v === undefined) {
         el.value = ''
-        message[prop] = sv = null
+        message[fk] = sv = null
     } else if (el.value) {
         // remove whitespace
         el.value = ''
         return msg
     }
 
-    postValidate(message, fd, fk, f, flag, message_, dfbs, msg, root, dirty)
+    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty)
     
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
     
-    cbfn(f, sv, message, fd, root)
+    cbfn(fk, sv, message, fd, root)
     
     return msg
 }
 
-function validateFloat(val: any, message: any, fd: any, fk, f: number, flag: number, message_: PojoSO, dfbs: number, 
-        prop: string, el: any, update: boolean, root: any, cbfn: any, flags: ChangeFlags): string|null {
+function validateFloat(val: any, message: any, fd: any, fk: string, flag: number, message_: PojoSO, dfbs: number, 
+        el: any, update: boolean, root: any, cbfn: any, flags: ChangeFlags): string|null {
     let msg: string|null = null,
         dirty = !!val,
         v,
         sv
     if (dirty) {
         // backup data
-        if (update && (v = message[prop]) !== undefined && v !== message_[prop])
-            message_[prop] = v
+        if (update && (v = message[fk]) !== undefined && v !== message_[fk])
+            message_[fk] = v
         
         if (!regexDouble.test(val)) {
             msg = fd.$n + ' is not a number.'
-            message[prop] = undefined
+            message[fk] = undefined
         } else if ((flags & ChangeFlags.SKIP_VALIDATE) || !fd.vfn) {
-            message[prop] = sv = v = parseFloat(val)
-            dirty = !update || v !== message_[prop]
+            message[fk] = sv = v = parseFloat(val)
+            dirty = !update || v !== message_[fk]
         } else if (!(msg = fd.vfn(v = parseFloat(val)))) {
-            message[prop] = sv = v
-            dirty = !update || v !== message_[prop]
+            message[fk] = sv = v
+            dirty = !update || v !== message_[fk]
         } else {
-            message[prop] = undefined
+            message[fk] = undefined
         }
     } else if (update) {
         dirty = !!(flag & dfbs)
         // restore data
-        if ((v = message[prop]) === undefined)
-            message[prop] = message_[prop]
+        if ((v = message[fk]) === undefined)
+            message[fk] = message_[fk]
         else
             el.value = v
-    } else if ((v = message[prop]) || v === undefined) {
+    } else if ((v = message[fk]) || v === undefined) {
         el.value = ''
-        message[prop] = sv = null
+        message[fk] = sv = null
     } else if (el.value) {
         // remove whitespace
         el.value = ''
         return msg
     }
 
-    postValidate(message, fd, fk, f, flag, message_, dfbs, msg, root, dirty)
+    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty)
     
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
     
-    cbfn(f, sv, message, fd, root)
+    cbfn(fk, sv, message, fd, root)
     
     return msg
 }
 
-function validateInt(val: any, message: any, fd: any, fk, f: number, flag: number, message_: PojoSO, dfbs: number, 
-        prop: string, el: any, update: boolean, root: any, cbfn: any, flags: ChangeFlags): string|null {
+function validateInt(val: any, message: any, fd: any, fk: string, flag: number, message_: PojoSO, dfbs: number, 
+        el: any, update: boolean, root: any, cbfn: any, flags: ChangeFlags): string|null {
     let msg: string|null = null,
         dirty = !!val,
         v,
         sv
     if (dirty) {
         // backup data
-        if (update && (v = message[prop]) !== undefined && v !== message_[prop])
-            message_[prop] = v
+        if (update && (v = message[fk]) !== undefined && v !== message_[fk])
+            message_[fk] = v
         
         if (!regexInt.test(val)) {
             msg = fd.$n + ' is not a whole number.'
-            message[prop] = undefined
+            message[fk] = undefined
         } else if ((flags & ChangeFlags.SKIP_VALIDATE) || !fd.vfn) {
-            message[prop] = sv = v = parseInt(val, 10)
-            dirty = !update || v !== message_[prop]
+            message[fk] = sv = v = parseInt(val, 10)
+            dirty = !update || v !== message_[fk]
         } else if (!(msg = fd.vfn(v = parseInt(val, 10)))) {
-            message[prop] = sv = v
-            dirty = !update || v !== message_[prop]
+            message[fk] = sv = v
+            dirty = !update || v !== message_[fk]
         } else {
-            message[prop] = undefined
+            message[fk] = undefined
         }
     } else if (update) {
         dirty = !!(flag & dfbs)
         // restore data
-        if ((v = message[prop]) === undefined)
-            message[prop] = message_[prop]
+        if ((v = message[fk]) === undefined)
+            message[fk] = message_[fk]
         else
             el.value = v
-    } else if ((v = message[prop]) || v === undefined) {
+    } else if ((v = message[fk]) || v === undefined) {
         el.value = ''
-        message[prop] = sv = null
+        message[fk] = sv = null
     } else if (el.value) {
         // remove whitespace
         el.value = ''
         return msg
     }
 
-    postValidate(message, fd, fk, f, flag, message_, dfbs, msg, root, dirty)
+    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty)
     
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
     
-    cbfn(f, sv, message, fd, root)
+    cbfn(fk, sv, message, fd, root)
     
     return msg
 }
 
-function validateTime(val: any, message: any, fd: any, fk, f: number, flag: number, message_: PojoSO, dfbs: number, 
-        prop: string, el: any, update: boolean, root: any, cbfn: any, flags: ChangeFlags): string|null {
+function validateTime(val: any, message: any, fd: any, fk: string, flag: number, message_: PojoSO, dfbs: number, 
+        el: any, update: boolean, root: any, cbfn: any, flags: ChangeFlags): string|null {
     let msg: string|null = null,
         dirty = !!val,
         v,
         sv
     if (dirty) {
         // backup data
-        if (update && (v = message[prop]) !== undefined && v !== message_[prop])
-            message_[prop] = v
+        if (update && (v = message[fk]) !== undefined && v !== message_[fk])
+            message_[fk] = v
         
         if (!regexTime.test(val) || 86399 < (v = numeral().unformat(val.length <= 5 ? (val + ':00') : val))) {
             msg = fd.$n + ' is not a valid time.'
-            message[prop] = undefined
+            message[fk] = undefined
         } else if ((flags & ChangeFlags.SKIP_VALIDATE) || !fd.vfn || !(msg = fd.vfn(v))) {
-            message[prop] = sv = v
-            dirty = !update || v !== message_[prop]
+            message[fk] = sv = v
+            dirty = !update || v !== message_[fk]
         } else {
-            message[prop] = undefined
+            message[fk] = undefined
         }
     } else if (update) {
         dirty = !!(flag & dfbs)
         // restore data
-        if ((v = message[prop]) === undefined)
-            message[prop] = message_[prop]
+        if ((v = message[fk]) === undefined)
+            message[fk] = message_[fk]
         else
             el.value = formatTime(v)
-    } else if ((v = message[prop]) || v === undefined) {
+    } else if ((v = message[fk]) || v === undefined) {
         el.value = ''
-        message[prop] = sv = null
+        message[fk] = sv = null
     } else if (el.value) {
         // remove whitespace
         el.value = ''
         return msg
     }
 
-    postValidate(message, fd, fk, f, flag, message_, dfbs, msg, root, dirty)
+    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty)
     
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
     
-    cbfn(f, sv, message, fd, root)
+    cbfn(fk, sv, message, fd, root)
     
     return msg
 }
 
-function validateDate(e, val: any, message: any, fd: any, fk, f: number, flag: number, message_: PojoSO, dfbs: number, 
-        prop: string, el: any, update: boolean, root: any, cbfn: any, flags: ChangeFlags): string|null {
+function validateDate(e, val: any, message: any, fd: any, fk: string, flag: number, message_: PojoSO, dfbs: number, 
+        el: any, update: boolean, root: any, cbfn: any, flags: ChangeFlags): string|null {
     let msg: string|null = null,
         dirty = !!val,
         v,
         sv
-    if (!e.isTrusted && (v = message[prop])) {
+    if (!e.isTrusted && (v = message[fk])) {
         // dirty
         if ((flags & ChangeFlags.SKIP_VALIDATE) || !fd.vfn || !(msg = fd.vfn(v))) {
             sv = v
-            dirty = !update || v !== message_[prop]
+            dirty = !update || v !== message_[fk]
         } else {
-            message[prop] = undefined
+            message[fk] = undefined
         }
     } else if (dirty) {
         // backup data
-        if (update && (v = message[prop]) !== undefined && v !== message_[prop])
-            message_[prop] = v
+        if (update && (v = message[fk]) !== undefined && v !== message_[fk])
+            message_[fk] = v
         
         if (!regexDate.test(val) || !(v = isValidDateStr(val)) || !(v = localToUtc(v))) {
             msg = fd.$n + ' is not a valid date.'
-            message[prop] = undefined
+            message[fk] = undefined
         } else if ((flags & ChangeFlags.SKIP_VALIDATE) || !fd.vfn || !(msg = fd.vfn(v))) {
-            message[prop] = sv = v
-            dirty = !update || v !== message_[prop]
+            message[fk] = sv = v
+            dirty = !update || v !== message_[fk]
         } else {
-            message[prop] = undefined
+            message[fk] = undefined
         }
     } else if (update) {
         dirty = !!(flag & dfbs)
         // restore data
-        if ((v = message[prop]) === undefined)
-            message[prop] = message_[prop]
+        if ((v = message[fk]) === undefined)
+            message[fk] = message_[fk]
         else
             el.value = formatDate(v)
-    } else if ((v = message[prop]) || v === undefined) {
+    } else if ((v = message[fk]) || v === undefined) {
         el.value = ''
-        message[prop] = sv = null
+        message[fk] = sv = null
     } else if (el.value) {
         // remove whitespace
         el.value = ''
         return msg
     }
 
-    postValidate(message, fd, fk, f, flag, message_, dfbs, msg, root, dirty)
+    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty)
     
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
     
-    cbfn(f, sv, message, fd, root)
+    cbfn(fk, sv, message, fd, root)
     
     return msg
 }
 
-function validateDateTime(val: any, message: any, fd: any, fk, f: number, flag: number, message_: PojoSO, dfbs: number, 
-        prop: string, el: any, update: boolean, root: any, cbfn: any, flags: ChangeFlags): string|null {
+function validateDateTime(val: any, message: any, fd: any, fk: string, flag: number, message_: PojoSO, dfbs: number, 
+        el: any, update: boolean, root: any, cbfn: any, flags: ChangeFlags): string|null {
     let msg: string|null = null,
         dirty = !!val,
         v,
         sv
     if (dirty) {
         // backup data
-        if (update && (v = message[prop]) !== undefined && v !== message_[prop])
-            message_[prop] = v
+        if (update && (v = message[fk]) !== undefined && v !== message_[fk])
+            message_[fk] = v
         
         if (!regexDateTime.test(val) || !(v = isValidDateTimeStr(val)) || !(v = localToUtc(v))) {
             msg = fd.$n + ' is not a valid date and time.'
-            message[prop] = undefined
+            message[fk] = undefined
         } else if ((flags & ChangeFlags.SKIP_VALIDATE) || !fd.vfn || !(msg = fd.vfn(v))) {
-            message[prop] = sv = v
-            dirty = !update || v !== message_[prop]
+            message[fk] = sv = v
+            dirty = !update || v !== message_[fk]
         } else {
-            message[prop] = undefined
+            message[fk] = undefined
         }
     } else if (update) {
         dirty = !!(flag & dfbs)
         // restore data
-        if ((v = message[prop]) === undefined)
-            message[prop] = message_[prop]
+        if ((v = message[fk]) === undefined)
+            message[fk] = message_[fk]
         else
             el.value = formatDateTime(v)
-    } else if ((v = message[prop]) || v === undefined) {
+    } else if ((v = message[fk]) || v === undefined) {
         el.value = ''
-        message[prop] = sv = null
+        message[fk] = sv = null
     } else if (el.value) {
         // remove whitespace
         el.value = ''
         return msg
     }
 
-    postValidate(message, fd, fk, f, flag, message_, dfbs, msg, root, dirty)
+    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty)
     
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
     
-    cbfn(f, sv, message, fd, root)
+    cbfn(fk, sv, message, fd, root)
     
     return msg
 }
@@ -399,7 +398,6 @@ export function $change(e, fk: string, message: any, update: boolean, root: any,
         dfbs = message_.dfbs,
         f = fd._,
         flag = 1 << (f - 1),
-        prop = fd.$ || fk,
         el = e.target,
         msg: string|null = null,
         val
@@ -408,16 +406,16 @@ export function $change(e, fk: string, message: any, update: boolean, root: any,
         case FieldType.BOOL:
             // re-use update var as dirty
             if (el.nodeName !== 'SELECT') {
-                message[prop] = val = el.checked
+                message[fk] = val = el.checked
                 update = !(flag & dfbs)
             } else if (update || el.value) {
-                message[prop] = val = ('1' === el.value)
+                message[fk] = val = ('1' === el.value)
                 update = !(flag & dfbs)
             } else {
-                message[prop] = val = null
+                message[fk] = val = null
                 update = false
             }
-            postValidate(message, fd, fk, f, flag, message_, dfbs, msg, root, update)
+            postValidate(message, fd, fk, flag, message_, dfbs, msg, root, update)
 
             if (!cbfn || ((flags & ChangeFlags.CB_ONLY_ON_SET) && val === null))
                 break
@@ -429,38 +427,38 @@ export function $change(e, fk: string, message: any, update: boolean, root: any,
                 val = (update = !!el.value.length) ? parseInt(el.value, 10) : null
             } else if (!(flag & dfbs)) {
                 // first update, dirty state
-                message_[prop] = val = parseInt(el.value, 10)
-            } else if (message_[prop] === (val = parseInt(el.value, 10))) {
+                message_[fk] = val = parseInt(el.value, 10)
+            } else if (message_[fk] === (val = parseInt(el.value, 10))) {
                 // restored to original value, no longer dirty
                 update = false
             }
-            message[prop] = val
-            postValidate(message, fd, fk, f, flag, message_, message_.dfbs, msg, root, update)
+            message[fk] = val
+            postValidate(message, fd, fk, flag, message_, dfbs, msg, root, update)
             
             if (!cbfn || ((flags & ChangeFlags.CB_ONLY_ON_SET) && val === null))
                 break
             cbfn(f, val, message, fd, root)
             break
         case FieldType.STRING:
-            msg = validateString(el.value.trim(), message, fd, fk, f, flag, message_, dfbs, prop, el, update, root, cbfn, flags)
+            msg = validateString(el.value.trim(), message, fd, fk, flag, message_, dfbs, el, update, root, cbfn, flags)
             break
         case FieldType.FLOAT:
         case FieldType.DOUBLE:
-            msg = validateFloat(el.value.trim(), message, fd, fk, f, flag, message_, dfbs, prop, el, update, root, cbfn, flags)
+            msg = validateFloat(el.value.trim(), message, fd, fk, flag, message_, dfbs, el, update, root, cbfn, flags)
             break
         default:
             switch (fd.o || 0) {
                 case 1: // time
-                    msg = validateTime(el.value.trim(), message, fd, fk, f, flag, message_, dfbs, prop, el, update, root, cbfn, flags)
+                    msg = validateTime(el.value.trim(), message, fd, fk, flag, message_, dfbs, el, update, root, cbfn, flags)
                     break
                 case 2: // date
-                    msg = validateDate(e, el.value.trim(), message, fd, fk, f, flag, message_, dfbs, prop, el, update, root, cbfn, flags)
+                    msg = validateDate(e, el.value.trim(), message, fd, fk, flag, message_, dfbs, el, update, root, cbfn, flags)
                     break
                 case 4: // datetime
-                    msg = validateDateTime(el.value.trim(), message, fd, fk, f, flag, message_, dfbs, prop, el, update, root, cbfn, flags)
+                    msg = validateDateTime(el.value.trim(), message, fd, fk, flag, message_, dfbs, el, update, root, cbfn, flags)
                     break
                 default:
-                    msg = validateInt(el.value.trim(), message, fd, fk, f, flag, message_, dfbs, prop, el, update, root, cbfn, flags)
+                    msg = validateInt(el.value.trim(), message, fd, fk, flag, message_, dfbs, el, update, root, cbfn, flags)
             }
     }
     
