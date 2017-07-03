@@ -444,6 +444,6 @@ export class Form {
             root = this.vm.get(this.root_key)
             this.root_key = undefined
         }
-        $change(e, message, field, this.update, this.root, cbfn, flags)
+        $change(e, message, field, this.update, root, cbfn, flags)
     }
 }
