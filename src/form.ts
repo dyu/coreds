@@ -8,10 +8,7 @@ import {
     isValidDateStr, isValidDateTimeStr
 } from './datetime_util'
 
-function unformat(str: string): number {
-    // TODO
-    return 0
-}
+import * as numeral from 'numeral'
 
 function timeout100ms(cb) {
     window.setTimeout(cb, 100)
@@ -222,7 +219,7 @@ function validateTime(val: any, message: any, fd: any, fk, f: number, flag: numb
         if (update && (v = message[prop]) !== undefined && v !== message_[prop])
             message_[prop] = v
         
-        if (!regexTime.test(val) || 86399 < (v = /*numeral().*/unformat(val.length <= 5 ? (val + ':00') : val))) {
+        if (!regexTime.test(val) || 86399 < (v = numeral().unformat(val.length <= 5 ? (val + ':00') : val))) {
             msg = fd.$n + ' is not a valid time.'
             message[prop] = undefined
         } else if ((flags & ChangeFlags.SKIP_VALIDATE) || !fd.vfn || !(msg = fd.vfn(v))) {
