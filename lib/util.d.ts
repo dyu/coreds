@@ -6,8 +6,13 @@ export declare function noop(): null;
  */
 export declare function defp<T>(obj: any, prop: string, val: T): T;
 /**
+ * Set a property.
+ * Returns the object
+ */
+export declare function setp<T>(obj: T, prop: string, val: any): T;
+/**
  * Nullify property.
- * Also useful for lazy observable properties that bypasses typescript's strictNullChecks config.
+ * Useful for lazy observable properties that bypasses typescript's strictNullChecks config.
  */
 export declare function nullp(obj: any, prop: string): void;
 export declare function extractMsg(data: any): string;
