@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@types/numeral@0.0.16":
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/@types/numeral/-/numeral-0.0.16.tgz#a1c225b1266f64e4a3cdbe515a266f01b6e89df1"
+
+numeral@^1.5.6:
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/numeral/-/numeral-1.5.6.tgz#3831db968451b9cf6aff9bf95925f1ef8e37b33f"
+
 typescript@2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.4.1.tgz#c3ccb16ddaa0b2314de031e7e6fee89e5ba346bc"
