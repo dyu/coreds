@@ -47,7 +47,6 @@ export declare const enum EventFlags {
 }
 export declare const enum ChangeFlags {
     SKIP_VALIDATE = 1,
-    CB_NEXT_TICK = 2,
     CB_ONLY_ON_SET = 4,
 }
 export interface FormUpdate {
