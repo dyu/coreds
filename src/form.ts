@@ -10,13 +10,6 @@ import {
 
 import * as numeral from 'numeral'
 
-function timeout100ms(cb) {
-    window.setTimeout(cb, 100)
-}
-
-const Vue = window['Vue']
-const nextTick = !Vue ? timeout100ms : Vue['nextTick']
-
 // =====================================
 // event handling
 
@@ -96,10 +89,7 @@ function validateString(val: string, message: any, fd: any, fk, f: number, flag:
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
     
-    if ((flags & ChangeFlags.CB_NEXT_TICK))
-        nextTick(cbfn)
-    else
-        cbfn(f, sv, message, fd, root)
+    cbfn(f, sv, message, fd, root)
     
     return msg
 }
@@ -148,10 +138,7 @@ function validateFloat(val: any, message: any, fd: any, fk, f: number, flag: num
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
     
-    if ((flags & ChangeFlags.CB_NEXT_TICK))
-        nextTick(cbfn)
-    else
-        cbfn(f, sv, message, fd, root)
+    cbfn(f, sv, message, fd, root)
     
     return msg
 }
@@ -200,10 +187,7 @@ function validateInt(val: any, message: any, fd: any, fk, f: number, flag: numbe
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
     
-    if ((flags & ChangeFlags.CB_NEXT_TICK))
-        nextTick(cbfn)
-    else
-        cbfn(f, sv, message, fd, root)
+    cbfn(f, sv, message, fd, root)
     
     return msg
 }
@@ -249,10 +233,7 @@ function validateTime(val: any, message: any, fd: any, fk, f: number, flag: numb
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
     
-    if ((flags & ChangeFlags.CB_NEXT_TICK))
-        nextTick(cbfn)
-    else
-        cbfn(f, sv, message, fd, root)
+    cbfn(f, sv, message, fd, root)
     
     return msg
 }
@@ -306,10 +287,7 @@ function validateDate(e, val: any, message: any, fd: any, fk, f: number, flag: n
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
     
-    if ((flags & ChangeFlags.CB_NEXT_TICK))
-        nextTick(cbfn)
-    else
-        cbfn(f, sv, message, fd, root)
+    cbfn(f, sv, message, fd, root)
     
     return msg
 }
@@ -355,10 +333,7 @@ function validateDateTime(val: any, message: any, fd: any, fk, f: number, flag: 
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
     
-    if ((flags & ChangeFlags.CB_NEXT_TICK))
-        nextTick(cbfn)
-    else
-        cbfn(f, sv, message, fd, root)
+    cbfn(f, sv, message, fd, root)
     
     return msg
 }
@@ -368,8 +343,7 @@ function validateDateTime(val: any, message: any, fd: any, fk, f: number, flag: 
  */
 export function $change(e, message: any, field: string|number, update: boolean, root: any, cbfn?: any, flags?: number): string|null {
     let d = message['$d'],
-        $ = d.$,
-        fk = $ && isNaN(field as any) ? $[field] : String(field),
+        fk = String(field),
         fd = d[fk]
     
     if (!fd || fd.t === FieldType.BYTES)
@@ -407,10 +381,7 @@ export function $change(e, message: any, field: string|number, update: boolean, 
 
             if (!cbfn || ((flags & ChangeFlags.CB_ONLY_ON_SET) && val === null))
                 break
-            if ((flags & ChangeFlags.CB_NEXT_TICK))
-                nextTick(cbfn)
-            else
-                cbfn(f, val, message, fd, root)
+            cbfn(f, val, message, fd, root)
             break
         case FieldType.ENUM:
             // re-use update var as dirty
@@ -428,10 +399,7 @@ export function $change(e, message: any, field: string|number, update: boolean, 
             
             if (!cbfn || ((flags & ChangeFlags.CB_ONLY_ON_SET) && val === null))
                 break
-            if ((flags & ChangeFlags.CB_NEXT_TICK))
-                nextTick(cbfn)
-            else
-                cbfn(f, val, message, fd, root)
+            cbfn(f, val, message, fd, root)
             break
         case FieldType.STRING:
             msg = validateString(el.value.trim(), message, fd, fk, f, flag, message_, dfbs, prop, el, update, root, cbfn, flags || 0)
@@ -457,4 +425,25 @@ export function $change(e, message: any, field: string|number, update: boolean, 
     }
     
     return msg
+}
+
+export interface VM {
+    set: (obj: any) => void
+    get: (key?: string) => any
+}
+
+export class Form {
+    root: any
+    constructor(public vm: VM, public $d: any, public update: boolean, public root_key?: string) {
+        
+    }
+
+    changed(e: any, message: any, field: string|number, cbfn?: any, flags?: number) {
+        let root = this.root
+        if (!root && this.root_key) {
+            root = this.vm.get(this.root_key)
+            this.root_key = undefined
+        }
+        $change(e, message, field, this.update, this.root, cbfn, flags)
+    }
 }
