@@ -1,6 +1,6 @@
 import { FieldType, PojoSO, PojoState, ChangeFlags } from './types'
 import {
-    setp, bit_unset, localToUtc,
+    setp, defp, bit_unset, localToUtc,
     regexDouble, regexInt, regexTime, regexDate, regexDateTime
 } from './util'
 import {
@@ -9,6 +9,53 @@ import {
 } from './datetime_util'
 
 import * as numeral from 'numeral'
+
+function addVpropsTo<T>(so: T, descriptor: any, owner: any, withVal?: boolean): T {
+    var prop
+    if (descriptor.$fdf) {
+        for (let k of descriptor.$fdf) {
+            prop = descriptor[k].$ || k
+            if (!withVal || owner[prop] === '') {
+                so[k] = null
+                owner[prop] = null
+            } else if (Object.prototype.hasOwnProperty.call(owner, prop)) {
+                so[k] = null
+            }
+        }
+    }
+
+    if (descriptor.$fdikf) {
+        for (let k of descriptor.$fdikf) {
+            prop = descriptor[k].$ || k
+            if (!withVal || Object.prototype.hasOwnProperty.call(owner, prop)) {
+                so[k] = null
+                owner[prop] = null
+            }
+        }
+    }
+    
+    return so
+}
+
+export function initObservable<T>(target: T, descriptor: any, withVal?: boolean): T {
+    target['_'] = addVpropsTo({
+        state: 0,
+        msg: '',
+        dfbs: 0,
+        vfbs: 0,
+        rfbs: 0
+    }, descriptor, target, withVal)
+
+    defp(target, '$d', descriptor)
+    if (!descriptor.$fmf)
+        return target
+
+    for (let fk of descriptor.$fmf) {
+        let fd = descriptor[fk]
+        initObservable(target[fd.$], fd.d_fn(), withVal)
+    }
+    return target
+}
 
 // =====================================
 // event handling

@@ -1,3 +1,4 @@
+export declare function initObservable<T>(target: T, descriptor: any, withVal?: boolean): T;
 /**
  * The update arg means if existing data is modified (not creating new data).
  */
