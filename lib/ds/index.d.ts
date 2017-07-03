@@ -35,7 +35,6 @@ export declare namespace ds {
                 $n: string;
             };
             $new: (id: number) => ParamId;
-            $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
         };
     }
     /**
@@ -85,7 +84,6 @@ export declare namespace ds {
                 $n: string;
             };
             $new: (key: string, parentKey?: string | undefined) => ParamKey;
-            $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
         };
     }
     /**
@@ -151,7 +149,6 @@ export declare namespace ds {
                 $n: string;
             };
             $new: (key: string, mc: MultiCAS, id?: number | undefined) => ParamUpdate;
-            $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
         };
     }
     /**
@@ -231,7 +228,6 @@ export declare namespace ds {
                 $n: string;
             };
             $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
-            $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
         };
     }
     /**
@@ -308,7 +304,6 @@ export declare namespace ds {
                 $n: string;
             };
             $new: (name: string, value: string, id?: number | undefined) => ACResult;
-            $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
         };
     }
     /**
@@ -424,11 +419,9 @@ export declare namespace ds {
                         $n: string;
                     };
                     $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
-                    $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
                 };
             };
             $new: (value: number, prk: ParamRangeKey, end?: number | undefined, pgstart?: number | undefined) => P1;
-            $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
         };
     }
     /**
@@ -544,11 +537,9 @@ export declare namespace ds {
                         $n: string;
                     };
                     $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
-                    $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
                 };
             };
             $new: (value: number, prk: ParamRangeKey, end?: number | undefined, pgstart?: number | undefined) => P4;
-            $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
         };
     }
     /**
@@ -664,11 +655,9 @@ export declare namespace ds {
                         $n: string;
                     };
                     $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
-                    $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
                 };
             };
             $new: (value: number, prk: ParamRangeKey, end?: number | undefined, pgstart?: number | undefined) => P8;
-            $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
         };
     }
     /**
@@ -784,11 +773,9 @@ export declare namespace ds {
                         $n: string;
                     };
                     $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
-                    $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
                 };
             };
             $new: (value: number, prk: ParamRangeKey, end?: number | undefined, pgstart?: number | undefined) => PD;
-            $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
         };
     }
     /**
@@ -902,11 +889,9 @@ export declare namespace ds {
                         $n: string;
                     };
                     $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
-                    $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
                 };
             };
             $new: (value: string, prk: ParamRangeKey, end?: string | undefined, pgstart?: string | undefined) => PB;
-            $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
         };
     }
     /**
@@ -1020,11 +1005,9 @@ export declare namespace ds {
                         $n: string;
                     };
                     $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
-                    $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
                 };
             };
             $new: (value: string, prk: ParamRangeKey, end?: string | undefined, pgstart?: string | undefined) => PK;
-            $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
         };
     }
     /**
@@ -1140,11 +1123,9 @@ export declare namespace ds {
                         $n: string;
                     };
                     $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
-                    $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
                 };
             };
             $new: (value: string, prk: ParamRangeKey, end?: string | undefined, pgstart?: string | undefined) => PS;
-            $change: (e: any, message: any, field: string | number, update: boolean, root: any, cbfn?: any, flags?: number | undefined) => string | null;
         };
     }
 }
