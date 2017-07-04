@@ -15,55 +15,7 @@
 // @created 2017/06/29
 
 import { extractMsg, incrementKey, decrementKey } from '../util'
-
-/*export namespace ds {
-    export interface ParamRangeKey {
-        ['1']: boolean;
-        ['2']?: number;
-        ['3']?: string;
-        ['4']?: string;
-    }
-    export namespace ParamRangeKey {
-        export const enum F$ {
-            desc = '1',
-            limit = '2',
-            startKey = '3',
-            parentKey = '4'
-        }
-        export const enum F0 {
-            desc = 1,
-            limit = 2,
-            startKey = 3,
-            parentKey = 4
-        }
-        export function $create(desc: boolean, limit?: number, startKey?: string, parentKey?: string): ParamRangeKey {
-            return {
-                '1': desc,
-                '2': limit,
-                '3': startKey,
-                '4': parentKey
-            }
-        }
-    }
-}*/
-
-export interface ParamRangeKey {
-    ['1']: boolean;
-    ['2']?: number;
-    ['3']?: string;
-    ['4']?: string;
-}
-
-function createParamRangeKey(desc: boolean, limit?: number, startKey?: string, parentKey?: string): ParamRangeKey {
-    return {
-        '1': desc,
-        '2': limit,
-        '3': startKey,
-        '4': parentKey
-    }
-}
-
-//const createParamRangeKey = ds.ParamRangeKey.$create
+import { ParamRangeKey, $newParamRangeKey } from '../prk'
 
 export interface Pager {
     loading: boolean
@@ -294,7 +246,7 @@ export class Store<T extends Entity> {
             this.desc = true
         }
 
-        var req = createParamRangeKey(empty,
+        var req = $newParamRangeKey(empty,
             empty ? this.pageSize * this.multiplier + 1 : (this.desc ? this.pageSize : this.pageSize * this.multiplier),
             empty ? undefined : (this.desc ? this.list[0].orig['1'] : this.list[this.list.length - 1].orig['1']));
 
@@ -321,7 +273,7 @@ export class Store<T extends Entity> {
             return false;
         }
 
-        var req = createParamRangeKey(true,
+        var req = $newParamRangeKey(true,
             this.desc ? this.pageSize * this.multiplier : this.pageSize,
             this.desc ? this.list[this.list.length - 1].orig['1'] : this.list[0].orig['1']);
 
@@ -353,7 +305,7 @@ export class Store<T extends Entity> {
         // the first item in the visible list
         var pair = this.list[this.page * this.pageSize];
 
-        var req = createParamRangeKey(this.desc,
+        var req = $newParamRangeKey(this.desc,
             Math.min(this.pageSize, this.list.length),
             this.desc ? incrementKey(pair.orig['1']) : decrementKey(pair.orig['1']),
         );
