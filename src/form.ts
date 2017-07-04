@@ -477,14 +477,16 @@ export class Form {
             flags?: number) {
         this.flags = flags || 0
     }
-
+    
     change(e: any, field: string, message?: any, flags?: number, cbfn?: any) {
         let root = this.root || (this.root = this.vm.get(this.root_key)),
             f = flags || this.flags,
-            ret = $change(e, field, message || root, this.update, root, f, cbfn)
+            m = message || root,
+            ret = $change(e, field, m, this.update, root, f, cbfn)
         
-        if ((f & ChangeFlags.VM_SET))
-            this.vm.set(setp({}, this.root_key, root))
+        if ((f & ChangeFlags.VM_SET)) {
+            this.vm.set(!this.root_key ? {} : setp({}, this.root_key, root))
+        }
         
         return ret
     }
