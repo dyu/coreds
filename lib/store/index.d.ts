@@ -1,9 +1,3 @@
-export interface ParamRangeKey {
-    ['1']: boolean;
-    ['2']?: number;
-    ['3']?: string;
-    ['4']?: string;
-}
 export interface Pager {
     loading: boolean;
     errmsg: string;
