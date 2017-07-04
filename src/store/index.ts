@@ -165,7 +165,6 @@ export class Store<T extends Entity> {
     appendAll(l: T[], reversed?: boolean) {
         if (l.length === 1) {
             this.list.push(this.createFn(l[0]))
-            return
         } else if (reversed) {
             for (let i = l.length; i-- > 0;) this.list.push(this.createFn(l[i]))
         } else {
