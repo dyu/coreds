@@ -387,12 +387,18 @@ function validateDateTime(val: any, message: any, fd: any, fk: string, flag: num
 /**
  * The update arg means if existing data is modified (not creating new data).
  */
-export function $change(e, fk: string, message: any, update: boolean, root: any, flags: number, cbfn?: any): string|null {
+export function $change(e, fk: string, message: any, update: boolean, root?: any, flags?: number, cbfn?: any): string|null {
     let d = message['$d'],
         fd = d[fk]
     
     if (!fd || fd.t === FieldType.BYTES)
         return null
+    
+    if (!root)
+        root = message
+    
+    if (flags === undefined)
+        flags = 0
     
     let message_ = message['_'] as PojoSO,
         dfbs = message_.dfbs,
