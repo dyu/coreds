@@ -1,5 +1,5 @@
 import { ItemSO, Pager, SelectionType, SelectionFlags, KeyHandler, MergeFn } from '../types';
-import { ParamRangeKey } from '../prk';
+import * as prk from '../prk';
 export declare const DESCRIPTOR = "$d";
 export declare const INDEX = "$index";
 export declare const PREV_KEY = "$prev_key";
@@ -7,7 +7,7 @@ export declare const PREV_PAGE = "$prev_page";
 export declare const PREV_ISTATE = "$prev_istate";
 export declare function shallowCopyTo<T>(target: T, src: T): T;
 export declare function resolveNextPageIndex(page: number, idx: number, pager: Pager): number;
-export declare type FetchFn = (req: ParamRangeKey, pager: Pager) => void;
+export declare type FetchFn = (req: prk.ParamRangeKey, pager: Pager) => void;
 export interface PagerOptions<T> {
     pageSize: number;
     descriptor: any;
@@ -87,10 +87,10 @@ export declare class PojoStore<T> {
      */
     update(updateArray: Array<T>): boolean;
     getStartObj(): T | null;
-    newRangeKeyForReload(): ParamRangeKey;
-    $newRangeKeyForReload(desc: boolean): ParamRangeKey;
-    newRangeKeyForLoadNewer(): ParamRangeKey;
-    newRangeKeyForLoadOlder(): ParamRangeKey;
+    newRangeKeyForReload(): prk.ParamRangeKey;
+    $newRangeKeyForReload(desc: boolean): prk.ParamRangeKey;
+    newRangeKeyForLoadNewer(): prk.ParamRangeKey;
+    newRangeKeyForLoadOlder(): prk.ParamRangeKey;
     requestNewer(): void;
     requestOlder(): void;
     reload(): void;
