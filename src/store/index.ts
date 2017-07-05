@@ -15,7 +15,7 @@
 // @created 2017/06/29
 
 import { extractMsg, incrementKey, decrementKey } from '../util'
-import { ParamRangeKey, $newParamRangeKey } from '../prk'
+import * as prk from '../prk'
 
 export interface Pager {
     loading: boolean
@@ -53,7 +53,7 @@ export type CreateFn<T> = (message: T) => Item<T>;
 
 export type MergeFn<T> = (message: T, pair: Item<T>) => void;
 
-//export type FetchFn = (req: ParamRangeKey) => void
+//export type FetchFn = (req: prk.ParamRangeKey) => void
 
 const enum FetchType {
     NONE,
@@ -246,7 +246,7 @@ export class Store<T extends Entity> {
             this.desc = true
         }
 
-        var req = $newParamRangeKey(empty,
+        var req = prk.$new(empty,
             empty ? this.pageSize * this.multiplier + 1 : (this.desc ? this.pageSize : this.pageSize * this.multiplier),
             empty ? undefined : (this.desc ? this.list[0].orig['1'] : this.list[this.list.length - 1].orig['1']));
 
@@ -273,7 +273,7 @@ export class Store<T extends Entity> {
             return false;
         }
 
-        var req = $newParamRangeKey(true,
+        var req = prk.$new(true,
             this.desc ? this.pageSize * this.multiplier : this.pageSize,
             this.desc ? this.list[this.list.length - 1].orig['1'] : this.list[0].orig['1']);
 
@@ -305,7 +305,7 @@ export class Store<T extends Entity> {
         // the first item in the visible list
         var pair = this.list[this.page * this.pageSize];
 
-        var req = $newParamRangeKey(this.desc,
+        var req = prk.$new(this.desc,
             Math.min(this.pageSize, this.list.length),
             this.desc ? incrementKey(pair.orig['1']) : decrementKey(pair.orig['1']),
         );

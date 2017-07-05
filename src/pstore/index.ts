@@ -5,7 +5,7 @@ import {
 } from '../types'
 import { bit_clear_and_set, bit_unset, incrementKey, decrementKey, defp, extractMsg } from '../util'
 import { mergeFrom } from '../diff'
-import { ParamRangeKey, $newParamRangeKey } from '../prk'
+import * as prk from '../prk'
 
 //export const STATE = "state"
 //export const LSTATE = "lstate" // list state
@@ -40,7 +40,7 @@ export function resolveNextPageIndex(page: number, idx: number, pager: Pager): n
     return page !== pager.page_count ? idx : Math.min(idx, (pager.size % pager.array.length) - 1)
 }
 
-export type FetchFn = (req: ParamRangeKey, pager: Pager) => void
+export type FetchFn = (req: prk.ParamRangeKey, pager: Pager) => void
 
 export interface PagerOptions<T> {
     pageSize: number
@@ -728,11 +728,11 @@ export class PojoStore<T> {
         }
     }
 
-    newRangeKeyForReload(): ParamRangeKey {
+    newRangeKeyForReload(): prk.ParamRangeKey {
         return this.$newRangeKeyForReload(!!(this.pager.state & PagerState.DESC))
     }
 
-    $newRangeKeyForReload(desc: boolean): ParamRangeKey {
+    $newRangeKeyForReload(desc: boolean): prk.ParamRangeKey {
         let pager = this.pager,
             options = this.options,
             toPopulate = pager.array as Array<T>,
@@ -756,31 +756,31 @@ export class PojoStore<T> {
             startKey = desc ? incrementKey(key) : decrementKey(key)
         }
 
-        return $newParamRangeKey(desc, visibleItemCount, startKey)
+        return prk.$new(desc, visibleItemCount, startKey)
     }
 
-    newRangeKeyForLoadNewer(): ParamRangeKey {
+    newRangeKeyForLoadNewer(): prk.ParamRangeKey {
         let pager = this.pager,
             toPopulate = pager.array as Array<T>
 
         if (this.isEmpty())
-            return $newParamRangeKey(true, (toPopulate.length * this.multiplier) + 1)
+            return prk.$new(true, (toPopulate.length * this.multiplier) + 1)
         
         let first = this.get(0),
             limit = !this.multiplier_conditional || 0 === (PagerState.DESC & pager.state) ? toPopulate.length * this.multiplier : toPopulate.length
         
         this.startObj = first
-        return $newParamRangeKey(false, limit, first[this.k])
+        return prk.$new(false, limit, first[this.k])
     }
 
-    newRangeKeyForLoadOlder(): ParamRangeKey {
+    newRangeKeyForLoadOlder(): prk.ParamRangeKey {
         let pager = this.pager,
             toPopulate = pager.array as Array<T>,
             last = this.get(this.size() - 1),
             limit = !this.multiplier_conditional || 0 !== (PagerState.DESC & pager.state) ? toPopulate.length * this.multiplier : toPopulate.length
 
         this.startObj = last
-        return $newParamRangeKey(true, limit, last[this.k])
+        return prk.$new(true, limit, last[this.k])
     }
 
     requestNewer() {
