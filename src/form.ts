@@ -1,12 +1,17 @@
-import { FieldType, PojoSO, PojoState, ChangeFlags } from './types'
 import {
-    setp, defp, bit_unset, localToUtc,
+    FieldType, PojoSO, PojoState, ChangeFlags,
+    HasState, PagerState, SelectionFlags
+} from './types'
+import {
+    setp, defp, bit_unset, localToUtc, bit_clear_and_set, extractMsg,
     regexDouble, regexInt, regexTime, regexDate, regexDateTime
 } from './util'
 import {
     formatTime, formatDate, formatDateTime,
     isValidDateStr, isValidDateTimeStr
 } from './datetime_util'
+import { MultiCAS } from './ds/mc'
+import { diffTo, diffFieldTo, mergeOriginalFrom } from './diff'
 
 import * as numeral from 'numeral'
 
@@ -54,6 +59,260 @@ export function initObservable<T>(target: T, descriptor: any, withVal?: boolean)
         initObservable(target[fk], fd.d_fn(), withVal)
     }
     return target
+}
+
+// =====================================
+// form ops
+
+export function verify_fields(message: any, descriptor: any, update?: boolean, root?: any): boolean {
+    let message_ = message._ as PojoSO,
+        root_: PojoSO,
+        rfbs: number,
+        fmf: string[],
+        fd
+    
+    if (root) {
+        root_ = root._ as PojoSO
+    } else {
+        root = message
+        root_ = message_
+    }
+
+    if (message_.vfbs) {
+        if (root_.msg) {
+            root_.state = bit_unset(root_.state, PojoState.MASK_STATUS)
+            root_.msg = ''
+        }
+        
+        return false
+    }
+
+    if ((fmf = descriptor.$fmf)) {
+        for (let fk of fmf) {
+            fd = descriptor[fk]
+            if (!verify_fields(message[fd.$ || fk], fd.d_fn(), update, root))
+                return false
+        }
+    }
+
+    if (update || !(rfbs = descriptor.$rfbs) || rfbs === message_.rfbs)
+        return true
+    
+    root_.state = bit_clear_and_set(root_.state, PojoState.MASK_STATUS, PojoState.ERROR)
+    root_.msg = 'All required fields must be provided.'
+    
+    return false
+}
+
+export function clear_fields(message: any, descriptor: any) {
+    let message_ = message['_'] as PojoSO,
+        fmf,
+        fd
+    
+    message_.dfbs = 0
+    message_.rfbs = 0
+    for (let fk of descriptor.$fdf) {
+        fd = descriptor[fk]
+        message[fd.$ || fk] = null
+    }
+    
+    if (!(fmf = descriptor.$fmf))
+        return
+    
+    for (let fk of fmf) {
+        fd = descriptor[fk]
+        clear_fields(message[fd.$ || fk], fd.d_fn())
+    }
+}
+
+// =====================================
+// create
+
+export function $success(pojo: any, msg?: string) {
+    let pojo_ = pojo['_'] as PojoSO
+    
+    pojo_.state = bit_clear_and_set(pojo_.state, PojoState.MASK_STATUS|PojoState.LOADING, PojoState.SUCCESS)
+    pojo_.msg = msg || 'Successful.'
+    
+    clear_fields(pojo, pojo['$d'])
+}
+
+export function $failed(pojo: any, errmsg: any) {
+    let pojo_ = pojo['_'] as PojoSO
+    
+    pojo_.state = bit_clear_and_set(pojo_.state, PojoState.MASK_STATUS|PojoState.LOADING, PojoState.ERROR)
+    pojo_.msg = !errmsg ? 'Error.' : extractMsg(errmsg)
+}
+
+export function $prepare(pojo: any) {
+    let pojo_ = pojo['_'] as PojoSO,
+        state = pojo_.state
+    
+    if ((state & PojoState.LOADING) || !verify_fields(pojo, pojo['$d']))
+        return false
+    
+    pojo_.state = bit_clear_and_set(state, PojoState.MASK_STATUS, PojoState.LOADING)
+    pojo_.msg = ''
+
+    return true
+}
+
+export function $clear(pojo: any): PojoSO {
+    let pojo_ = pojo['_'] as PojoSO
+
+    if (pojo_.msg)
+        pojo_.msg = ''
+    
+    if (!pojo_.dfbs)
+        return pojo_
+    
+    if (pojo_.vfbs)
+        pojo_.vfbs = 0
+    
+    clear_fields(pojo, pojo['$d'])
+    
+    return pojo_
+}
+
+// =====================================
+// update
+
+export interface ParamUpdate {
+    /** key = 1, required */
+    ['1']: string
+    /** mc = 2, required */
+    ['2']: MultiCAS
+    /** id = 3, optional */
+    ['3']?: number
+}
+
+export function $update_req(key: string, mc: MultiCAS, id?: number): ParamUpdate {
+    return {
+        '1': key,
+        '2': mc,
+        '3': id
+    }
+}
+
+export function $update_success(pojo: any, pager: HasState, original: any, selected?: any) {
+    let pojo_ = pojo['_'] as PojoSO
+    
+    pojo_.state = bit_clear_and_set(pojo_.state, 
+            PojoState.MASK_STATUS|PojoState.LOADING, PojoState.SUCCESS)
+    pojo_.msg = 'Successful.'
+    pojo_.dfbs = 0
+    
+    mergeOriginalFrom(pojo, pojo['$d'], original, selected)
+    
+    pager.state ^= PagerState.LOADING
+}
+
+export function $update_failed(pojo: any, pager: HasState, errmsg: any) {
+    let pojo_ = pojo['_'] as PojoSO
+    
+    pojo_.state = bit_clear_and_set(pojo_.state, PojoState.MASK_STATUS|PojoState.LOADING, PojoState.ERROR)
+    pojo_.msg = !errmsg ? 'Error.' : extractMsg(errmsg)
+    
+    pager.state ^= PagerState.LOADING
+}
+
+export function $update(pojo: any, pager: HasState, original: any, changes?: any): MultiCAS|undefined {
+    let pojo_ = pojo['_'] as PojoSO,
+        state = pojo_.state,
+        $d = pojo['$d']
+    
+    if ((pager.state & PagerState.LOADING) || (state & PojoState.LOADING) || !verify_fields(pojo, $d, true))
+        return undefined
+    
+    let mc: MultiCAS|undefined,
+        diffCount = pojo_.dfbs && diffTo(mc = {}, $d, original, pojo)
+    
+    if (!diffCount && !changes) {
+        if (!pojo_.msg) {
+            pojo_.state = bit_clear_and_set(state, PojoState.MASK_STATUS, PojoState.WARNING)
+            pojo_.msg = 'No changes were made.'
+        }
+        
+        return undefined
+    }
+
+    pojo_.state = bit_clear_and_set(state, PojoState.MASK_STATUS, PojoState.LOADING)
+    pojo_.msg = ''
+
+    pager.state |= PagerState.LOADING
+
+    return diffCount ? mc : undefined
+}
+
+// =====================================
+// toggle
+
+export function $toggle_success(pager: any, pojo_update: any, skipMerge?: boolean): boolean {
+    let selected = pager.pojo,
+        selected_ = selected['_'] as PojoSO,
+        store = pager['store']
+    
+    pager.state ^= PagerState.LOADING
+    if (!skipMerge)
+        mergeOriginalFrom(selected, selected['$d'], store.getOriginal(selected), pojo_update)
+    
+    selected_.state = bit_clear_and_set(selected_.state, PojoState.MASK_STATUS|PojoState.LOADING, PojoState.SUCCESS)
+    selected_.msg = 'Update Successful.'
+    
+    return true
+}
+
+export function $toggle_failed(pager: any, errmsg: any) {
+    let selected = pager.pojo,
+        selected_ = selected['_'] as PojoSO
+    
+    pager.state ^= PagerState.LOADING
+    selected_.state = bit_clear_and_set(selected_.state, PojoState.MASK_STATUS|PojoState.LOADING, PojoState.ERROR)
+    selected_.msg = !errmsg ? 'Update failed.' : extractMsg(errmsg)
+}
+
+export function $toggle(pager: any, field: string, pojo?: any, changed?: boolean): MultiCAS|null {
+    let selected = pojo || pager.pojo,
+        selected_ = selected['_'] as PojoSO
+    
+    if ((pager.state & PagerState.LOADING) || (selected_.state & PojoState.LOADING))
+        return null
+    
+    let d = selected['$d'],
+        fd = d[d.$[field]],
+        store = pager['store'],
+        original = store.getOriginal(selected),
+        mc = {}
+    
+    if (pojo && pojo !== pager.pojo)
+        store.select(pojo, SelectionFlags.CLICKED)
+
+    if (!changed)
+        selected[field] = !selected[field]
+
+    diffFieldTo(mc, d, original, selected, fd._)
+    
+    pager.state |= PagerState.LOADING
+    selected_.state |= PojoState.LOADING
+    if (selected_.msg)
+        selected_.msg = ''
+
+    return mc
+}
+
+export function $toggle_prepare(pager: any): boolean {
+    let selected = pager.pojo,
+        selected_ = selected['_'] as PojoSO
+    
+    if ((pager.state & PagerState.LOADING) || (selected_.state & PojoState.LOADING))
+        return false
+    
+    pager.state |= PagerState.LOADING
+    selected_.state |= PojoState.LOADING
+    if (selected_.msg)
+        selected_.msg = ''
+    
+    return true
 }
 
 // =====================================
