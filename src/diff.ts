@@ -60,9 +60,9 @@ export function mergeOriginalFrom<T>(src: any, descriptor: any, target: T, vm?: 
 export function mergeFrom<T>(src: any, descriptor: any, target: T): T {
     var v
     for (var i of Object.keys(src)) {
-        if (descriptor[i] && target[i] !== (v = src[i])) {
-            target[i] = v
-        }
+        if (!descriptor[i] || target[i] === (v = src[i])) continue
+        
+        target[i] = v
     }
     
     return target
