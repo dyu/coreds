@@ -1,4 +1,28 @@
+import { PojoSO, HasState } from './types';
+import { MultiCAS } from './ds/mc';
 export declare function initObservable<T>(target: T, descriptor: any, withVal?: boolean): T;
+export declare function verify_fields(message: any, descriptor: any, update?: boolean, root?: any): boolean;
+export declare function clear_fields(message: any, descriptor: any): void;
+export declare function $success(pojo: any, msg?: string): void;
+export declare function $failed(pojo: any, errmsg: any): void;
+export declare function $prepare(pojo: any): boolean;
+export declare function $clear(pojo: any): PojoSO;
+export interface ParamUpdate {
+    /** key = 1, required */
+    ['1']: string;
+    /** mc = 2, required */
+    ['2']: MultiCAS;
+    /** id = 3, optional */
+    ['3']?: number;
+}
+export declare function $update_req(key: string, mc: MultiCAS, id?: number): ParamUpdate;
+export declare function $update_success(pojo: any, pager: HasState, original: any, selected?: any): void;
+export declare function $update_failed(pojo: any, pager: HasState, errmsg: any): void;
+export declare function $update(pojo: any, pager: HasState, original: any, changes?: any): MultiCAS | undefined;
+export declare function $toggle_success(pager: any, pojo_update: any, skipMerge?: boolean): boolean;
+export declare function $toggle_failed(pager: any, errmsg: any): void;
+export declare function $toggle(pager: any, field: string, pojo?: any, changed?: boolean): MultiCAS | null;
+export declare function $toggle_prepare(pager: any): boolean;
 /**
  * The update arg means if existing data is modified (not creating new data).
  */
