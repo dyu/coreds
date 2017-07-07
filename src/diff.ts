@@ -48,7 +48,7 @@ export function diffTo<T>(mc: any/**MultiCAS*/, descriptor: any, original: T, mo
 export function mergeOriginalFrom<T>(src: any, descriptor: any, target: T, vm?: any): T {
     var v
     for (var i of Object.keys(src)) {
-        if (target[i] === (v = src[i])) continue
+        if (!descriptor[i] || target[i] === (v = src[i])) continue
         
         target[i] = v
         if (vm) vm[i] = v
