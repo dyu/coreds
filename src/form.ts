@@ -684,7 +684,7 @@ export function $change(e, fk: string, message: any, update: boolean, root?: any
 
             if (!cbfn || ((flags & ChangeFlags.CB_ONLY_ON_SET) && val === null))
                 break
-            cbfn(f, val, message, fd, root)
+            cbfn(fk, val, message, fd, root)
             break
         case FieldType.ENUM:
             // re-use update var as dirty
@@ -702,7 +702,7 @@ export function $change(e, fk: string, message: any, update: boolean, root?: any
             
             if (!cbfn || ((flags & ChangeFlags.CB_ONLY_ON_SET) && val === null))
                 break
-            cbfn(f, val, message, fd, root)
+            cbfn(fk, val, message, fd, root)
             break
         case FieldType.STRING:
             msg = validateString(el.value.trim(), message, fd, fk, flag, message_, dfbs, el, update, root, cbfn, flags)
