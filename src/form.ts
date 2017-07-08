@@ -68,8 +68,7 @@ export function verify_fields(message: any, descriptor: any, update?: boolean, r
     let message_ = message._ as PojoSO,
         root_: PojoSO,
         rfbs: number,
-        fmf: string[],
-        fd
+        fmf: string[]
     
     if (root) {
         root_ = root._ as PojoSO
@@ -89,8 +88,7 @@ export function verify_fields(message: any, descriptor: any, update?: boolean, r
 
     if ((fmf = descriptor.$fmf)) {
         for (let fk of fmf) {
-            fd = descriptor[fk]
-            if (!verify_fields(message[fd.$ || fk], fd.d_fn(), update, root))
+            if (!verify_fields(message[fk], descriptor[fk].d_fn(), update, root))
                 return false
         }
     }
@@ -106,22 +104,19 @@ export function verify_fields(message: any, descriptor: any, update?: boolean, r
 
 export function clear_fields(message: any, descriptor: any) {
     let message_ = message['_'] as PojoSO,
-        fmf,
-        fd
+        fmf
     
     message_.dfbs = 0
     message_.rfbs = 0
     for (let fk of descriptor.$fdf) {
-        fd = descriptor[fk]
-        message[fd.$ || fk] = null
+        message[fk] = null
     }
     
     if (!(fmf = descriptor.$fmf))
         return
     
     for (let fk of fmf) {
-        fd = descriptor[fk]
-        clear_fields(message[fd.$ || fk], fd.d_fn())
+        clear_fields(message[fk], descriptor[fk].d_fn())
     }
 }
 
