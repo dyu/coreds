@@ -31,7 +31,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             $new: (id: number) => ParamId;
@@ -72,7 +71,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '2': {
@@ -80,7 +78,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             $new: (key: string, parentKey?: string | undefined) => ParamKey;
@@ -128,7 +125,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '2': {
@@ -136,7 +132,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
                 d_fn: () => {};
             };
@@ -145,7 +140,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             $new: (key: string, mc: MultiCAS, id?: number | undefined) => ParamUpdate;
@@ -200,7 +194,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '2': {
@@ -208,7 +201,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '3': {
@@ -216,7 +208,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '4': {
@@ -224,7 +215,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
@@ -284,7 +274,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '2': {
@@ -292,7 +281,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '3': {
@@ -300,7 +288,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             $new: (name: string, value: string, id?: number | undefined) => ACResult;
@@ -355,7 +342,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '2': {
@@ -363,7 +349,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '3': {
@@ -371,7 +356,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '4': {
@@ -379,7 +363,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
                 d_fn: () => {
                     $rfbs: number;
@@ -391,7 +374,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '2': {
@@ -399,7 +381,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '3': {
@@ -407,7 +388,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '4': {
@@ -415,7 +395,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
@@ -473,7 +452,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '2': {
@@ -481,7 +459,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '3': {
@@ -489,7 +466,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '4': {
@@ -497,7 +473,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
                 d_fn: () => {
                     $rfbs: number;
@@ -509,7 +484,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '2': {
@@ -517,7 +491,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '3': {
@@ -525,7 +498,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '4': {
@@ -533,7 +505,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
@@ -591,7 +562,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '2': {
@@ -599,7 +569,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '3': {
@@ -607,7 +576,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '4': {
@@ -615,7 +583,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
                 d_fn: () => {
                     $rfbs: number;
@@ -627,7 +594,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '2': {
@@ -635,7 +601,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '3': {
@@ -643,7 +608,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '4': {
@@ -651,7 +615,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
@@ -709,7 +672,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '2': {
@@ -717,7 +679,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '3': {
@@ -725,7 +686,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '4': {
@@ -733,7 +693,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
                 d_fn: () => {
                     $rfbs: number;
@@ -745,7 +704,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '2': {
@@ -753,7 +711,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '3': {
@@ -761,7 +718,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '4': {
@@ -769,7 +725,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
@@ -825,7 +780,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '2': {
@@ -833,7 +787,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '3': {
@@ -841,7 +794,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '4': {
@@ -849,7 +801,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
                 d_fn: () => {
                     $rfbs: number;
@@ -861,7 +812,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '2': {
@@ -869,7 +819,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '3': {
@@ -877,7 +826,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '4': {
@@ -885,7 +833,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
@@ -941,7 +888,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '2': {
@@ -949,7 +895,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '3': {
@@ -957,7 +902,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '4': {
@@ -965,7 +909,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
                 d_fn: () => {
                     $rfbs: number;
@@ -977,7 +920,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '2': {
@@ -985,7 +927,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '3': {
@@ -993,7 +934,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '4': {
@@ -1001,7 +941,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
@@ -1059,7 +998,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '2': {
@@ -1067,7 +1005,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '3': {
@@ -1075,7 +1012,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
             };
             '4': {
@@ -1083,7 +1019,6 @@ export declare namespace ds {
                 t: number;
                 m: number;
                 a: number;
-                $: string;
                 $n: string;
                 d_fn: () => {
                     $rfbs: number;
@@ -1095,7 +1030,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '2': {
@@ -1103,7 +1037,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '3': {
@@ -1111,7 +1044,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     '4': {
@@ -1119,7 +1051,6 @@ export declare namespace ds {
                         t: number;
                         m: number;
                         a: number;
-                        $: string;
                         $n: string;
                     };
                     $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
