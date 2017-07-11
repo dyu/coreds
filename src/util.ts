@@ -2,6 +2,27 @@ export const hasOwnProperty = Object.prototype.hasOwnProperty
 export function noop() { return null }
 
 /**
+ * ts type hack.
+ */
+export function $any(p): any {
+    return p
+}
+
+/**
+ * Define a getter that should not be configurable.
+ * Returns the value
+ */
+export function defg<T>(obj: any, prop: string, val: T) {
+    Object.defineProperty(obj, prop, {
+        enumerable: true,
+        configurable: false,
+        get: () => val,
+        set(ignore) {}
+    })
+    return val
+}
+
+/**
  * Define a property that should not be discoverable.
  * Returns the value
  */
