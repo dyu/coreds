@@ -274,7 +274,7 @@ export function $toggle(pager: any, field: string, pojo?: any, changed?: boolean
         return null
     
     let d = selected['$d'],
-        fd = d[d.$[field]],
+        fd = d[field],
         store = pager['store'],
         original = store.getOriginal(selected),
         mc = {}
