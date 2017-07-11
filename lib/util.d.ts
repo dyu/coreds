@@ -1,6 +1,15 @@
 export declare const hasOwnProperty: (v: string) => boolean;
 export declare function noop(): null;
 /**
+ * ts type hack.
+ */
+export declare function $any(p: any): any;
+/**
+ * Define a getter that should not be configurable.
+ * Returns the value
+ */
+export declare function defg<T>(obj: any, prop: string, val: T): T;
+/**
  * Define a property that should not be discoverable.
  * Returns the value
  */
