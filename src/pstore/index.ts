@@ -444,7 +444,7 @@ export class PojoStore<T> {
     }
 
     /**
-     * Returns the id.
+     * Returns the pojo.
      */
     $get(id: number): T {
         return this.mainArray[this.desc ? this.mainArray.length - id : id - 1]
