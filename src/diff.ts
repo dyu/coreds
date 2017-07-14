@@ -22,10 +22,11 @@ export function diffFieldTo<T>(mc: any/**MultiCAS*/, descriptor: any, original: 
 }
 
 // only the scalar fields are diffed
-export function diffTo<T>(mc: any/**MultiCAS*/, descriptor: any, original: T, modified: T): number {
+export function diffFieldsTo<T>(mc: any/**MultiCAS*/, descriptor: any, original: T, modified: T,
+        fields: string[]): number {
     var d, t, k, array, forig, fmod, diffed = 0//diffed: KV[] = []
 
-    for (var i of Object.keys(modified)) {
+    for (var i of fields) {
         if (!(d = descriptor[i]) ||
             !d.m ||
             !(t = d.t) ||
@@ -42,6 +43,11 @@ export function diffTo<T>(mc: any/**MultiCAS*/, descriptor: any, original: T, mo
     }
 
     return diffed
+}
+
+// only the scalar fields are diffed
+export function diffTo<T>(mc: any/**MultiCAS*/, descriptor: any, original: T, modified: T): number {
+    return diffFieldsTo(mc, descriptor, original, modified, Object.keys(modified))
 }
 
 // target is original

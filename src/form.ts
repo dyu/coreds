@@ -11,7 +11,7 @@ import {
     isValidDateStr, isValidDateTimeStr
 } from './datetime_util'
 import { MultiCAS } from './ds/mc'
-import { diffTo, diffFieldTo, mergeOriginalFrom } from './diff'
+import { diffFieldsTo, diffFieldTo, mergeOriginalFrom } from './diff'
 
 import * as numeral from 'numeral'
 
@@ -220,7 +220,8 @@ export function $update(pojo: any, pager: HasState, original: any, changes?: any
         return undefined
     
     let mc: MultiCAS|undefined,
-        diffCount = pojo_.dfbs && diffTo(mc = {}, $d, original, pojo)
+        fields = pojo_.dfbs ? Object.keys(pojo) : $d.$fdikf,
+        diffCount = fields && diffFieldsTo(mc = {}, $d, original, pojo, fields)
     
     if (!diffCount && !changes) {
         if (!pojo_.msg) {
