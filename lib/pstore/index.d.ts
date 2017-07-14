@@ -31,6 +31,7 @@ export interface PagerOptions<T> {
 export declare function nullifyVprops(so: ItemSO, descriptor: any): ItemSO | undefined;
 export declare class PojoStore<T> {
     options: PagerOptions<T>;
+    desc: boolean;
     pager: Pager;
     multiplier: number;
     multiplier_conditional: boolean;
@@ -58,6 +59,10 @@ export declare class PojoStore<T> {
      */
     addAndSelect(entity: T, latest: boolean, flags: SelectionFlags): void;
     get(index: number): T;
+    /**
+     * Returns the pojo.
+     */
+    $get(id: number): T;
     getStoreIndex(selected: T): number;
     $getStoreIndex(index: number): number;
     getSelectedOriginal(): T | null;
