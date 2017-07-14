@@ -110,7 +110,7 @@ function createObservable<T>(options: PagerOptions<T>, index: number, pager: Pag
 }
 
 export class PojoStore<T> {
-
+    desc: boolean
     pager: Pager
     multiplier: number
     multiplier_conditional: boolean
@@ -122,6 +122,7 @@ export class PojoStore<T> {
     private fnMergeFrom: MergeFn<T>
 
     constructor(fetchedArray: Array<T>, public options: PagerOptions<T>) {
+        this.desc = !!options.desc
         this.mainArray = fetchedArray
         this.array = fetchedArray
         this.multiplier = options.multiplier || 1
@@ -440,6 +441,13 @@ export class PojoStore<T> {
 
     get(index: number): T {
         return this.array[index]
+    }
+
+    /**
+     * Returns the id.
+     */
+    $get(id: number): T {
+        return this.mainArray[this.desc ? this.mainArray.length - id : id - 1]
     }
 
     getStoreIndex(selected: T): number {
