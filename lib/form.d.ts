@@ -5,7 +5,7 @@ export declare function verify_fields(message: any, descriptor: any, update?: bo
 export declare function clear_fields(message: any, descriptor: any): void;
 export declare function $success(pojo: any, msg?: string): void;
 export declare function $failed(pojo: any, errmsg: any): void;
-export declare function $prepare(pojo: any): boolean;
+export declare function $prepare(pojo: any, skipVerify?: boolean): boolean;
 export declare function $clear(pojo: any): PojoSO;
 export interface ParamUpdate {
     /** key = 1, required */
