@@ -139,11 +139,11 @@ export function $failed(pojo: any, errmsg: any) {
     pojo_.msg = !errmsg ? 'Error.' : extractMsg(errmsg)
 }
 
-export function $prepare(pojo: any) {
+export function $prepare(pojo: any, skipVerify?: boolean) {
     let pojo_ = pojo['_'] as PojoSO,
         state = pojo_.state
     
-    if ((state & PojoState.LOADING) || !verify_fields(pojo, pojo['$d']))
+    if ((state & PojoState.LOADING) || (!skipVerify && !verify_fields(pojo, pojo['$d'])))
         return false
     
     pojo_.state = bit_clear_and_set(state, PojoState.MASK_STATUS, PojoState.LOADING)
