@@ -8,6 +8,8 @@ export function $any(p): any {
     return p
 }
 
+export function noop_arg(ignore) {}
+
 /**
  * Define a getter that should not be configurable.
  * Returns the value
@@ -17,7 +19,7 @@ export function defg<T>(obj: any, prop: string, val: T) {
         enumerable: true,
         configurable: false,
         get: () => val,
-        set(ignore) {}
+        set: noop_arg
     })
     return val
 }
