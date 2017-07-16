@@ -975,6 +975,25 @@ export class PojoStore<T> {
         pager.state = bit_clear_and_set(pager.state, PagerState.MASK_RPC | PagerState.LOADING, PagerState.ERROR)
         pager.msg = !errmsg ? 'Failed.' : extractMsg(errmsg)
     }
+
+    loading(val: boolean) {
+        let pager = this.pager,
+            state = pager.state
+        
+        if (!val) {
+            pager.state = bit_unset(state, PojoState.LOADING)
+            return true
+        }
+
+        if ((state & PagerState.LOADING))
+            return false
+
+        if (pager.msg)
+            pager.msg = ''
+        
+        pager.state = bit_clear_and_set(state, PagerState.MASK_STATUS, PagerState.LOADING)
+        return true
+    }
 }
 
 function fetchSuccess(this: PojoStore<any>, data: any) {
