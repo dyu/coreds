@@ -4,6 +4,7 @@ export declare function noop(): null;
  * ts type hack.
  */
 export declare function $any(p: any): any;
+export declare function noop_arg(ignore: any): void;
 /**
  * Define a getter that should not be configurable.
  * Returns the value
