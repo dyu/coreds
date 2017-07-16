@@ -106,6 +106,7 @@ export declare class PojoStore<T> {
     pageNextOrLoad(flags: number): number;
     cbFetchSuccess(array: Array<T>): void;
     cbFetchFailed(errmsg: any): void;
+    loading(val: boolean): boolean;
 }
 export declare function bindFetchSuccess(pstore: PojoStore<any>): any;
 export declare function bindFetchFailed(pstore: PojoStore<any>): any;
