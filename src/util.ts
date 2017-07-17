@@ -48,6 +48,15 @@ export function setp<T>(obj: T, prop: string, val: any): T {
 }
 
 /**
+ * Copy a property.
+ * Returns the object
+ */
+export function copyp<T>(obj: T, prop: string, src: any): T {
+    obj[prop] = src[prop]
+    return obj
+}
+
+/**
  * Nullify property.
  * Useful for lazy observable properties that bypasses typescript's strictNullChecks config.
  */
