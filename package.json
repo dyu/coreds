@@ -1,6 +1,6 @@
 {
   "name": "coreds",
-  "version": "0.8.3",
+  "version": "0.9.0",
   "description": "core libs for protostuffdb js frontend",
   "author": "dyu",
   "main": "lib/index.js",
