@@ -611,9 +611,10 @@ export class PojoStore<T> {
 
                 if (options.onRemoveArray)
                     options.onRemoveArray(this.array, main)
-
-                this.mainArray = this.array = []
-
+                
+                // clear array
+                this.array.length = 0
+                
                 this.notify(SelectionType.RESET, 0)
                 return true
             }
