@@ -21,6 +21,11 @@ export declare function defp<T>(obj: any, prop: string, val: T): T;
  */
 export declare function setp<T>(obj: T, prop: string, val: any): T;
 /**
+ * Copy a property.
+ * Returns the object
+ */
+export declare function copyp<T>(obj: T, prop: string, src: any): T;
+/**
  * Nullify property.
  * Useful for lazy observable properties that bypasses typescript's strictNullChecks config.
  */
