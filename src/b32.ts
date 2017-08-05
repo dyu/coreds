@@ -23,9 +23,7 @@ export function encodeAscii(str: string, padding?: boolean): string {
     }
 
     if (padding) {
-        while ((output.length % 8) !== 0) {
-            output += '='
-        }
+        while (0 !== (output.length % 8)) output += '='
     }
 
     return output
@@ -51,9 +49,7 @@ export function encode(u8array: Uint8Array, padding?: boolean): string {
     }
 
     if (padding) {
-        while ((output.length % 8) !== 0) {
-            output += '='
-        }
+        while (0 !== (output.length % 8)) output += '='
     }
 
     return output
