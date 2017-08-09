@@ -224,19 +224,19 @@ export declare namespace ds {
      * ```
      *
      * message ACResult {
-     *   required string name = 1;
-     *   required bytes value = 2;
-     *   optional uint32 id = 3;
+     *   required bytes value = 1;
+     *   optional uint32 id = 2;
+     *   required string name = 3;
      * }
      * ```
      */
     interface ACResult {
-        /** name = 1, required */
+        /** value = 1, required */
         ['1']: string;
-        /** value = 2, required */
-        ['2']: string;
-        /** id = 3, optional */
-        ['3']?: number;
+        /** id = 2, optional */
+        ['2']?: number;
+        /** name = 3, required */
+        ['3']: string;
     }
     namespace ACResult {
         /**
@@ -253,18 +253,18 @@ export declare namespace ds {
         }
         const enum $ {
             /** required: 1 */
-            name = "1",
-            /** required: 2 */
-            value = "2",
-            /** optional: 3 */
-            id = "3",
+            value = "1",
+            /** optional: 2 */
+            id = "2",
+            /** required: 3 */
+            name = "3",
         }
         const enum $0 {
-            name = 1,
-            value = 2,
-            id = 3,
+            value = 1,
+            id = 2,
+            name = 3,
         }
-        function $new(name: string, value: string, id?: number): ACResult;
+        function $new(value: string, name: string, id?: number): ACResult;
         const $d: {
             $rfbs: number;
             $rfdf: string[];
@@ -290,7 +290,7 @@ export declare namespace ds {
                 a: number;
                 $n: string;
             };
-            $new: (name: string, value: string, id?: number | undefined) => ACResult;
+            $new: (value: string, name: string, id?: number | undefined) => ACResult;
         };
     }
     /**
