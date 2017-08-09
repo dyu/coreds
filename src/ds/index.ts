@@ -199,19 +199,19 @@ export namespace ds {
      * ```
      * 
      * message ACResult {
-     *   required string name = 1;
-     *   required bytes value = 2;
-     *   optional uint32 id = 3;
+     *   required bytes value = 1;
+     *   optional uint32 id = 2;
+     *   required string name = 3;
      * }
      * ```
      */
     export interface ACResult {
-        /** name = 1, required */
+        /** value = 1, required */
         ['1']: string
-        /** value = 2, required */
-        ['2']: string
-        /** id = 3, optional */
-        ['3']?: number
+        /** id = 2, optional */
+        ['2']?: number
+        /** name = 3, required */
+        ['3']: string
     }
     export namespace ACResult {
         /**
@@ -229,30 +229,30 @@ export namespace ds {
 
         export const enum $ {
             /** required: 1 */
-            name = '1',
-            /** required: 2 */
-            value = '2',
-            /** optional: 3 */
-            id = '3'
+            value = '1',
+            /** optional: 2 */
+            id = '2',
+            /** required: 3 */
+            name = '3'
         }
         export const enum $0 {
-            name = 1,
-            value = 2,
-            id = 3
+            value = 1,
+            id = 2,
+            name = 3
         }
-        export function $new(name: string, value: string, id?: number): ACResult {
+        export function $new(value: string, name: string, id?: number): ACResult {
             return {
-                '1': name,
-                '2': value,
-                '3': id
+                '1': value,
+                '2': id,
+                '3': name
             }
         }
         export const $d = {
-            $rfbs: 1, $rfdf: ['1'],
-            $fdf: ['1','3'],
-            '1': {_: 1, t: 3, m: 2, a: 0, $n: 'Name'},
-            '2': {_: 2, t: 2, m: 2, a: 0, $n: 'Value'},
-            '3': {_: 3, t: 10, m: 1, a: 0, $n: 'Id'},
+            $rfbs: 4, $rfdf: ['3'],
+            $fdf: ['2','3'],
+            '1': {_: 1, t: 2, m: 2, a: 0, $n: 'Value'},
+            '2': {_: 2, t: 10, m: 1, a: 0, $n: 'Id'},
+            '3': {_: 3, t: 3, m: 2, a: 0, $n: 'Name'},
             $new
         }
 
