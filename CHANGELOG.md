@@ -1,3 +1,7 @@
+## 0.10.2 (2017-09-22)
+
+* Reset required flag when the required input is also reset/cleared.
+
 ## 0.10.1 (2017-08-22)
 
 * Add localStorage stub

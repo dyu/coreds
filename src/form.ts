@@ -315,7 +315,7 @@ export function $toggle_prepare(pager: any): boolean {
 // event handling
 
 function postValidate(message: any, fd: any, fk: string, flag: number, 
-        message_: PojoSO, dfbs: number, msg, root: any, dirty: boolean) {
+        message_: PojoSO, dfbs: number, msg, root: any, dirty: boolean, update: boolean) {
     let root_ = root._ as PojoSO,
         state = message_.state,
         vfbs = message_.vfbs,
@@ -342,8 +342,8 @@ function postValidate(message: any, fd: any, fk: string, flag: number,
     } else {
         if (vfbs & flag)
             message_.vfbs ^= flag
-        if (required && !(rfbs & flag))
-            message_.rfbs |= flag
+        if (!update && required && (!(rfbs & flag) || !dirty))
+            message_.rfbs ^= flag
     }
 
     if (root_.msg) {
@@ -385,7 +385,7 @@ function validateString(val: string, message: any, fd: any, fk: string, flag: nu
         return msg
     }
 
-    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty)
+    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty, update)
     
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
@@ -434,7 +434,7 @@ function validateFloat(val: any, message: any, fd: any, fk: string, flag: number
         return msg
     }
 
-    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty)
+    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty, update)
     
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
@@ -483,7 +483,7 @@ function validateInt(val: any, message: any, fd: any, fk: string, flag: number, 
         return msg
     }
 
-    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty)
+    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty, update)
     
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
@@ -529,7 +529,7 @@ function validateTime(val: any, message: any, fd: any, fk: string, flag: number,
         return msg
     }
 
-    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty)
+    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty, update)
     
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
@@ -583,7 +583,7 @@ function validateDate(e, val: any, message: any, fd: any, fk: string, flag: numb
         return msg
     }
 
-    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty)
+    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty, update)
     
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
@@ -629,7 +629,7 @@ function validateDateTime(val: any, message: any, fd: any, fk: string, flag: num
         return msg
     }
 
-    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty)
+    postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty, update)
     
     if (!cbfn || sv === undefined || ((flags & ChangeFlags.CB_ONLY_ON_SET) && sv === null))
         return msg
@@ -661,40 +661,39 @@ export function $change(e, fk: string, message: any, update: boolean, root?: any
         flag = 1 << (f - 1),
         el = e.target,
         msg: string|null = null,
+        dirty = true,
         val
     
     switch (fd.t) {
         case FieldType.BOOL:
-            // re-use update var as dirty
             if (el.nodeName !== 'SELECT') {
                 message[fk] = val = el.checked
-                update = !(flag & dfbs)
+                dirty = !(flag & dfbs)
             } else if (update || el.value) {
                 message[fk] = val = ('1' === el.value)
-                update = !(flag & dfbs)
+                dirty = !(flag & dfbs)
             } else {
                 message[fk] = val = null
-                update = false
+                dirty = false
             }
-            postValidate(message, fd, fk, flag, message_, dfbs, msg, root, update)
+            postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty, update)
 
             if (!cbfn || ((flags & ChangeFlags.CB_ONLY_ON_SET) && val === null))
                 break
             cbfn(fk, val, message, fd, root)
             break
         case FieldType.ENUM:
-            // re-use update var as dirty
             if (!update) {
-                val = (update = !!el.value.length) ? parseInt(el.value, 10) : null
+                val = (dirty = !!el.value.length) ? parseInt(el.value, 10) : null
             } else if (!(flag & dfbs)) {
                 // first update, dirty state
                 message_[fk] = val = parseInt(el.value, 10)
             } else if (message_[fk] === (val = parseInt(el.value, 10))) {
                 // restored to original value, no longer dirty
-                update = false
+                dirty = false
             }
             message[fk] = val
-            postValidate(message, fd, fk, flag, message_, dfbs, msg, root, update)
+            postValidate(message, fd, fk, flag, message_, dfbs, msg, root, dirty, update)
             
             if (!cbfn || ((flags & ChangeFlags.CB_ONLY_ON_SET) && val === null))
                 break
