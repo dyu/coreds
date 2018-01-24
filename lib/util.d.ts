@@ -1,10 +1,12 @@
 export declare const hasOwnProperty: (v: string) => boolean;
 export declare function noop(): null;
+export declare function noop_arg(ignore: any): void;
+export declare function setNextTick(fn: any): void;
+export declare function nextTick(fn: any): void;
 /**
  * ts type hack.
  */
 export declare function $any(p: any): any;
-export declare function noop_arg(ignore: any): void;
 /**
  * Define a getter that should not be configurable.
  * Returns the value

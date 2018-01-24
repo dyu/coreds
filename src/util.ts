@@ -1,5 +1,19 @@
+const defer = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.setTimeout
+let nt = defer
 export const hasOwnProperty = Object.prototype.hasOwnProperty
 export function noop() { return null }
+export function noop_arg(ignore) {}
+
+export function setNextTick(fn: any) {
+    // can only be overriden once
+    if (nt !== defer && typeof fn === 'function') {
+        nt = fn
+    }
+}
+
+export function nextTick(fn: any) {
+    nt(fn)
+}
 
 /**
  * ts type hack.
@@ -7,8 +21,6 @@ export function noop() { return null }
 export function $any(p): any {
     return p
 }
-
-export function noop_arg(ignore) {}
 
 /**
  * Define a getter that should not be configurable.

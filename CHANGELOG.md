@@ -1,3 +1,7 @@
+## 1.0.0 (2018-01-24)
+
+* Add `nextTick` function
+
 ## 0.10.2 (2017-09-22)
 
 * Reset required flag when the required input is also reset/cleared.
