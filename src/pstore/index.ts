@@ -933,25 +933,7 @@ export class PojoStore<T> {
         
         return EventFlags.PREVENT_BOTH
     }
-
-    // next tick
-
-    /*$$requestNewer(pager: Pager) {
-        nextTick(() => this.requestNewer())
-    }
-
-    $$requestOlder(pager: Pager) {
-        nextTick(() => this.requestOlder())
-    }
-
-    $$reload(pager: Pager) {
-        nextTick(() => this.reload())
-    }
     
-    $$notify() {
-        nextTick(() => this.notify())
-    }*/
-
     cbFetchSuccess(array: Array<T>) {
         let pager = this.pager, 
             masked = PagerState.MASK_RPC & pager.state
