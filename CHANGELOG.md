@@ -1,3 +1,7 @@
+## 1.0.1 (2018-01-26)
+
+* Add `range` function
+
 ## 1.0.0 (2018-01-24)
 
 * Add `nextTick` function
