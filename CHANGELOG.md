@@ -1,3 +1,7 @@
+## 1.0.2 (2018-02-01)
+
+* Allow form success msg to be empty.
+
 ## 1.0.1 (2018-01-26)
 
 * Add `range` function

@@ -127,7 +127,7 @@ export function $success(pojo: any, msg?: string) {
     let pojo_ = pojo['_'] as PojoSO
     
     pojo_.state = bit_clear_and_set(pojo_.state, PojoState.MASK_STATUS|PojoState.LOADING, PojoState.SUCCESS)
-    pojo_.msg = msg || 'Successful.'
+    pojo_.msg = msg !== undefined ? msg : 'Successful.'
     
     clear_fields(pojo, pojo['$d'])
 }
@@ -243,7 +243,7 @@ export function $update(pojo: any, pager: HasState, original: any, changes?: any
 // =====================================
 // toggle
 
-export function $toggle_success(pager: any, pojo_update: any, skipMerge?: boolean): boolean {
+export function $toggle_success(pager: any, pojo_update: any, skipMerge?: boolean, msg?: string): boolean {
     let selected = pager.pojo,
         selected_ = selected['_'] as PojoSO,
         store = pager['store']
@@ -253,7 +253,7 @@ export function $toggle_success(pager: any, pojo_update: any, skipMerge?: boolea
         mergeOriginalFrom(selected, selected['$d'], store.getOriginal(selected), pojo_update)
     
     selected_.state = bit_clear_and_set(selected_.state, PojoState.MASK_STATUS|PojoState.LOADING, PojoState.SUCCESS)
-    selected_.msg = 'Update Successful.'
+    selected_.msg = msg !== undefined ? msg : 'Update Successful.'
     
     return true
 }

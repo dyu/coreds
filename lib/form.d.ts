@@ -19,7 +19,7 @@ export declare function $update_req(key: string, mc: MultiCAS, id?: number): Par
 export declare function $update_success(pojo: any, pager: HasState, original: any, selected?: any): void;
 export declare function $update_failed(pojo: any, pager: HasState, errmsg: any): void;
 export declare function $update(pojo: any, pager: HasState, original: any, changes?: any): MultiCAS | undefined;
-export declare function $toggle_success(pager: any, pojo_update: any, skipMerge?: boolean): boolean;
+export declare function $toggle_success(pager: any, pojo_update: any, skipMerge?: boolean, msg?: string): boolean;
 export declare function $toggle_failed(pager: any, errmsg: any): void;
 export declare function $toggle(pager: any, field: string, pojo?: any, changed?: boolean): MultiCAS | null;
 export declare function $toggle_prepare(pager: any): boolean;
