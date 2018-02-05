@@ -73,6 +73,18 @@ export function copyp<T>(obj: T, prop: string, src: any): T {
 }
 
 /**
+ * Copy the props to the target object.
+ * Returns the object
+ */
+export function shallowCopyTo<T>(target: T, src: any, overwrite?: boolean): T {
+    for (var i of Object.keys(src)) {
+        if (overwrite || undefined === target[i]) target[i] = src[i]
+    }
+    
+    return target
+}
+
+/**
  * Nullify property.
  * Useful for lazy observable properties that bypasses typescript's strictNullChecks config.
  */

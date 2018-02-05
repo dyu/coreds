@@ -29,6 +29,11 @@ export declare function setp<T>(obj: T, prop: string, val: any): T;
  */
 export declare function copyp<T>(obj: T, prop: string, src: any): T;
 /**
+ * Copy the props to the target object.
+ * Returns the object
+ */
+export declare function shallowCopyTo<T>(target: T, src: any, overwrite?: boolean): T;
+/**
  * Nullify property.
  * Useful for lazy observable properties that bypasses typescript's strictNullChecks config.
  */

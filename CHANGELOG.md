@@ -1,3 +1,7 @@
+## 1.0.3 (2018-02-05)
+
+* Add `copyUniqueTo`
+
 ## 1.0.2 (2018-02-01)
 
 * Allow form success msg to be empty.
