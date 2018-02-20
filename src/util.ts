@@ -4,8 +4,8 @@ export const hasOwnProperty = Object.prototype.hasOwnProperty
 export function noop() { return null }
 export function noop_arg(ignore) {}
 
-export function range(val: any, min: number, max: number, def: number) {
-    return typeof val !== 'number' ? def : Math.max(min, Math.min(val, max))
+export function range(val: any, min: number, max: number, def_val: number) {
+    return typeof val !== 'number' ? def_val : Math.max(min, Math.min(val, max))
 }
 
 export function setNextTick(fn: any) {

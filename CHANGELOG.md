@@ -1,3 +1,7 @@
+## 1.0.4 (2018-02-20)
+
+* Avoid using the var `def` since some minifiers fail upon encountering that.
+
 ## 1.0.3 (2018-02-05)
 
 * Add `shallowCopyTo`

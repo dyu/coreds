@@ -1,7 +1,7 @@
 export declare const hasOwnProperty: (v: string) => boolean;
 export declare function noop(): null;
 export declare function noop_arg(ignore: any): void;
-export declare function range(val: any, min: number, max: number, def: number): number;
+export declare function range(val: any, min: number, max: number, def_val: number): number;
 export declare function setNextTick(fn: any): void;
 export declare function nextTick(fn: any): void;
 /**
