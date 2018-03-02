@@ -1,3 +1,7 @@
+## 1.0.5 (2018-03-02)
+
+* `page_vcount` optimization
+
 ## 1.0.4 (2018-02-20)
 
 * Avoid using the var `def` since some minifiers fail upon encountering that.

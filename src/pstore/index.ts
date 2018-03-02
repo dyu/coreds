@@ -289,13 +289,11 @@ export class PojoStore<T> {
         pager.index_selected = idxSelected
         pager.index_hidden = i
 
-        var visibleCount = pageSize
         while (i < pageSize) {
             toPopulate[i++]['_'].lstate = PojoListState.NONE
-            visibleCount--
         }
 
-        pager.page_vcount = visibleCount
+        pager.page_vcount = len
         pager.page_count = Math.floor((size - 1) / pageSize)
         pager.page_from = (page * pageSize) + 1
         pager.page_to = (page * pageSize) + (pageSize - remaining)
