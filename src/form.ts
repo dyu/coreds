@@ -8,12 +8,11 @@ import {
 } from './util'
 import {
     formatTime, formatDate, formatDateTime,
-    isValidDateStr, isValidDateTimeStr
+    isValidDateStr, isValidDateTimeStr,
+    numeral
 } from './datetime_util'
 import { MultiCAS } from './ds/mc'
 import { diffFieldsTo, diffFieldTo, mergeOriginalFrom } from './diff'
-
-import * as numeral from 'numeral'
 
 const hasOwnProperty = Object.prototype.hasOwnProperty
 

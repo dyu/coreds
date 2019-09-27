@@ -1,7 +1,7 @@
-declare function require(path: string) : any;
-
-import * as numeral from 'numeral'
 import { regexDate, utcToLocal } from './util'
+import * as numeral_ from 'numeral'
+export let numeral = numeral_
+if (typeof numeral !== 'function') numeral = numeral_['default'] || window['numeral']
 
 const //MILLIS_PER_DAY = 1000 * 60 * 60 * 24,
     monthRegularArray = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ],
