@@ -13,12 +13,17 @@ export interface Factory {
     getter(created: any): any;
     setter(created: any): any;
     wrap_as_ds(created: any): any;
+    watch(getter: any, setter: any): any;
     freeze_fn?: any;
 }
 /**
  * Set the factory for creating observables.
  */
 export declare function setFactory(p: Factory): void;
+/**
+ * Watch a property (function, 1st arg) and the 2nd arg (function) will be called on change.
+ */
+export declare function watch(getter: any, setter: any): void;
 /**
  * Create an observable.
  */

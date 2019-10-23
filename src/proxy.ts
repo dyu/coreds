@@ -14,6 +14,7 @@ export interface Factory {
     getter(created: any): any
     setter(created: any): any
     wrap_as_ds(created: any): any
+    watch(getter: any, setter: any): any
     freeze_fn?: any
 }
 
@@ -24,6 +25,13 @@ let factory
  */
 export function setFactory(p: Factory) {
     factory = p
+}
+
+/**
+ * Watch a property (function, 1st arg) and the 2nd arg (function) will be called on change.
+ */
+export function watch(getter: any, setter: any) {
+    factory.watch(getter, setter)
 }
 
 /**
