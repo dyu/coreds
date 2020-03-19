@@ -1,6 +1,7 @@
 import {
     FieldType, PojoSO, PojoState, ChangeFlags,
-    HasState, PagerState, SelectionFlags
+    HasState, PagerState, SelectionFlags,
+    ObservableFactory
 } from './types'
 import {
     setp, defp, bit_unset, localToUtc, bit_clear_and_set, extractMsg,
@@ -748,5 +749,102 @@ export class Form {
         }
         
         return ret
+    }
+}
+
+export class FormPojoBuilder {
+    map = Object.create(null)
+    $d = {
+        $rfbs: 0,
+        $rfdf: [] as any[],
+        //$fikdf: [] as any[],
+        $fdf: [] as any[]
+    }
+    num = 0
+    obj = {}
+    result = null as any
+    
+    constructor(private factory: ObservableFactory) {
+        
+    }
+    
+    getFD(name) {
+        return this.map[name]
+    }
+    
+    build(withVal?: boolean) {
+        if (this.result) throw 'Already built.'
+        if (this.num === 0) throw 'No fields defined.'
+        
+        return this.result = initObservable(this.obj, this.$d, withVal)
+    }
+    
+    _(t: number, a: number, o: number, name: string, value: any, display: string, required?: boolean): FormPojoBuilder {
+        if (this.result) throw 'Already built.'
+        if (this.map[name]) throw `${name} already exists.`
+        
+        let obj = this.obj,
+            $d = this.$d,
+            factory = this.factory,
+            n = ++this.num,
+            fd = {name, v: value, k: String(n), _: n, t, a, o, m: required ? 2 : 1, $n: display}
+        
+        this.map[name] = fd
+        $d[fd.k] = fd
+        $d.$fdf.push(fd.k)
+        
+        if (required) {
+            $d.$rfbs |= (1 << (fd._ - 1))
+            $d.$rfdf.push(fd.k)
+        }
+        
+        const binding = factory.create(fd.v),
+            get = factory.getter(binding),
+            set = factory.setter(binding)
+        
+        Object.defineProperty(obj, fd.k, {
+            enumerable: false,
+            configurable: false,
+            get,
+            set
+        })
+        Object.defineProperty(obj, fd.name, {
+            enumerable: true,
+            configurable: false,
+            get,
+            set
+        })
+        
+        return this
+    }
+    $bool(name: string, value: boolean|null, display: string): FormPojoBuilder {
+        return this._(1, 0, 0, name, value, display)
+    }
+    $str(name: string, value: string|null, display: string, required?: boolean): FormPojoBuilder {
+        return this._(3, 0, 0, name, value, display, required)
+    }
+    $float(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
+        return this._(4, 0, 0, name, value, display, required)
+    }
+    $double(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
+        return this._(5, 0, 0, name, value, display, required)
+    }
+    $int8(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
+        return this._(8, 0, 0, name, value, display, required)
+    }
+    $int32(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
+        return this._(10, 0, 0, name, value, display, required)
+    }
+    $int64(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
+        return this._(11, 0, 0, name, value, display, required)
+    }
+    $time(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
+        return this._(10, 0, 1, name, value, display, required)
+    }
+    $date(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
+        return this._(11, 0, 2, name, value, display, required)
+    }
+    $datetime(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
+        return this._(11, 0, 4, name, value, display, required)
     }
 }

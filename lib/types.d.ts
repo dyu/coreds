@@ -117,3 +117,21 @@ export interface KeyHandler {
     dec(key: string): string;
 }
 export declare type MergeFn<T> = (src: any, descriptor: any, target: T) => T;
+/**
+ * An observable.
+ */
+export interface DataSignal<T> {
+    (): T;
+    (val: T): T;
+}
+/**
+ * Factory for creating observables.
+ */
+export interface ObservableFactory {
+    create(val: any): any;
+    getter(created: any): any;
+    setter(created: any): any;
+    wrap_as_ds(created: any): any;
+    watch(getter: any, setter: any): any;
+    freeze_fn?: any;
+}

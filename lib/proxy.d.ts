@@ -1,25 +1,12 @@
-/**
- * An observable.
- */
-export interface DataSignal<T> {
-    (): T;
-    (val: T): T;
-}
-/**
- * Factory for creating observables.
- */
-export interface Factory {
-    create(val: any): any;
-    getter(created: any): any;
-    setter(created: any): any;
-    wrap_as_ds(created: any): any;
-    watch(getter: any, setter: any): any;
-    freeze_fn?: any;
-}
+import { DataSignal, ObservableFactory } from './types';
 /**
  * Set the factory for creating observables.
  */
-export declare function setFactory(p: Factory): void;
+export declare function setFactory(p: ObservableFactory): void;
+/**
+ * Get the factory for creating observables.
+ */
+export declare function getFactory(): any;
 /**
  * Watch a property (function, 1st arg) and the 2nd arg (function) will be called on change.
  */
