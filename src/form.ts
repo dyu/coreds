@@ -799,7 +799,7 @@ export class FormPojoBuilder {
         return ret
     }
     
-    _(t: number, a: number, o: number, name: string, value: any, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+    _(t: number, a: number, o: number, name: string, value: any, display: string, required?: boolean, vfn?: (val) => string|undefined|null): FormPojoBuilder {
         if (this.built) throw 'Already built.'
         if (this.map[name]) throw `${name} already exists.`
         
@@ -840,31 +840,31 @@ export class FormPojoBuilder {
     $bool(name: string, value: boolean|null, display: string): FormPojoBuilder {
         return this._(1, 0, 0, name, value, display)
     }
-    $str(name: string, value: string|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+    $str(name: string, value: string|null, display: string, required?: boolean, vfn?: (val) => string|undefined|null): FormPojoBuilder {
         return this._(3, 0, 0, name, value, display, required, vfn)
     }
-    $float(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+    $float(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string|undefined|null): FormPojoBuilder {
         return this._(4, 0, 0, name, value, display, required, vfn)
     }
-    $double(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+    $double(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string|undefined|null): FormPojoBuilder {
         return this._(5, 0, 0, name, value, display, required, vfn)
     }
-    $int8(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+    $int8(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string|undefined|null): FormPojoBuilder {
         return this._(8, 0, 0, name, value, display, required, vfn)
     }
-    $int32(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+    $int32(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string|undefined|null): FormPojoBuilder {
         return this._(10, 0, 0, name, value, display, required, vfn)
     }
-    $int64(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+    $int64(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string|undefined|null): FormPojoBuilder {
         return this._(11, 0, 0, name, value, display, required, vfn)
     }
-    $time(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+    $time(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string|undefined|null): FormPojoBuilder {
         return this._(10, 0, 1, name, value, display, required, vfn)
     }
-    $date(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+    $date(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string|undefined|null): FormPojoBuilder {
         return this._(11, 0, 2, name, value, display, required, vfn)
     }
-    $datetime(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+    $datetime(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string|undefined|null): FormPojoBuilder {
         return this._(11, 0, 4, name, value, display, required, vfn)
     }
 }
