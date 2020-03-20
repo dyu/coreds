@@ -762,7 +762,7 @@ export class FormPojoBuilder {
     }
     num = 0
     obj = {}
-    result = null as any
+    built = false
     
     constructor(private factory: ObservableFactory) {
         
@@ -773,21 +773,41 @@ export class FormPojoBuilder {
     }
     
     build(withVal?: boolean) {
-        if (this.result) throw 'Already built.'
+        if (this.built) throw 'Already built.'
         if (this.num === 0) throw 'No fields defined.'
         
-        return this.result = initObservable(this.obj, this.$d, withVal)
+        let ret = initObservable(this.obj, this.$d, withVal),
+            inner = ret['_'],
+            factory = this.factory
+        
+        for (let k of Object.keys(inner)) {
+            let binding = factory.create(inner[k])            
+            Object.defineProperty(inner, k, {
+                enumerable: true,
+                configurable: true,
+                get: factory.getter(binding),
+                set: factory.setter(binding)
+            })
+        }
+        Object.defineProperty(ret, '_', {
+            enumerable: false,
+            configurable: true,
+            value: inner
+        })
+        
+        this.built = true
+        return ret
     }
     
-    _(t: number, a: number, o: number, name: string, value: any, display: string, required?: boolean): FormPojoBuilder {
-        if (this.result) throw 'Already built.'
+    _(t: number, a: number, o: number, name: string, value: any, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+        if (this.built) throw 'Already built.'
         if (this.map[name]) throw `${name} already exists.`
         
         let obj = this.obj,
             $d = this.$d,
             factory = this.factory,
             n = ++this.num,
-            fd = {name, v: value, k: String(n), _: n, t, a, o, m: required ? 2 : 1, $n: display}
+            fd = {name, v: value, k: String(n), _: n, t, a, o, m: required ? 2 : 1, $n: display, vfn}
         
         this.map[name] = fd
         $d[fd.k] = fd
@@ -820,31 +840,31 @@ export class FormPojoBuilder {
     $bool(name: string, value: boolean|null, display: string): FormPojoBuilder {
         return this._(1, 0, 0, name, value, display)
     }
-    $str(name: string, value: string|null, display: string, required?: boolean): FormPojoBuilder {
-        return this._(3, 0, 0, name, value, display, required)
+    $str(name: string, value: string|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+        return this._(3, 0, 0, name, value, display, required, vfn)
     }
-    $float(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
-        return this._(4, 0, 0, name, value, display, required)
+    $float(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+        return this._(4, 0, 0, name, value, display, required, vfn)
     }
-    $double(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
-        return this._(5, 0, 0, name, value, display, required)
+    $double(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+        return this._(5, 0, 0, name, value, display, required, vfn)
     }
-    $int8(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
-        return this._(8, 0, 0, name, value, display, required)
+    $int8(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+        return this._(8, 0, 0, name, value, display, required, vfn)
     }
-    $int32(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
-        return this._(10, 0, 0, name, value, display, required)
+    $int32(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+        return this._(10, 0, 0, name, value, display, required, vfn)
     }
-    $int64(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
-        return this._(11, 0, 0, name, value, display, required)
+    $int64(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+        return this._(11, 0, 0, name, value, display, required, vfn)
     }
-    $time(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
-        return this._(10, 0, 1, name, value, display, required)
+    $time(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+        return this._(10, 0, 1, name, value, display, required, vfn)
     }
-    $date(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
-        return this._(11, 0, 2, name, value, display, required)
+    $date(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+        return this._(11, 0, 2, name, value, display, required, vfn)
     }
-    $datetime(name: string, value: number|null, display: string, required?: boolean): FormPojoBuilder {
-        return this._(11, 0, 4, name, value, display, required)
+    $datetime(name: string, value: number|null, display: string, required?: boolean, vfn?: (val) => string): FormPojoBuilder {
+        return this._(11, 0, 4, name, value, display, required, vfn)
     }
 }
