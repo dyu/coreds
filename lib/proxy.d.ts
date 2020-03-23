@@ -21,7 +21,7 @@ export declare function o<T>(val: T): DataSignal<T>;
 export declare function proxy<T>(obj: T, $?: any): T;
 export declare const enum BindFlags {
     OVERWRITE = 1,
-    OWN_KEYS = 2,
+    OWN_KEYS = 2
 }
 /**
  * Bind the functions to obj.

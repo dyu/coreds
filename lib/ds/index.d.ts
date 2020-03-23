@@ -16,10 +16,10 @@ export declare namespace ds {
     namespace ParamId {
         const enum $ {
             /** required: 1 */
-            id = "1",
+            id = "1"
         }
         const enum $0 {
-            id = 1,
+            id = 1
         }
         function $new(id: number): ParamId;
         const $d: {
@@ -33,7 +33,7 @@ export declare namespace ds {
                 a: number;
                 $n: string;
             };
-            $new: (id: number) => ParamId;
+            $new: typeof $new;
         };
     }
     /**
@@ -56,11 +56,11 @@ export declare namespace ds {
             /** required: 1 */
             key = "1",
             /** optional: 2 */
-            parentKey = "2",
+            parentKey = "2"
         }
         const enum $0 {
             key = 1,
-            parentKey = 2,
+            parentKey = 2
         }
         function $new(key: string, parentKey?: string): ParamKey;
         const $d: {
@@ -80,7 +80,7 @@ export declare namespace ds {
                 a: number;
                 $n: string;
             };
-            $new: (key: string, parentKey?: string | undefined) => ParamKey;
+            $new: typeof $new;
         };
     }
     /**
@@ -108,12 +108,12 @@ export declare namespace ds {
             /** required: 2 */
             mc = "2",
             /** optional: 3 */
-            id = "3",
+            id = "3"
         }
         const enum $0 {
             key = 1,
             mc = 2,
-            id = 3,
+            id = 3
         }
         function $new(key: string, mc: MultiCAS, id?: number): ParamUpdate;
         const $d: {
@@ -142,7 +142,7 @@ export declare namespace ds {
                 a: number;
                 $n: string;
             };
-            $new: (key: string, mc: MultiCAS, id?: number | undefined) => ParamUpdate;
+            $new: typeof $new;
         };
     }
     /**
@@ -175,13 +175,13 @@ export declare namespace ds {
             /** optional: 3 */
             startKey = "3",
             /** optional: 4 */
-            parentKey = "4",
+            parentKey = "4"
         }
         const enum $0 {
             desc = 1,
             limit = 2,
             startKey = 3,
-            parentKey = 4,
+            parentKey = 4
         }
         function $new(desc: boolean, limit?: number, startKey?: string, parentKey?: string): ParamRangeKey;
         const $d: {
@@ -217,7 +217,7 @@ export declare namespace ds {
                 a: number;
                 $n: string;
             };
-            $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
+            $new: typeof $new;
         };
     }
     /**
@@ -257,12 +257,12 @@ export declare namespace ds {
             /** optional: 2 */
             id = "2",
             /** required: 3 */
-            name = "3",
+            name = "3"
         }
         const enum $0 {
             value = 1,
             id = 2,
-            name = 3,
+            name = 3
         }
         function $new(value: string, name: string, id?: number): ACResult;
         const $d: {
@@ -290,7 +290,7 @@ export declare namespace ds {
                 a: number;
                 $n: string;
             };
-            $new: (value: string, name: string, id?: number | undefined) => ACResult;
+            $new: typeof $new;
         };
     }
     /**
@@ -323,13 +323,13 @@ export declare namespace ds {
             /** optional: 3 */
             pgstart = "3",
             /** required: 4 */
-            prk = "4",
+            prk = "4"
         }
         const enum $0 {
             value = 1,
             end = 2,
             pgstart = 3,
-            prk = 4,
+            prk = 4
         }
         function $new(value: number, prk: ParamRangeKey, end?: number, pgstart?: number): P1;
         const $d: {
@@ -397,10 +397,10 @@ export declare namespace ds {
                         a: number;
                         $n: string;
                     };
-                    $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
+                    $new: typeof ParamRangeKey.$new;
                 };
             };
-            $new: (value: number, prk: ParamRangeKey, end?: number | undefined, pgstart?: number | undefined) => P1;
+            $new: typeof $new;
         };
     }
     /**
@@ -433,13 +433,13 @@ export declare namespace ds {
             /** optional: 3 */
             pgstart = "3",
             /** required: 4 */
-            prk = "4",
+            prk = "4"
         }
         const enum $0 {
             value = 1,
             end = 2,
             pgstart = 3,
-            prk = 4,
+            prk = 4
         }
         function $new(value: number, prk: ParamRangeKey, end?: number, pgstart?: number): P4;
         const $d: {
@@ -507,10 +507,10 @@ export declare namespace ds {
                         a: number;
                         $n: string;
                     };
-                    $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
+                    $new: typeof ParamRangeKey.$new;
                 };
             };
-            $new: (value: number, prk: ParamRangeKey, end?: number | undefined, pgstart?: number | undefined) => P4;
+            $new: typeof $new;
         };
     }
     /**
@@ -543,13 +543,13 @@ export declare namespace ds {
             /** optional: 3 */
             pgstart = "3",
             /** required: 4 */
-            prk = "4",
+            prk = "4"
         }
         const enum $0 {
             value = 1,
             end = 2,
             pgstart = 3,
-            prk = 4,
+            prk = 4
         }
         function $new(value: number, prk: ParamRangeKey, end?: number, pgstart?: number): P8;
         const $d: {
@@ -617,10 +617,10 @@ export declare namespace ds {
                         a: number;
                         $n: string;
                     };
-                    $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
+                    $new: typeof ParamRangeKey.$new;
                 };
             };
-            $new: (value: number, prk: ParamRangeKey, end?: number | undefined, pgstart?: number | undefined) => P8;
+            $new: typeof $new;
         };
     }
     /**
@@ -653,13 +653,13 @@ export declare namespace ds {
             /** optional: 3 */
             pgstart = "3",
             /** required: 4 */
-            prk = "4",
+            prk = "4"
         }
         const enum $0 {
             value = 1,
             end = 2,
             pgstart = 3,
-            prk = 4,
+            prk = 4
         }
         function $new(value: number, prk: ParamRangeKey, end?: number, pgstart?: number): PD;
         const $d: {
@@ -727,10 +727,10 @@ export declare namespace ds {
                         a: number;
                         $n: string;
                     };
-                    $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
+                    $new: typeof ParamRangeKey.$new;
                 };
             };
-            $new: (value: number, prk: ParamRangeKey, end?: number | undefined, pgstart?: number | undefined) => PD;
+            $new: typeof $new;
         };
     }
     /**
@@ -763,13 +763,13 @@ export declare namespace ds {
             /** optional: 3 */
             pgstart = "3",
             /** required: 4 */
-            prk = "4",
+            prk = "4"
         }
         const enum $0 {
             value = 1,
             end = 2,
             pgstart = 3,
-            prk = 4,
+            prk = 4
         }
         function $new(value: string, prk: ParamRangeKey, end?: string, pgstart?: string): PB;
         const $d: {
@@ -835,10 +835,10 @@ export declare namespace ds {
                         a: number;
                         $n: string;
                     };
-                    $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
+                    $new: typeof ParamRangeKey.$new;
                 };
             };
-            $new: (value: string, prk: ParamRangeKey, end?: string | undefined, pgstart?: string | undefined) => PB;
+            $new: typeof $new;
         };
     }
     /**
@@ -871,13 +871,13 @@ export declare namespace ds {
             /** optional: 3 */
             pgstart = "3",
             /** required: 4 */
-            prk = "4",
+            prk = "4"
         }
         const enum $0 {
             value = 1,
             end = 2,
             pgstart = 3,
-            prk = 4,
+            prk = 4
         }
         function $new(value: string, prk: ParamRangeKey, end?: string, pgstart?: string): PK;
         const $d: {
@@ -943,10 +943,10 @@ export declare namespace ds {
                         a: number;
                         $n: string;
                     };
-                    $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
+                    $new: typeof ParamRangeKey.$new;
                 };
             };
-            $new: (value: string, prk: ParamRangeKey, end?: string | undefined, pgstart?: string | undefined) => PK;
+            $new: typeof $new;
         };
     }
     /**
@@ -979,13 +979,13 @@ export declare namespace ds {
             /** optional: 3 */
             pgstart = "3",
             /** required: 4 */
-            prk = "4",
+            prk = "4"
         }
         const enum $0 {
             value = 1,
             end = 2,
             pgstart = 3,
-            prk = 4,
+            prk = 4
         }
         function $new(value: string, prk: ParamRangeKey, end?: string, pgstart?: string): PS;
         const $d: {
@@ -1053,10 +1053,10 @@ export declare namespace ds {
                         a: number;
                         $n: string;
                     };
-                    $new: (desc: boolean, limit?: number | undefined, startKey?: string | undefined, parentKey?: string | undefined) => ParamRangeKey;
+                    $new: typeof ParamRangeKey.$new;
                 };
             };
-            $new: (value: string, prk: ParamRangeKey, end?: string | undefined, pgstart?: string | undefined) => PS;
+            $new: typeof $new;
         };
     }
 }

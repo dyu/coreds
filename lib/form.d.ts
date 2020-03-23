@@ -55,15 +55,15 @@ export declare class FormPojoBuilder {
     constructor(factory: ObservableFactory);
     getFD(name: any): any;
     build(withVal?: boolean): {};
-    _(t: number, a: number, o: number, name: string, value: any, display: string, required?: boolean, vfn?: (val) => string | undefined | null): FormPojoBuilder;
+    _(t: number, a: number, o: number, name: string, value: any, display: string, required?: boolean, vfn?: (val: any) => string | undefined | null): FormPojoBuilder;
     $bool(name: string, value: boolean | null, display: string): FormPojoBuilder;
-    $str(name: string, value: string | null, display: string, required?: boolean, vfn?: (val) => string | undefined | null): FormPojoBuilder;
-    $float(name: string, value: number | null, display: string, required?: boolean, vfn?: (val) => string | undefined | null): FormPojoBuilder;
-    $double(name: string, value: number | null, display: string, required?: boolean, vfn?: (val) => string | undefined | null): FormPojoBuilder;
-    $int8(name: string, value: number | null, display: string, required?: boolean, vfn?: (val) => string | undefined | null): FormPojoBuilder;
-    $int32(name: string, value: number | null, display: string, required?: boolean, vfn?: (val) => string | undefined | null): FormPojoBuilder;
-    $int64(name: string, value: number | null, display: string, required?: boolean, vfn?: (val) => string | undefined | null): FormPojoBuilder;
-    $time(name: string, value: number | null, display: string, required?: boolean, vfn?: (val) => string | undefined | null): FormPojoBuilder;
-    $date(name: string, value: number | null, display: string, required?: boolean, vfn?: (val) => string | undefined | null): FormPojoBuilder;
-    $datetime(name: string, value: number | null, display: string, required?: boolean, vfn?: (val) => string | undefined | null): FormPojoBuilder;
+    $str(name: string, value: string | null, display: string, required?: boolean, vfn?: (val: any) => string | undefined | null): FormPojoBuilder;
+    $float(name: string, value: number | null, display: string, required?: boolean, vfn?: (val: any) => string | undefined | null): FormPojoBuilder;
+    $double(name: string, value: number | null, display: string, required?: boolean, vfn?: (val: any) => string | undefined | null): FormPojoBuilder;
+    $int8(name: string, value: number | null, display: string, required?: boolean, vfn?: (val: any) => string | undefined | null): FormPojoBuilder;
+    $int32(name: string, value: number | null, display: string, required?: boolean, vfn?: (val: any) => string | undefined | null): FormPojoBuilder;
+    $int64(name: string, value: number | null, display: string, required?: boolean, vfn?: (val: any) => string | undefined | null): FormPojoBuilder;
+    $time(name: string, value: number | null, display: string, required?: boolean, vfn?: (val: any) => string | undefined | null): FormPojoBuilder;
+    $date(name: string, value: number | null, display: string, required?: boolean, vfn?: (val: any) => string | undefined | null): FormPojoBuilder;
+    $datetime(name: string, value: number | null, display: string, required?: boolean, vfn?: (val: any) => string | undefined | null): FormPojoBuilder;
 }

@@ -23,12 +23,12 @@ export declare const enum $ {
     /** optional: 3 */
     startKey = "3",
     /** optional: 4 */
-    parentKey = "4",
+    parentKey = "4"
 }
 export declare const enum $0 {
     desc = 1,
     limit = 2,
     startKey = 3,
-    parentKey = 4,
+    parentKey = 4
 }
 export declare function $new(desc: boolean, limit?: number, startKey?: string, parentKey?: string): ParamRangeKey;

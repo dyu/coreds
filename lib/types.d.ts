@@ -15,7 +15,7 @@ export declare const enum FieldType {
     SINT64 = 13,
     SFIXED32 = 14,
     SFIXED64 = 15,
-    ENUM = 16,
+    ENUM = 16
 }
 export declare const enum PojoState {
     NONE = 0,
@@ -24,7 +24,7 @@ export declare const enum PojoState {
     WARNING = 4,
     LOADING = 8,
     UPDATE = 16,
-    MASK_STATUS = 7,
+    MASK_STATUS = 7
 }
 export interface HasState {
     state: number;
@@ -43,12 +43,12 @@ export declare const enum EventFlags {
     PREVENT_DEFAULT = 1,
     PREVENT_PROPAGATION = 2,
     PREVENT_BOTH = 3,
-    CAPTURING = 4,
+    CAPTURING = 4
 }
 export declare const enum ChangeFlags {
     SKIP_VALIDATE = 1,
     VM_SET = 2,
-    CB_ONLY_ON_SET = 4,
+    CB_ONLY_ON_SET = 4
 }
 export interface FormUpdate {
     pojo: any;
@@ -60,7 +60,7 @@ export declare const enum SelectionType {
     /** Do not reference this, for internal use only */
     SELECT = 2,
     RETAIN = 3,
-    RESELECT = 4,
+    RESELECT = 4
 }
 export declare const enum SelectionFlags {
     NONE = 0,
@@ -68,14 +68,14 @@ export declare const enum SelectionFlags {
     REFRESH = 2,
     CLICKED_UPDATE = 4,
     FORCE = 8,
-    MASK_FORCE_OR_UPDATE = 12,
+    MASK_FORCE_OR_UPDATE = 12
 }
 export declare const enum PojoListState {
     NONE = 0,
     INCLUDED = 1,
     SELECTED = 2,
     REFRESH = 4,
-    MASK_SELECTED_REFRESH = 6,
+    MASK_SELECTED_REFRESH = 6
 }
 export declare const enum PagerState {
     NONE = 0,
@@ -90,7 +90,7 @@ export declare const enum PagerState {
     LOCAL_SEARCH = 256,
     MASK_STATUS = 7,
     MASK_RPC = 224,
-    MASK_RPC_DISABLE = 264,
+    MASK_RPC_DISABLE = 264
 }
 export interface Pager extends HasState {
     size: number;

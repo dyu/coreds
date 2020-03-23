@@ -1,4 +1,4 @@
-export declare const hasOwnProperty: (v: string) => boolean;
+export declare const hasOwnProperty: (v: string | number | symbol) => boolean;
 export declare function noop(): null;
 export declare function noop_arg(ignore: any): void;
 export declare function range(val: any, min: number, max: number, def_val: number): number;
