@@ -1,4 +1,5 @@
-const defer = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.setTimeout
+const isNode = 'undefined' === typeof window
+const defer = isNode ? setTimeout : window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.setTimeout
 let nt = defer
 export const hasOwnProperty = Object.prototype.hasOwnProperty
 export function noop() { return null }
@@ -153,6 +154,7 @@ function b_to_b64(bytes: any): string {
 }
 
 function b_to_b64_fn(): (bytes: any) => string {
+    if (isNode) return b_to_b64
     var b = window['Binary'], b2a = window.btoa, b2s
     if (b && (b2s = b['bytesToString']) && typeof b2s === 'function' && typeof b2a === 'function') {
         return function(bytes: any): string {
@@ -178,6 +180,7 @@ function b64_to_b(base64: string): any {
 }
 
 function b64_to_b_fn(): (base64: string) => any {
+    if (isNode) return b64_to_b
     var b = window['Binary'], a2b = window.atob, s2b
     if (b && (s2b = b['stringToBytes']) && typeof s2b === 'function' && typeof a2b === 'function') {
         return function(base64: string): any {

@@ -1,4 +1,5 @@
 declare function fetch(path: string, opts?: any): any;
+declare const process: any;
 
 export interface HasToken {
     token: string
@@ -56,10 +57,11 @@ const config_default = {
     post$$
 } as Config
 
-window['rpc_config_d'] = config_default
+const isNode = 'undefined' === typeof window
+!isNode && (window['rpc_config_d'] = config_default)
 
-const config: Config = window['rpc_config'] || config_default
-const prefix: string = window['rpc_host'] || ''
+const config: Config = isNode ? config_default : (window['rpc_config'] || config_default)
+const prefix: string = isNode ? (process.env.RPC_HOST || 'http://127.0.0.1:5000') : (window['rpc_host'] || '')
 
 function get$$<T>(location: string, opts?: any): PromiseLike<T> {
     return $get(!prefix ? location : prefix + location, opts)
