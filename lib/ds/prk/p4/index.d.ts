@@ -3,6 +3,384 @@ export declare namespace p4 {
     /**
      * ```
      *
+     * message P4D1 {
+     *   required uint32 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.P1 l = 3;
+     * }
+     * ```
+     */
+    interface P4D1 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.P1;
+    }
+    function P4D1$$new(p0: number, p1: number, l: ds.P1): P4D1;
+    /**
+     * ```
+     *
+     * message P4D4 {
+     *   required uint32 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.P4 l = 3;
+     * }
+     * ```
+     */
+    interface P4D4 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.P4;
+    }
+    function P4D4$$new(p0: number, p1: number, l: ds.P4): P4D4;
+    /**
+     * ```
+     *
+     * message P4D8 {
+     *   required uint32 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.P8 l = 3;
+     * }
+     * ```
+     */
+    interface P4D8 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.P8;
+    }
+    function P4D8$$new(p0: number, p1: number, l: ds.P8): P4D8;
+    /**
+     * ```
+     *
+     * message P4DD {
+     *   required uint32 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.PD l = 3;
+     * }
+     * ```
+     */
+    interface P4DD {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.PD;
+    }
+    function P4DD$$new(p0: number, p1: number, l: ds.PD): P4DD;
+    /**
+     * ```
+     *
+     * message P4DK {
+     *   required uint32 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.PK l = 3;
+     * }
+     * ```
+     */
+    interface P4DK {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.PK;
+    }
+    function P4DK$$new(p0: number, p1: number, l: ds.PK): P4DK;
+    /**
+     * ```
+     *
+     * message P4DS {
+     *   required uint32 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.PS l = 3;
+     * }
+     * ```
+     */
+    interface P4DS {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.PS;
+    }
+    function P4DS$$new(p0: number, p1: number, l: ds.PS): P4DS;
+    /**
+     * ```
+     *
+     * message P44441 {
+     *   required uint32 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required ds.P1 l = 5;
+     * }
+     * ```
+     */
+    interface P44441 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** p2 = 3, required */
+        ['3']: number;
+        /** p3 = 4, required */
+        ['4']: number;
+        /** l = 5, required */
+        ['5']: ds.P1;
+    }
+    function P44441$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P1): P44441;
+    /**
+     * ```
+     *
+     * message P44444 {
+     *   required uint32 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required ds.P4 l = 5;
+     * }
+     * ```
+     */
+    interface P44444 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** p2 = 3, required */
+        ['3']: number;
+        /** p3 = 4, required */
+        ['4']: number;
+        /** l = 5, required */
+        ['5']: ds.P4;
+    }
+    function P44444$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P4): P44444;
+    /**
+     * ```
+     *
+     * message P44448 {
+     *   required uint32 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required ds.P8 l = 5;
+     * }
+     * ```
+     */
+    interface P44448 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** p2 = 3, required */
+        ['3']: number;
+        /** p3 = 4, required */
+        ['4']: number;
+        /** l = 5, required */
+        ['5']: ds.P8;
+    }
+    function P44448$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P8): P44448;
+    /**
+     * ```
+     *
+     * message P4444D {
+     *   required uint32 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required ds.PD l = 5;
+     * }
+     * ```
+     */
+    interface P4444D {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** p2 = 3, required */
+        ['3']: number;
+        /** p3 = 4, required */
+        ['4']: number;
+        /** l = 5, required */
+        ['5']: ds.PD;
+    }
+    function P4444D$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PD): P4444D;
+    /**
+     * ```
+     *
+     * message P4444K {
+     *   required uint32 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required ds.PK l = 5;
+     * }
+     * ```
+     */
+    interface P4444K {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** p2 = 3, required */
+        ['3']: number;
+        /** p3 = 4, required */
+        ['4']: number;
+        /** l = 5, required */
+        ['5']: ds.PK;
+    }
+    function P4444K$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PK): P4444K;
+    /**
+     * ```
+     *
+     * message P4444S {
+     *   required uint32 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required ds.PS l = 5;
+     * }
+     * ```
+     */
+    interface P4444S {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** p2 = 3, required */
+        ['3']: number;
+        /** p3 = 4, required */
+        ['4']: number;
+        /** l = 5, required */
+        ['5']: ds.PS;
+    }
+    function P4444S$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PS): P4444S;
+    /**
+     * ```
+     *
+     * message P481 {
+     *   required uint32 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.P1 l = 3;
+     * }
+     * ```
+     */
+    interface P481 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.P1;
+    }
+    function P481$$new(p0: number, p1: number, l: ds.P1): P481;
+    /**
+     * ```
+     *
+     * message P484 {
+     *   required uint32 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.P4 l = 3;
+     * }
+     * ```
+     */
+    interface P484 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.P4;
+    }
+    function P484$$new(p0: number, p1: number, l: ds.P4): P484;
+    /**
+     * ```
+     *
+     * message P488 {
+     *   required uint32 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.P8 l = 3;
+     * }
+     * ```
+     */
+    interface P488 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.P8;
+    }
+    function P488$$new(p0: number, p1: number, l: ds.P8): P488;
+    /**
+     * ```
+     *
+     * message P48D {
+     *   required uint32 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.PD l = 3;
+     * }
+     * ```
+     */
+    interface P48D {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.PD;
+    }
+    function P48D$$new(p0: number, p1: number, l: ds.PD): P48D;
+    /**
+     * ```
+     *
+     * message P48K {
+     *   required uint32 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.PK l = 3;
+     * }
+     * ```
+     */
+    interface P48K {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.PK;
+    }
+    function P48K$$new(p0: number, p1: number, l: ds.PK): P48K;
+    /**
+     * ```
+     *
+     * message P48S {
+     *   required uint32 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.PS l = 3;
+     * }
+     * ```
+     */
+    interface P48S {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.PS;
+    }
+    function P48S$$new(p0: number, p1: number, l: ds.PS): P48S;
+    /**
+     * ```
+     *
      * message P444441 {
      *   required uint32 p0 = 1;
      *   required uint32 p1 = 2;
@@ -171,153 +549,441 @@ export declare namespace p4 {
     /**
      * ```
      *
-     * message P44441 {
+     * message P441 {
      *   required uint32 p0 = 1;
      *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required ds.P1 l = 5;
+     *   required ds.P1 l = 3;
      * }
      * ```
      */
-    interface P44441 {
+    interface P441 {
         /** p0 = 1, required */
         ['1']: number;
         /** p1 = 2, required */
         ['2']: number;
-        /** p2 = 3, required */
-        ['3']: number;
-        /** p3 = 4, required */
-        ['4']: number;
-        /** l = 5, required */
-        ['5']: ds.P1;
+        /** l = 3, required */
+        ['3']: ds.P1;
     }
-    function P44441$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P1): P44441;
+    function P441$$new(p0: number, p1: number, l: ds.P1): P441;
     /**
      * ```
      *
-     * message P44444 {
+     * message P444 {
      *   required uint32 p0 = 1;
      *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required ds.P4 l = 5;
+     *   required ds.P4 l = 3;
      * }
      * ```
      */
-    interface P44444 {
+    interface P444 {
         /** p0 = 1, required */
         ['1']: number;
         /** p1 = 2, required */
         ['2']: number;
-        /** p2 = 3, required */
-        ['3']: number;
-        /** p3 = 4, required */
-        ['4']: number;
-        /** l = 5, required */
-        ['5']: ds.P4;
+        /** l = 3, required */
+        ['3']: ds.P4;
     }
-    function P44444$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P4): P44444;
+    function P444$$new(p0: number, p1: number, l: ds.P4): P444;
     /**
      * ```
      *
-     * message P44448 {
+     * message P448 {
      *   required uint32 p0 = 1;
      *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required ds.P8 l = 5;
+     *   required ds.P8 l = 3;
      * }
      * ```
      */
-    interface P44448 {
+    interface P448 {
         /** p0 = 1, required */
         ['1']: number;
         /** p1 = 2, required */
         ['2']: number;
-        /** p2 = 3, required */
-        ['3']: number;
-        /** p3 = 4, required */
-        ['4']: number;
-        /** l = 5, required */
-        ['5']: ds.P8;
+        /** l = 3, required */
+        ['3']: ds.P8;
     }
-    function P44448$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P8): P44448;
+    function P448$$new(p0: number, p1: number, l: ds.P8): P448;
     /**
      * ```
      *
-     * message P4444D {
+     * message P44D {
      *   required uint32 p0 = 1;
      *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required ds.PD l = 5;
+     *   required ds.PD l = 3;
      * }
      * ```
      */
-    interface P4444D {
+    interface P44D {
         /** p0 = 1, required */
         ['1']: number;
         /** p1 = 2, required */
         ['2']: number;
-        /** p2 = 3, required */
-        ['3']: number;
-        /** p3 = 4, required */
-        ['4']: number;
-        /** l = 5, required */
-        ['5']: ds.PD;
+        /** l = 3, required */
+        ['3']: ds.PD;
     }
-    function P4444D$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PD): P4444D;
+    function P44D$$new(p0: number, p1: number, l: ds.PD): P44D;
     /**
      * ```
      *
-     * message P4444K {
+     * message P44K {
      *   required uint32 p0 = 1;
      *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required ds.PK l = 5;
+     *   required ds.PK l = 3;
      * }
      * ```
      */
-    interface P4444K {
+    interface P44K {
         /** p0 = 1, required */
         ['1']: number;
         /** p1 = 2, required */
         ['2']: number;
-        /** p2 = 3, required */
-        ['3']: number;
-        /** p3 = 4, required */
-        ['4']: number;
-        /** l = 5, required */
-        ['5']: ds.PK;
+        /** l = 3, required */
+        ['3']: ds.PK;
     }
-    function P4444K$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PK): P4444K;
+    function P44K$$new(p0: number, p1: number, l: ds.PK): P44K;
     /**
      * ```
      *
-     * message P4444S {
+     * message P44S {
      *   required uint32 p0 = 1;
      *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required ds.PS l = 5;
+     *   required ds.PS l = 3;
      * }
      * ```
      */
-    interface P4444S {
+    interface P44S {
         /** p0 = 1, required */
         ['1']: number;
         /** p1 = 2, required */
         ['2']: number;
-        /** p2 = 3, required */
-        ['3']: number;
-        /** p3 = 4, required */
-        ['4']: number;
-        /** l = 5, required */
-        ['5']: ds.PS;
+        /** l = 3, required */
+        ['3']: ds.PS;
     }
-    function P4444S$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PS): P4444S;
+    function P44S$$new(p0: number, p1: number, l: ds.PS): P44S;
+    /**
+     * ```
+     *
+     * message P4K1 {
+     *   required uint32 p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.P1 l = 3;
+     * }
+     * ```
+     */
+    interface P4K1 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: string;
+        /** l = 3, required */
+        ['3']: ds.P1;
+    }
+    function P4K1$$new(p0: number, p1: string, l: ds.P1): P4K1;
+    /**
+     * ```
+     *
+     * message P4K4 {
+     *   required uint32 p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.P4 l = 3;
+     * }
+     * ```
+     */
+    interface P4K4 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: string;
+        /** l = 3, required */
+        ['3']: ds.P4;
+    }
+    function P4K4$$new(p0: number, p1: string, l: ds.P4): P4K4;
+    /**
+     * ```
+     *
+     * message P4K8 {
+     *   required uint32 p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.P8 l = 3;
+     * }
+     * ```
+     */
+    interface P4K8 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: string;
+        /** l = 3, required */
+        ['3']: ds.P8;
+    }
+    function P4K8$$new(p0: number, p1: string, l: ds.P8): P4K8;
+    /**
+     * ```
+     *
+     * message P4KD {
+     *   required uint32 p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.PD l = 3;
+     * }
+     * ```
+     */
+    interface P4KD {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: string;
+        /** l = 3, required */
+        ['3']: ds.PD;
+    }
+    function P4KD$$new(p0: number, p1: string, l: ds.PD): P4KD;
+    /**
+     * ```
+     *
+     * message P4KK {
+     *   required uint32 p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.PK l = 3;
+     * }
+     * ```
+     */
+    interface P4KK {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: string;
+        /** l = 3, required */
+        ['3']: ds.PK;
+    }
+    function P4KK$$new(p0: number, p1: string, l: ds.PK): P4KK;
+    /**
+     * ```
+     *
+     * message P4KS {
+     *   required uint32 p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.PS l = 3;
+     * }
+     * ```
+     */
+    interface P4KS {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: string;
+        /** l = 3, required */
+        ['3']: ds.PS;
+    }
+    function P4KS$$new(p0: number, p1: string, l: ds.PS): P4KS;
+    /**
+     * ```
+     *
+     * message P41 {
+     *   required uint32 p0 = 1;
+     *   required ds.P1 l = 2;
+     * }
+     * ```
+     */
+    interface P41 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** l = 2, required */
+        ['2']: ds.P1;
+    }
+    function P41$$new(p0: number, l: ds.P1): P41;
+    /**
+     * ```
+     *
+     * message P44 {
+     *   required uint32 p0 = 1;
+     *   required ds.P4 l = 2;
+     * }
+     * ```
+     */
+    interface P44 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** l = 2, required */
+        ['2']: ds.P4;
+    }
+    function P44$$new(p0: number, l: ds.P4): P44;
+    /**
+     * ```
+     *
+     * message P48 {
+     *   required uint32 p0 = 1;
+     *   required ds.P8 l = 2;
+     * }
+     * ```
+     */
+    interface P48 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** l = 2, required */
+        ['2']: ds.P8;
+    }
+    function P48$$new(p0: number, l: ds.P8): P48;
+    /**
+     * ```
+     *
+     * message P4D {
+     *   required uint32 p0 = 1;
+     *   required ds.PD l = 2;
+     * }
+     * ```
+     */
+    interface P4D {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** l = 2, required */
+        ['2']: ds.PD;
+    }
+    function P4D$$new(p0: number, l: ds.PD): P4D;
+    /**
+     * ```
+     *
+     * message P4K {
+     *   required uint32 p0 = 1;
+     *   required ds.PK l = 2;
+     * }
+     * ```
+     */
+    interface P4K {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** l = 2, required */
+        ['2']: ds.PK;
+    }
+    function P4K$$new(p0: number, l: ds.PK): P4K;
+    /**
+     * ```
+     *
+     * message P4S {
+     *   required uint32 p0 = 1;
+     *   required ds.PS l = 2;
+     * }
+     * ```
+     */
+    interface P4S {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** l = 2, required */
+        ['2']: ds.PS;
+    }
+    function P4S$$new(p0: number, l: ds.PS): P4S;
+    /**
+     * ```
+     *
+     * message P411 {
+     *   required uint32 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.P1 l = 3;
+     * }
+     * ```
+     */
+    interface P411 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.P1;
+    }
+    function P411$$new(p0: number, p1: number, l: ds.P1): P411;
+    /**
+     * ```
+     *
+     * message P414 {
+     *   required uint32 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.P4 l = 3;
+     * }
+     * ```
+     */
+    interface P414 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.P4;
+    }
+    function P414$$new(p0: number, p1: number, l: ds.P4): P414;
+    /**
+     * ```
+     *
+     * message P418 {
+     *   required uint32 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.P8 l = 3;
+     * }
+     * ```
+     */
+    interface P418 {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.P8;
+    }
+    function P418$$new(p0: number, p1: number, l: ds.P8): P418;
+    /**
+     * ```
+     *
+     * message P41D {
+     *   required uint32 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.PD l = 3;
+     * }
+     * ```
+     */
+    interface P41D {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.PD;
+    }
+    function P41D$$new(p0: number, p1: number, l: ds.PD): P41D;
+    /**
+     * ```
+     *
+     * message P41K {
+     *   required uint32 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.PK l = 3;
+     * }
+     * ```
+     */
+    interface P41K {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.PK;
+    }
+    function P41K$$new(p0: number, p1: number, l: ds.PK): P41K;
+    /**
+     * ```
+     *
+     * message P41S {
+     *   required uint32 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.PS l = 3;
+     * }
+     * ```
+     */
+    interface P41S {
+        /** p0 = 1, required */
+        ['1']: number;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.PS;
+    }
+    function P41S$$new(p0: number, p1: number, l: ds.PS): P41S;
     /**
      * ```
      *
@@ -453,576 +1119,6 @@ export declare namespace p4 {
     /**
      * ```
      *
-     * message P411 {
-     *   required uint32 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required ds.P1 l = 3;
-     * }
-     * ```
-     */
-    interface P411 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P1;
-    }
-    function P411$$new(p0: number, p1: number, l: ds.P1): P411;
-    /**
-     * ```
-     *
-     * message P414 {
-     *   required uint32 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required ds.P4 l = 3;
-     * }
-     * ```
-     */
-    interface P414 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P4;
-    }
-    function P414$$new(p0: number, p1: number, l: ds.P4): P414;
-    /**
-     * ```
-     *
-     * message P418 {
-     *   required uint32 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required ds.P8 l = 3;
-     * }
-     * ```
-     */
-    interface P418 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P8;
-    }
-    function P418$$new(p0: number, p1: number, l: ds.P8): P418;
-    /**
-     * ```
-     *
-     * message P41D {
-     *   required uint32 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required ds.PD l = 3;
-     * }
-     * ```
-     */
-    interface P41D {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PD;
-    }
-    function P41D$$new(p0: number, p1: number, l: ds.PD): P41D;
-    /**
-     * ```
-     *
-     * message P41K {
-     *   required uint32 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required ds.PK l = 3;
-     * }
-     * ```
-     */
-    interface P41K {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PK;
-    }
-    function P41K$$new(p0: number, p1: number, l: ds.PK): P41K;
-    /**
-     * ```
-     *
-     * message P41S {
-     *   required uint32 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required ds.PS l = 3;
-     * }
-     * ```
-     */
-    interface P41S {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PS;
-    }
-    function P41S$$new(p0: number, p1: number, l: ds.PS): P41S;
-    /**
-     * ```
-     *
-     * message P481 {
-     *   required uint32 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P1 l = 3;
-     * }
-     * ```
-     */
-    interface P481 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P1;
-    }
-    function P481$$new(p0: number, p1: number, l: ds.P1): P481;
-    /**
-     * ```
-     *
-     * message P484 {
-     *   required uint32 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P4 l = 3;
-     * }
-     * ```
-     */
-    interface P484 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P4;
-    }
-    function P484$$new(p0: number, p1: number, l: ds.P4): P484;
-    /**
-     * ```
-     *
-     * message P488 {
-     *   required uint32 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P8 l = 3;
-     * }
-     * ```
-     */
-    interface P488 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P8;
-    }
-    function P488$$new(p0: number, p1: number, l: ds.P8): P488;
-    /**
-     * ```
-     *
-     * message P48D {
-     *   required uint32 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PD l = 3;
-     * }
-     * ```
-     */
-    interface P48D {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PD;
-    }
-    function P48D$$new(p0: number, p1: number, l: ds.PD): P48D;
-    /**
-     * ```
-     *
-     * message P48K {
-     *   required uint32 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PK l = 3;
-     * }
-     * ```
-     */
-    interface P48K {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PK;
-    }
-    function P48K$$new(p0: number, p1: number, l: ds.PK): P48K;
-    /**
-     * ```
-     *
-     * message P48S {
-     *   required uint32 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PS l = 3;
-     * }
-     * ```
-     */
-    interface P48S {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PS;
-    }
-    function P48S$$new(p0: number, p1: number, l: ds.PS): P48S;
-    /**
-     * ```
-     *
-     * message P4D1 {
-     *   required uint32 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P1 l = 3;
-     * }
-     * ```
-     */
-    interface P4D1 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P1;
-    }
-    function P4D1$$new(p0: number, p1: number, l: ds.P1): P4D1;
-    /**
-     * ```
-     *
-     * message P4D4 {
-     *   required uint32 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P4 l = 3;
-     * }
-     * ```
-     */
-    interface P4D4 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P4;
-    }
-    function P4D4$$new(p0: number, p1: number, l: ds.P4): P4D4;
-    /**
-     * ```
-     *
-     * message P4D8 {
-     *   required uint32 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P8 l = 3;
-     * }
-     * ```
-     */
-    interface P4D8 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P8;
-    }
-    function P4D8$$new(p0: number, p1: number, l: ds.P8): P4D8;
-    /**
-     * ```
-     *
-     * message P4DD {
-     *   required uint32 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PD l = 3;
-     * }
-     * ```
-     */
-    interface P4DD {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PD;
-    }
-    function P4DD$$new(p0: number, p1: number, l: ds.PD): P4DD;
-    /**
-     * ```
-     *
-     * message P4DK {
-     *   required uint32 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PK l = 3;
-     * }
-     * ```
-     */
-    interface P4DK {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PK;
-    }
-    function P4DK$$new(p0: number, p1: number, l: ds.PK): P4DK;
-    /**
-     * ```
-     *
-     * message P4DS {
-     *   required uint32 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PS l = 3;
-     * }
-     * ```
-     */
-    interface P4DS {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PS;
-    }
-    function P4DS$$new(p0: number, p1: number, l: ds.PS): P4DS;
-    /**
-     * ```
-     *
-     * message P4K1 {
-     *   required uint32 p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.P1 l = 3;
-     * }
-     * ```
-     */
-    interface P4K1 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: string;
-        /** l = 3, required */
-        ['3']: ds.P1;
-    }
-    function P4K1$$new(p0: number, p1: string, l: ds.P1): P4K1;
-    /**
-     * ```
-     *
-     * message P4K4 {
-     *   required uint32 p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.P4 l = 3;
-     * }
-     * ```
-     */
-    interface P4K4 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: string;
-        /** l = 3, required */
-        ['3']: ds.P4;
-    }
-    function P4K4$$new(p0: number, p1: string, l: ds.P4): P4K4;
-    /**
-     * ```
-     *
-     * message P4K8 {
-     *   required uint32 p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.P8 l = 3;
-     * }
-     * ```
-     */
-    interface P4K8 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: string;
-        /** l = 3, required */
-        ['3']: ds.P8;
-    }
-    function P4K8$$new(p0: number, p1: string, l: ds.P8): P4K8;
-    /**
-     * ```
-     *
-     * message P4KD {
-     *   required uint32 p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.PD l = 3;
-     * }
-     * ```
-     */
-    interface P4KD {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: string;
-        /** l = 3, required */
-        ['3']: ds.PD;
-    }
-    function P4KD$$new(p0: number, p1: string, l: ds.PD): P4KD;
-    /**
-     * ```
-     *
-     * message P4KK {
-     *   required uint32 p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.PK l = 3;
-     * }
-     * ```
-     */
-    interface P4KK {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: string;
-        /** l = 3, required */
-        ['3']: ds.PK;
-    }
-    function P4KK$$new(p0: number, p1: string, l: ds.PK): P4KK;
-    /**
-     * ```
-     *
-     * message P4KS {
-     *   required uint32 p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.PS l = 3;
-     * }
-     * ```
-     */
-    interface P4KS {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: string;
-        /** l = 3, required */
-        ['3']: ds.PS;
-    }
-    function P4KS$$new(p0: number, p1: string, l: ds.PS): P4KS;
-    /**
-     * ```
-     *
-     * message P441 {
-     *   required uint32 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required ds.P1 l = 3;
-     * }
-     * ```
-     */
-    interface P441 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P1;
-    }
-    function P441$$new(p0: number, p1: number, l: ds.P1): P441;
-    /**
-     * ```
-     *
-     * message P444 {
-     *   required uint32 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required ds.P4 l = 3;
-     * }
-     * ```
-     */
-    interface P444 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P4;
-    }
-    function P444$$new(p0: number, p1: number, l: ds.P4): P444;
-    /**
-     * ```
-     *
-     * message P448 {
-     *   required uint32 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required ds.P8 l = 3;
-     * }
-     * ```
-     */
-    interface P448 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P8;
-    }
-    function P448$$new(p0: number, p1: number, l: ds.P8): P448;
-    /**
-     * ```
-     *
-     * message P44D {
-     *   required uint32 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required ds.PD l = 3;
-     * }
-     * ```
-     */
-    interface P44D {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PD;
-    }
-    function P44D$$new(p0: number, p1: number, l: ds.PD): P44D;
-    /**
-     * ```
-     *
-     * message P44K {
-     *   required uint32 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required ds.PK l = 3;
-     * }
-     * ```
-     */
-    interface P44K {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PK;
-    }
-    function P44K$$new(p0: number, p1: number, l: ds.PK): P44K;
-    /**
-     * ```
-     *
-     * message P44S {
-     *   required uint32 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required ds.PS l = 3;
-     * }
-     * ```
-     */
-    interface P44S {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PS;
-    }
-    function P44S$$new(p0: number, p1: number, l: ds.PS): P44S;
-    /**
-     * ```
-     *
      * message P4S1 {
      *   required uint32 p0 = 1;
      *   required string p1 = 2;
@@ -1134,100 +1230,4 @@ export declare namespace p4 {
         ['3']: ds.PS;
     }
     function P4SS$$new(p0: number, p1: string, l: ds.PS): P4SS;
-    /**
-     * ```
-     *
-     * message P41 {
-     *   required uint32 p0 = 1;
-     *   required ds.P1 l = 2;
-     * }
-     * ```
-     */
-    interface P41 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** l = 2, required */
-        ['2']: ds.P1;
-    }
-    function P41$$new(p0: number, l: ds.P1): P41;
-    /**
-     * ```
-     *
-     * message P44 {
-     *   required uint32 p0 = 1;
-     *   required ds.P4 l = 2;
-     * }
-     * ```
-     */
-    interface P44 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** l = 2, required */
-        ['2']: ds.P4;
-    }
-    function P44$$new(p0: number, l: ds.P4): P44;
-    /**
-     * ```
-     *
-     * message P48 {
-     *   required uint32 p0 = 1;
-     *   required ds.P8 l = 2;
-     * }
-     * ```
-     */
-    interface P48 {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** l = 2, required */
-        ['2']: ds.P8;
-    }
-    function P48$$new(p0: number, l: ds.P8): P48;
-    /**
-     * ```
-     *
-     * message P4D {
-     *   required uint32 p0 = 1;
-     *   required ds.PD l = 2;
-     * }
-     * ```
-     */
-    interface P4D {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** l = 2, required */
-        ['2']: ds.PD;
-    }
-    function P4D$$new(p0: number, l: ds.PD): P4D;
-    /**
-     * ```
-     *
-     * message P4K {
-     *   required uint32 p0 = 1;
-     *   required ds.PK l = 2;
-     * }
-     * ```
-     */
-    interface P4K {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** l = 2, required */
-        ['2']: ds.PK;
-    }
-    function P4K$$new(p0: number, l: ds.PK): P4K;
-    /**
-     * ```
-     *
-     * message P4S {
-     *   required uint32 p0 = 1;
-     *   required ds.PS l = 2;
-     * }
-     * ```
-     */
-    interface P4S {
-        /** p0 = 1, required */
-        ['1']: number;
-        /** l = 2, required */
-        ['2']: ds.PS;
-    }
-    function P4S$$new(p0: number, l: ds.PS): P4S;
 }

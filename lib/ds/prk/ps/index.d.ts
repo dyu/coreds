@@ -3,120 +3,6 @@ export declare namespace ps {
     /**
      * ```
      *
-     * message PSK1 {
-     *   required string p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.P1 l = 3;
-     * }
-     * ```
-     */
-    interface PSK1 {
-        /** p0 = 1, required */
-        ['1']: string;
-        /** p1 = 2, required */
-        ['2']: string;
-        /** l = 3, required */
-        ['3']: ds.P1;
-    }
-    function PSK1$$new(p0: string, p1: string, l: ds.P1): PSK1;
-    /**
-     * ```
-     *
-     * message PSK4 {
-     *   required string p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.P4 l = 3;
-     * }
-     * ```
-     */
-    interface PSK4 {
-        /** p0 = 1, required */
-        ['1']: string;
-        /** p1 = 2, required */
-        ['2']: string;
-        /** l = 3, required */
-        ['3']: ds.P4;
-    }
-    function PSK4$$new(p0: string, p1: string, l: ds.P4): PSK4;
-    /**
-     * ```
-     *
-     * message PSK8 {
-     *   required string p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.P8 l = 3;
-     * }
-     * ```
-     */
-    interface PSK8 {
-        /** p0 = 1, required */
-        ['1']: string;
-        /** p1 = 2, required */
-        ['2']: string;
-        /** l = 3, required */
-        ['3']: ds.P8;
-    }
-    function PSK8$$new(p0: string, p1: string, l: ds.P8): PSK8;
-    /**
-     * ```
-     *
-     * message PSKD {
-     *   required string p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.PD l = 3;
-     * }
-     * ```
-     */
-    interface PSKD {
-        /** p0 = 1, required */
-        ['1']: string;
-        /** p1 = 2, required */
-        ['2']: string;
-        /** l = 3, required */
-        ['3']: ds.PD;
-    }
-    function PSKD$$new(p0: string, p1: string, l: ds.PD): PSKD;
-    /**
-     * ```
-     *
-     * message PSKK {
-     *   required string p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.PK l = 3;
-     * }
-     * ```
-     */
-    interface PSKK {
-        /** p0 = 1, required */
-        ['1']: string;
-        /** p1 = 2, required */
-        ['2']: string;
-        /** l = 3, required */
-        ['3']: ds.PK;
-    }
-    function PSKK$$new(p0: string, p1: string, l: ds.PK): PSKK;
-    /**
-     * ```
-     *
-     * message PSKS {
-     *   required string p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.PS l = 3;
-     * }
-     * ```
-     */
-    interface PSKS {
-        /** p0 = 1, required */
-        ['1']: string;
-        /** p1 = 2, required */
-        ['2']: string;
-        /** l = 3, required */
-        ['3']: ds.PS;
-    }
-    function PSKS$$new(p0: string, p1: string, l: ds.PS): PSKS;
-    /**
-     * ```
-     *
      * message PS111 {
      *   required string p0 = 1;
      *   required int8 p1 = 2;
@@ -249,120 +135,6 @@ export declare namespace ps {
     /**
      * ```
      *
-     * message PSD1 {
-     *   required string p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P1 l = 3;
-     * }
-     * ```
-     */
-    interface PSD1 {
-        /** p0 = 1, required */
-        ['1']: string;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P1;
-    }
-    function PSD1$$new(p0: string, p1: number, l: ds.P1): PSD1;
-    /**
-     * ```
-     *
-     * message PSD4 {
-     *   required string p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P4 l = 3;
-     * }
-     * ```
-     */
-    interface PSD4 {
-        /** p0 = 1, required */
-        ['1']: string;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P4;
-    }
-    function PSD4$$new(p0: string, p1: number, l: ds.P4): PSD4;
-    /**
-     * ```
-     *
-     * message PSD8 {
-     *   required string p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P8 l = 3;
-     * }
-     * ```
-     */
-    interface PSD8 {
-        /** p0 = 1, required */
-        ['1']: string;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.P8;
-    }
-    function PSD8$$new(p0: string, p1: number, l: ds.P8): PSD8;
-    /**
-     * ```
-     *
-     * message PSDD {
-     *   required string p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PD l = 3;
-     * }
-     * ```
-     */
-    interface PSDD {
-        /** p0 = 1, required */
-        ['1']: string;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PD;
-    }
-    function PSDD$$new(p0: string, p1: number, l: ds.PD): PSDD;
-    /**
-     * ```
-     *
-     * message PSDK {
-     *   required string p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PK l = 3;
-     * }
-     * ```
-     */
-    interface PSDK {
-        /** p0 = 1, required */
-        ['1']: string;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PK;
-    }
-    function PSDK$$new(p0: string, p1: number, l: ds.PK): PSDK;
-    /**
-     * ```
-     *
-     * message PSDS {
-     *   required string p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PS l = 3;
-     * }
-     * ```
-     */
-    interface PSDS {
-        /** p0 = 1, required */
-        ['1']: string;
-        /** p1 = 2, required */
-        ['2']: number;
-        /** l = 3, required */
-        ['3']: ds.PS;
-    }
-    function PSDS$$new(p0: string, p1: number, l: ds.PS): PSDS;
-    /**
-     * ```
-     *
      * message PS41 {
      *   required string p0 = 1;
      *   required uint32 p1 = 2;
@@ -474,6 +246,234 @@ export declare namespace ps {
         ['3']: ds.PS;
     }
     function PS4S$$new(p0: string, p1: number, l: ds.PS): PS4S;
+    /**
+     * ```
+     *
+     * message PSK1 {
+     *   required string p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.P1 l = 3;
+     * }
+     * ```
+     */
+    interface PSK1 {
+        /** p0 = 1, required */
+        ['1']: string;
+        /** p1 = 2, required */
+        ['2']: string;
+        /** l = 3, required */
+        ['3']: ds.P1;
+    }
+    function PSK1$$new(p0: string, p1: string, l: ds.P1): PSK1;
+    /**
+     * ```
+     *
+     * message PSK4 {
+     *   required string p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.P4 l = 3;
+     * }
+     * ```
+     */
+    interface PSK4 {
+        /** p0 = 1, required */
+        ['1']: string;
+        /** p1 = 2, required */
+        ['2']: string;
+        /** l = 3, required */
+        ['3']: ds.P4;
+    }
+    function PSK4$$new(p0: string, p1: string, l: ds.P4): PSK4;
+    /**
+     * ```
+     *
+     * message PSK8 {
+     *   required string p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.P8 l = 3;
+     * }
+     * ```
+     */
+    interface PSK8 {
+        /** p0 = 1, required */
+        ['1']: string;
+        /** p1 = 2, required */
+        ['2']: string;
+        /** l = 3, required */
+        ['3']: ds.P8;
+    }
+    function PSK8$$new(p0: string, p1: string, l: ds.P8): PSK8;
+    /**
+     * ```
+     *
+     * message PSKD {
+     *   required string p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.PD l = 3;
+     * }
+     * ```
+     */
+    interface PSKD {
+        /** p0 = 1, required */
+        ['1']: string;
+        /** p1 = 2, required */
+        ['2']: string;
+        /** l = 3, required */
+        ['3']: ds.PD;
+    }
+    function PSKD$$new(p0: string, p1: string, l: ds.PD): PSKD;
+    /**
+     * ```
+     *
+     * message PSKK {
+     *   required string p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.PK l = 3;
+     * }
+     * ```
+     */
+    interface PSKK {
+        /** p0 = 1, required */
+        ['1']: string;
+        /** p1 = 2, required */
+        ['2']: string;
+        /** l = 3, required */
+        ['3']: ds.PK;
+    }
+    function PSKK$$new(p0: string, p1: string, l: ds.PK): PSKK;
+    /**
+     * ```
+     *
+     * message PSKS {
+     *   required string p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.PS l = 3;
+     * }
+     * ```
+     */
+    interface PSKS {
+        /** p0 = 1, required */
+        ['1']: string;
+        /** p1 = 2, required */
+        ['2']: string;
+        /** l = 3, required */
+        ['3']: ds.PS;
+    }
+    function PSKS$$new(p0: string, p1: string, l: ds.PS): PSKS;
+    /**
+     * ```
+     *
+     * message PS11 {
+     *   required string p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.P1 l = 3;
+     * }
+     * ```
+     */
+    interface PS11 {
+        /** p0 = 1, required */
+        ['1']: string;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.P1;
+    }
+    function PS11$$new(p0: string, p1: number, l: ds.P1): PS11;
+    /**
+     * ```
+     *
+     * message PS14 {
+     *   required string p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.P4 l = 3;
+     * }
+     * ```
+     */
+    interface PS14 {
+        /** p0 = 1, required */
+        ['1']: string;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.P4;
+    }
+    function PS14$$new(p0: string, p1: number, l: ds.P4): PS14;
+    /**
+     * ```
+     *
+     * message PS18 {
+     *   required string p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.P8 l = 3;
+     * }
+     * ```
+     */
+    interface PS18 {
+        /** p0 = 1, required */
+        ['1']: string;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.P8;
+    }
+    function PS18$$new(p0: string, p1: number, l: ds.P8): PS18;
+    /**
+     * ```
+     *
+     * message PS1D {
+     *   required string p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.PD l = 3;
+     * }
+     * ```
+     */
+    interface PS1D {
+        /** p0 = 1, required */
+        ['1']: string;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.PD;
+    }
+    function PS1D$$new(p0: string, p1: number, l: ds.PD): PS1D;
+    /**
+     * ```
+     *
+     * message PS1K {
+     *   required string p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.PK l = 3;
+     * }
+     * ```
+     */
+    interface PS1K {
+        /** p0 = 1, required */
+        ['1']: string;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.PK;
+    }
+    function PS1K$$new(p0: string, p1: number, l: ds.PK): PS1K;
+    /**
+     * ```
+     *
+     * message PS1S {
+     *   required string p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.PS l = 3;
+     * }
+     * ```
+     */
+    interface PS1S {
+        /** p0 = 1, required */
+        ['1']: string;
+        /** p1 = 2, required */
+        ['2']: number;
+        /** l = 3, required */
+        ['3']: ds.PS;
+    }
+    function PS1S$$new(p0: string, p1: number, l: ds.PS): PS1S;
     /**
      * ```
      *
@@ -591,14 +591,14 @@ export declare namespace ps {
     /**
      * ```
      *
-     * message PS11 {
+     * message PSD1 {
      *   required string p0 = 1;
-     *   required int8 p1 = 2;
+     *   required uint64 p1 = 2;
      *   required ds.P1 l = 3;
      * }
      * ```
      */
-    interface PS11 {
+    interface PSD1 {
         /** p0 = 1, required */
         ['1']: string;
         /** p1 = 2, required */
@@ -606,18 +606,18 @@ export declare namespace ps {
         /** l = 3, required */
         ['3']: ds.P1;
     }
-    function PS11$$new(p0: string, p1: number, l: ds.P1): PS11;
+    function PSD1$$new(p0: string, p1: number, l: ds.P1): PSD1;
     /**
      * ```
      *
-     * message PS14 {
+     * message PSD4 {
      *   required string p0 = 1;
-     *   required int8 p1 = 2;
+     *   required uint64 p1 = 2;
      *   required ds.P4 l = 3;
      * }
      * ```
      */
-    interface PS14 {
+    interface PSD4 {
         /** p0 = 1, required */
         ['1']: string;
         /** p1 = 2, required */
@@ -625,18 +625,18 @@ export declare namespace ps {
         /** l = 3, required */
         ['3']: ds.P4;
     }
-    function PS14$$new(p0: string, p1: number, l: ds.P4): PS14;
+    function PSD4$$new(p0: string, p1: number, l: ds.P4): PSD4;
     /**
      * ```
      *
-     * message PS18 {
+     * message PSD8 {
      *   required string p0 = 1;
-     *   required int8 p1 = 2;
+     *   required uint64 p1 = 2;
      *   required ds.P8 l = 3;
      * }
      * ```
      */
-    interface PS18 {
+    interface PSD8 {
         /** p0 = 1, required */
         ['1']: string;
         /** p1 = 2, required */
@@ -644,18 +644,18 @@ export declare namespace ps {
         /** l = 3, required */
         ['3']: ds.P8;
     }
-    function PS18$$new(p0: string, p1: number, l: ds.P8): PS18;
+    function PSD8$$new(p0: string, p1: number, l: ds.P8): PSD8;
     /**
      * ```
      *
-     * message PS1D {
+     * message PSDD {
      *   required string p0 = 1;
-     *   required int8 p1 = 2;
+     *   required uint64 p1 = 2;
      *   required ds.PD l = 3;
      * }
      * ```
      */
-    interface PS1D {
+    interface PSDD {
         /** p0 = 1, required */
         ['1']: string;
         /** p1 = 2, required */
@@ -663,18 +663,18 @@ export declare namespace ps {
         /** l = 3, required */
         ['3']: ds.PD;
     }
-    function PS1D$$new(p0: string, p1: number, l: ds.PD): PS1D;
+    function PSDD$$new(p0: string, p1: number, l: ds.PD): PSDD;
     /**
      * ```
      *
-     * message PS1K {
+     * message PSDK {
      *   required string p0 = 1;
-     *   required int8 p1 = 2;
+     *   required uint64 p1 = 2;
      *   required ds.PK l = 3;
      * }
      * ```
      */
-    interface PS1K {
+    interface PSDK {
         /** p0 = 1, required */
         ['1']: string;
         /** p1 = 2, required */
@@ -682,18 +682,18 @@ export declare namespace ps {
         /** l = 3, required */
         ['3']: ds.PK;
     }
-    function PS1K$$new(p0: string, p1: number, l: ds.PK): PS1K;
+    function PSDK$$new(p0: string, p1: number, l: ds.PK): PSDK;
     /**
      * ```
      *
-     * message PS1S {
+     * message PSDS {
      *   required string p0 = 1;
-     *   required int8 p1 = 2;
+     *   required uint64 p1 = 2;
      *   required ds.PS l = 3;
      * }
      * ```
      */
-    interface PS1S {
+    interface PSDS {
         /** p0 = 1, required */
         ['1']: string;
         /** p1 = 2, required */
@@ -701,7 +701,7 @@ export declare namespace ps {
         /** l = 3, required */
         ['3']: ds.PS;
     }
-    function PS1S$$new(p0: string, p1: number, l: ds.PS): PS1S;
+    function PSDS$$new(p0: string, p1: number, l: ds.PS): PSDS;
     /**
      * ```
      *
