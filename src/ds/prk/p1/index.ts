@@ -6,392 +6,6 @@ export namespace p1 {
     /**
      * ```
      * 
-     * message P181 {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P1 l = 3;
-     * }
-     * ```
-     */
-    export interface P181 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.P1
-    }
-    export function P181$$new(p0: number, p1: number, l: ds.P1): P181 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P184 {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P4 l = 3;
-     * }
-     * ```
-     */
-    export interface P184 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.P4
-    }
-    export function P184$$new(p0: number, p1: number, l: ds.P4): P184 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P188 {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P8 l = 3;
-     * }
-     * ```
-     */
-    export interface P188 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.P8
-    }
-    export function P188$$new(p0: number, p1: number, l: ds.P8): P188 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P18D {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PD l = 3;
-     * }
-     * ```
-     */
-    export interface P18D {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.PD
-    }
-    export function P18D$$new(p0: number, p1: number, l: ds.PD): P18D {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P18K {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PK l = 3;
-     * }
-     * ```
-     */
-    export interface P18K {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.PK
-    }
-    export function P18K$$new(p0: number, p1: number, l: ds.PK): P18K {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P18S {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PS l = 3;
-     * }
-     * ```
-     */
-    export interface P18S {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.PS
-    }
-    export function P18S$$new(p0: number, p1: number, l: ds.PS): P18S {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
-     * message P111411 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required int8 p4 = 5;
-     *   required ds.P1 l = 6;
-     * }
-     * ```
-     */
-    export interface P111411 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** p4 = 5, required */
-        ['5']: number
-        /** l = 6, required */
-        ['6']: ds.P1
-    }
-    export function P111411$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P1): P111411 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': p4,
-            '6': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P111414 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required int8 p4 = 5;
-     *   required ds.P4 l = 6;
-     * }
-     * ```
-     */
-    export interface P111414 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** p4 = 5, required */
-        ['5']: number
-        /** l = 6, required */
-        ['6']: ds.P4
-    }
-    export function P111414$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P4): P111414 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': p4,
-            '6': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P111418 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required int8 p4 = 5;
-     *   required ds.P8 l = 6;
-     * }
-     * ```
-     */
-    export interface P111418 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** p4 = 5, required */
-        ['5']: number
-        /** l = 6, required */
-        ['6']: ds.P8
-    }
-    export function P111418$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P8): P111418 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': p4,
-            '6': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11141D {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required int8 p4 = 5;
-     *   required ds.PD l = 6;
-     * }
-     * ```
-     */
-    export interface P11141D {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** p4 = 5, required */
-        ['5']: number
-        /** l = 6, required */
-        ['6']: ds.PD
-    }
-    export function P11141D$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PD): P11141D {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': p4,
-            '6': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11141K {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required int8 p4 = 5;
-     *   required ds.PK l = 6;
-     * }
-     * ```
-     */
-    export interface P11141K {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** p4 = 5, required */
-        ['5']: number
-        /** l = 6, required */
-        ['6']: ds.PK
-    }
-    export function P11141K$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PK): P11141K {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': p4,
-            '6': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11141S {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required int8 p4 = 5;
-     *   required ds.PS l = 6;
-     * }
-     * ```
-     */
-    export interface P11141S {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** p4 = 5, required */
-        ['5']: number
-        /** l = 6, required */
-        ['6']: ds.PS
-    }
-    export function P11141S$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PS): P11141S {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': p4,
-            '6': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
      * message P1D111 {
      *   required int8 p0 = 1;
      *   required uint64 p1 = 2;
@@ -597,156 +211,180 @@ export namespace p1 {
     /**
      * ```
      * 
-     * message P141 {
+     * message P1441 {
      *   required int8 p0 = 1;
      *   required uint32 p1 = 2;
-     *   required ds.P1 l = 3;
+     *   required uint32 p2 = 3;
+     *   required ds.P1 l = 4;
      * }
      * ```
      */
-    export interface P141 {
+    export interface P1441 {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
         ['2']: number
-        /** l = 3, required */
-        ['3']: ds.P1
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.P1
     }
-    export function P141$$new(p0: number, p1: number, l: ds.P1): P141 {
+    export function P1441$$new(p0: number, p1: number, p2: number, l: ds.P1): P1441 {
         return {
             '1': p0,
             '2': p1,
-            '3': l
+            '3': p2,
+            '4': l
         }
     }
 
     /**
      * ```
      * 
-     * message P144 {
+     * message P1444 {
      *   required int8 p0 = 1;
      *   required uint32 p1 = 2;
-     *   required ds.P4 l = 3;
+     *   required uint32 p2 = 3;
+     *   required ds.P4 l = 4;
      * }
      * ```
      */
-    export interface P144 {
+    export interface P1444 {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
         ['2']: number
-        /** l = 3, required */
-        ['3']: ds.P4
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.P4
     }
-    export function P144$$new(p0: number, p1: number, l: ds.P4): P144 {
+    export function P1444$$new(p0: number, p1: number, p2: number, l: ds.P4): P1444 {
         return {
             '1': p0,
             '2': p1,
-            '3': l
+            '3': p2,
+            '4': l
         }
     }
 
     /**
      * ```
      * 
-     * message P148 {
+     * message P1448 {
      *   required int8 p0 = 1;
      *   required uint32 p1 = 2;
-     *   required ds.P8 l = 3;
+     *   required uint32 p2 = 3;
+     *   required ds.P8 l = 4;
      * }
      * ```
      */
-    export interface P148 {
+    export interface P1448 {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
         ['2']: number
-        /** l = 3, required */
-        ['3']: ds.P8
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.P8
     }
-    export function P148$$new(p0: number, p1: number, l: ds.P8): P148 {
+    export function P1448$$new(p0: number, p1: number, p2: number, l: ds.P8): P1448 {
         return {
             '1': p0,
             '2': p1,
-            '3': l
+            '3': p2,
+            '4': l
         }
     }
 
     /**
      * ```
      * 
-     * message P14D {
+     * message P144D {
      *   required int8 p0 = 1;
      *   required uint32 p1 = 2;
-     *   required ds.PD l = 3;
+     *   required uint32 p2 = 3;
+     *   required ds.PD l = 4;
      * }
      * ```
      */
-    export interface P14D {
+    export interface P144D {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
         ['2']: number
-        /** l = 3, required */
-        ['3']: ds.PD
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.PD
     }
-    export function P14D$$new(p0: number, p1: number, l: ds.PD): P14D {
+    export function P144D$$new(p0: number, p1: number, p2: number, l: ds.PD): P144D {
         return {
             '1': p0,
             '2': p1,
-            '3': l
+            '3': p2,
+            '4': l
         }
     }
 
     /**
      * ```
      * 
-     * message P14K {
+     * message P144K {
      *   required int8 p0 = 1;
      *   required uint32 p1 = 2;
-     *   required ds.PK l = 3;
+     *   required uint32 p2 = 3;
+     *   required ds.PK l = 4;
      * }
      * ```
      */
-    export interface P14K {
+    export interface P144K {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
         ['2']: number
-        /** l = 3, required */
-        ['3']: ds.PK
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.PK
     }
-    export function P14K$$new(p0: number, p1: number, l: ds.PK): P14K {
+    export function P144K$$new(p0: number, p1: number, p2: number, l: ds.PK): P144K {
         return {
             '1': p0,
             '2': p1,
-            '3': l
+            '3': p2,
+            '4': l
         }
     }
 
     /**
      * ```
      * 
-     * message P14S {
+     * message P144S {
      *   required int8 p0 = 1;
      *   required uint32 p1 = 2;
-     *   required ds.PS l = 3;
+     *   required uint32 p2 = 3;
+     *   required ds.PS l = 4;
      * }
      * ```
      */
-    export interface P14S {
+    export interface P144S {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
         ['2']: number
-        /** l = 3, required */
-        ['3']: ds.PS
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.PS
     }
-    export function P14S$$new(p0: number, p1: number, l: ds.PS): P14S {
+    export function P144S$$new(p0: number, p1: number, p2: number, l: ds.PS): P144S {
         return {
             '1': p0,
             '2': p1,
-            '3': l
+            '3': p2,
+            '4': l
         }
     }
 
@@ -904,1816 +542,6 @@ export namespace p1 {
             '1': p0,
             '2': p1,
             '3': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
-     * message P1K1 {
-     *   required int8 p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.P1 l = 3;
-     * }
-     * ```
-     */
-    export interface P1K1 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: string
-        /** l = 3, required */
-        ['3']: ds.P1
-    }
-    export function P1K1$$new(p0: number, p1: string, l: ds.P1): P1K1 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1K4 {
-     *   required int8 p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.P4 l = 3;
-     * }
-     * ```
-     */
-    export interface P1K4 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: string
-        /** l = 3, required */
-        ['3']: ds.P4
-    }
-    export function P1K4$$new(p0: number, p1: string, l: ds.P4): P1K4 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1K8 {
-     *   required int8 p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.P8 l = 3;
-     * }
-     * ```
-     */
-    export interface P1K8 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: string
-        /** l = 3, required */
-        ['3']: ds.P8
-    }
-    export function P1K8$$new(p0: number, p1: string, l: ds.P8): P1K8 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1KD {
-     *   required int8 p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.PD l = 3;
-     * }
-     * ```
-     */
-    export interface P1KD {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: string
-        /** l = 3, required */
-        ['3']: ds.PD
-    }
-    export function P1KD$$new(p0: number, p1: string, l: ds.PD): P1KD {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1KK {
-     *   required int8 p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.PK l = 3;
-     * }
-     * ```
-     */
-    export interface P1KK {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: string
-        /** l = 3, required */
-        ['3']: ds.PK
-    }
-    export function P1KK$$new(p0: number, p1: string, l: ds.PK): P1KK {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1KS {
-     *   required int8 p0 = 1;
-     *   required bytes p1 = 2;
-     *   required ds.PS l = 3;
-     * }
-     * ```
-     */
-    export interface P1KS {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: string
-        /** l = 3, required */
-        ['3']: ds.PS
-    }
-    export function P1KS$$new(p0: number, p1: string, l: ds.PS): P1KS {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
-     * message P1D1 {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P1 l = 3;
-     * }
-     * ```
-     */
-    export interface P1D1 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.P1
-    }
-    export function P1D1$$new(p0: number, p1: number, l: ds.P1): P1D1 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1D4 {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P4 l = 3;
-     * }
-     * ```
-     */
-    export interface P1D4 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.P4
-    }
-    export function P1D4$$new(p0: number, p1: number, l: ds.P4): P1D4 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1D8 {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.P8 l = 3;
-     * }
-     * ```
-     */
-    export interface P1D8 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.P8
-    }
-    export function P1D8$$new(p0: number, p1: number, l: ds.P8): P1D8 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1DD {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PD l = 3;
-     * }
-     * ```
-     */
-    export interface P1DD {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.PD
-    }
-    export function P1DD$$new(p0: number, p1: number, l: ds.PD): P1DD {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1DK {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PK l = 3;
-     * }
-     * ```
-     */
-    export interface P1DK {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.PK
-    }
-    export function P1DK$$new(p0: number, p1: number, l: ds.PK): P1DK {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1DS {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required ds.PS l = 3;
-     * }
-     * ```
-     */
-    export interface P1DS {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.PS
-    }
-    export function P1DS$$new(p0: number, p1: number, l: ds.PS): P1DS {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
-     * message P1D11 {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required ds.P1 l = 4;
-     * }
-     * ```
-     */
-    export interface P1D11 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** l = 4, required */
-        ['4']: ds.P1
-    }
-    export function P1D11$$new(p0: number, p1: number, p2: number, l: ds.P1): P1D11 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1D14 {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required ds.P4 l = 4;
-     * }
-     * ```
-     */
-    export interface P1D14 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** l = 4, required */
-        ['4']: ds.P4
-    }
-    export function P1D14$$new(p0: number, p1: number, p2: number, l: ds.P4): P1D14 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1D18 {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required ds.P8 l = 4;
-     * }
-     * ```
-     */
-    export interface P1D18 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** l = 4, required */
-        ['4']: ds.P8
-    }
-    export function P1D18$$new(p0: number, p1: number, p2: number, l: ds.P8): P1D18 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1D1D {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required ds.PD l = 4;
-     * }
-     * ```
-     */
-    export interface P1D1D {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** l = 4, required */
-        ['4']: ds.PD
-    }
-    export function P1D1D$$new(p0: number, p1: number, p2: number, l: ds.PD): P1D1D {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1D1K {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required ds.PK l = 4;
-     * }
-     * ```
-     */
-    export interface P1D1K {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** l = 4, required */
-        ['4']: ds.PK
-    }
-    export function P1D1K$$new(p0: number, p1: number, p2: number, l: ds.PK): P1D1K {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1D1S {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required ds.PS l = 4;
-     * }
-     * ```
-     */
-    export interface P1D1S {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** l = 4, required */
-        ['4']: ds.PS
-    }
-    export function P1D1S$$new(p0: number, p1: number, p2: number, l: ds.PS): P1D1S {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
-     * message P11111 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required int8 p3 = 4;
-     *   required ds.P1 l = 5;
-     * }
-     * ```
-     */
-    export interface P11111 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** l = 5, required */
-        ['5']: ds.P1
-    }
-    export function P11111$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P1): P11111 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11114 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required int8 p3 = 4;
-     *   required ds.P4 l = 5;
-     * }
-     * ```
-     */
-    export interface P11114 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** l = 5, required */
-        ['5']: ds.P4
-    }
-    export function P11114$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P4): P11114 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11118 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required int8 p3 = 4;
-     *   required ds.P8 l = 5;
-     * }
-     * ```
-     */
-    export interface P11118 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** l = 5, required */
-        ['5']: ds.P8
-    }
-    export function P11118$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P8): P11118 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1111D {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required int8 p3 = 4;
-     *   required ds.PD l = 5;
-     * }
-     * ```
-     */
-    export interface P1111D {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** l = 5, required */
-        ['5']: ds.PD
-    }
-    export function P1111D$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PD): P1111D {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1111K {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required int8 p3 = 4;
-     *   required ds.PK l = 5;
-     * }
-     * ```
-     */
-    export interface P1111K {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** l = 5, required */
-        ['5']: ds.PK
-    }
-    export function P1111K$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PK): P1111K {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1111S {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required int8 p3 = 4;
-     *   required ds.PS l = 5;
-     * }
-     * ```
-     */
-    export interface P1111S {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** l = 5, required */
-        ['5']: ds.PS
-    }
-    export function P1111S$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PS): P1111S {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
-     * message P111 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required ds.P1 l = 3;
-     * }
-     * ```
-     */
-    export interface P111 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.P1
-    }
-    export function P111$$new(p0: number, p1: number, l: ds.P1): P111 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P114 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required ds.P4 l = 3;
-     * }
-     * ```
-     */
-    export interface P114 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.P4
-    }
-    export function P114$$new(p0: number, p1: number, l: ds.P4): P114 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P118 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required ds.P8 l = 3;
-     * }
-     * ```
-     */
-    export interface P118 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.P8
-    }
-    export function P118$$new(p0: number, p1: number, l: ds.P8): P118 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11D {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required ds.PD l = 3;
-     * }
-     * ```
-     */
-    export interface P11D {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.PD
-    }
-    export function P11D$$new(p0: number, p1: number, l: ds.PD): P11D {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11K {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required ds.PK l = 3;
-     * }
-     * ```
-     */
-    export interface P11K {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.PK
-    }
-    export function P11K$$new(p0: number, p1: number, l: ds.PK): P11K {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11S {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required ds.PS l = 3;
-     * }
-     * ```
-     */
-    export interface P11S {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** l = 3, required */
-        ['3']: ds.PS
-    }
-    export function P11S$$new(p0: number, p1: number, l: ds.PS): P11S {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
-     * message P111K1 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required bytes p3 = 4;
-     *   required ds.P1 l = 5;
-     * }
-     * ```
-     */
-    export interface P111K1 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: string
-        /** l = 5, required */
-        ['5']: ds.P1
-    }
-    export function P111K1$$new(p0: number, p1: number, p2: number, p3: string, l: ds.P1): P111K1 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P111K4 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required bytes p3 = 4;
-     *   required ds.P4 l = 5;
-     * }
-     * ```
-     */
-    export interface P111K4 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: string
-        /** l = 5, required */
-        ['5']: ds.P4
-    }
-    export function P111K4$$new(p0: number, p1: number, p2: number, p3: string, l: ds.P4): P111K4 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P111K8 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required bytes p3 = 4;
-     *   required ds.P8 l = 5;
-     * }
-     * ```
-     */
-    export interface P111K8 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: string
-        /** l = 5, required */
-        ['5']: ds.P8
-    }
-    export function P111K8$$new(p0: number, p1: number, p2: number, p3: string, l: ds.P8): P111K8 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P111KD {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required bytes p3 = 4;
-     *   required ds.PD l = 5;
-     * }
-     * ```
-     */
-    export interface P111KD {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: string
-        /** l = 5, required */
-        ['5']: ds.PD
-    }
-    export function P111KD$$new(p0: number, p1: number, p2: number, p3: string, l: ds.PD): P111KD {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P111KK {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required bytes p3 = 4;
-     *   required ds.PK l = 5;
-     * }
-     * ```
-     */
-    export interface P111KK {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: string
-        /** l = 5, required */
-        ['5']: ds.PK
-    }
-    export function P111KK$$new(p0: number, p1: number, p2: number, p3: string, l: ds.PK): P111KK {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P111KS {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required bytes p3 = 4;
-     *   required ds.PS l = 5;
-     * }
-     * ```
-     */
-    export interface P111KS {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: string
-        /** l = 5, required */
-        ['5']: ds.PS
-    }
-    export function P111KS$$new(p0: number, p1: number, p2: number, p3: string, l: ds.PS): P111KS {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
-     * message P1141 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required ds.P1 l = 4;
-     * }
-     * ```
-     */
-    export interface P1141 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** l = 4, required */
-        ['4']: ds.P1
-    }
-    export function P1141$$new(p0: number, p1: number, p2: number, l: ds.P1): P1141 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1144 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required ds.P4 l = 4;
-     * }
-     * ```
-     */
-    export interface P1144 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** l = 4, required */
-        ['4']: ds.P4
-    }
-    export function P1144$$new(p0: number, p1: number, p2: number, l: ds.P4): P1144 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1148 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required ds.P8 l = 4;
-     * }
-     * ```
-     */
-    export interface P1148 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** l = 4, required */
-        ['4']: ds.P8
-    }
-    export function P1148$$new(p0: number, p1: number, p2: number, l: ds.P8): P1148 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P114D {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required ds.PD l = 4;
-     * }
-     * ```
-     */
-    export interface P114D {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** l = 4, required */
-        ['4']: ds.PD
-    }
-    export function P114D$$new(p0: number, p1: number, p2: number, l: ds.PD): P114D {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P114K {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required ds.PK l = 4;
-     * }
-     * ```
-     */
-    export interface P114K {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** l = 4, required */
-        ['4']: ds.PK
-    }
-    export function P114K$$new(p0: number, p1: number, p2: number, l: ds.PK): P114K {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P114S {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required ds.PS l = 4;
-     * }
-     * ```
-     */
-    export interface P114S {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** l = 4, required */
-        ['4']: ds.PS
-    }
-    export function P114S$$new(p0: number, p1: number, p2: number, l: ds.PS): P114S {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
-     * message P11K1 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required bytes p2 = 3;
-     *   required ds.P1 l = 4;
-     * }
-     * ```
-     */
-    export interface P11K1 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.P1
-    }
-    export function P11K1$$new(p0: number, p1: number, p2: string, l: ds.P1): P11K1 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11K4 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required bytes p2 = 3;
-     *   required ds.P4 l = 4;
-     * }
-     * ```
-     */
-    export interface P11K4 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.P4
-    }
-    export function P11K4$$new(p0: number, p1: number, p2: string, l: ds.P4): P11K4 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11K8 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required bytes p2 = 3;
-     *   required ds.P8 l = 4;
-     * }
-     * ```
-     */
-    export interface P11K8 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.P8
-    }
-    export function P11K8$$new(p0: number, p1: number, p2: string, l: ds.P8): P11K8 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11KD {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required bytes p2 = 3;
-     *   required ds.PD l = 4;
-     * }
-     * ```
-     */
-    export interface P11KD {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.PD
-    }
-    export function P11KD$$new(p0: number, p1: number, p2: string, l: ds.PD): P11KD {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11KK {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required bytes p2 = 3;
-     *   required ds.PK l = 4;
-     * }
-     * ```
-     */
-    export interface P11KK {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.PK
-    }
-    export function P11KK$$new(p0: number, p1: number, p2: string, l: ds.PK): P11KK {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11KS {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required bytes p2 = 3;
-     *   required ds.PS l = 4;
-     * }
-     * ```
-     */
-    export interface P11KS {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.PS
-    }
-    export function P11KS$$new(p0: number, p1: number, p2: string, l: ds.PS): P11KS {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
-     * message P1DK1 {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required bytes p2 = 3;
-     *   required ds.P1 l = 4;
-     * }
-     * ```
-     */
-    export interface P1DK1 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.P1
-    }
-    export function P1DK1$$new(p0: number, p1: number, p2: string, l: ds.P1): P1DK1 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1DK4 {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required bytes p2 = 3;
-     *   required ds.P4 l = 4;
-     * }
-     * ```
-     */
-    export interface P1DK4 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.P4
-    }
-    export function P1DK4$$new(p0: number, p1: number, p2: string, l: ds.P4): P1DK4 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1DK8 {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required bytes p2 = 3;
-     *   required ds.P8 l = 4;
-     * }
-     * ```
-     */
-    export interface P1DK8 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.P8
-    }
-    export function P1DK8$$new(p0: number, p1: number, p2: string, l: ds.P8): P1DK8 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1DKD {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required bytes p2 = 3;
-     *   required ds.PD l = 4;
-     * }
-     * ```
-     */
-    export interface P1DKD {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.PD
-    }
-    export function P1DKD$$new(p0: number, p1: number, p2: string, l: ds.PD): P1DKD {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1DKK {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required bytes p2 = 3;
-     *   required ds.PK l = 4;
-     * }
-     * ```
-     */
-    export interface P1DKK {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.PK
-    }
-    export function P1DKK$$new(p0: number, p1: number, p2: string, l: ds.PK): P1DKK {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1DKS {
-     *   required int8 p0 = 1;
-     *   required uint64 p1 = 2;
-     *   required bytes p2 = 3;
-     *   required ds.PS l = 4;
-     * }
-     * ```
-     */
-    export interface P1DKS {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.PS
-    }
-    export function P1DKS$$new(p0: number, p1: number, p2: string, l: ds.PS): P1DKS {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
-     * message P14441 {
-     *   required int8 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required ds.P1 l = 5;
-     * }
-     * ```
-     */
-    export interface P14441 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** l = 5, required */
-        ['5']: ds.P1
-    }
-    export function P14441$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P1): P14441 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P14444 {
-     *   required int8 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required ds.P4 l = 5;
-     * }
-     * ```
-     */
-    export interface P14444 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** l = 5, required */
-        ['5']: ds.P4
-    }
-    export function P14444$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P4): P14444 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P14448 {
-     *   required int8 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required ds.P8 l = 5;
-     * }
-     * ```
-     */
-    export interface P14448 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** l = 5, required */
-        ['5']: ds.P8
-    }
-    export function P14448$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P8): P14448 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1444D {
-     *   required int8 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required ds.PD l = 5;
-     * }
-     * ```
-     */
-    export interface P1444D {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** l = 5, required */
-        ['5']: ds.PD
-    }
-    export function P1444D$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PD): P1444D {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1444K {
-     *   required int8 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required ds.PK l = 5;
-     * }
-     * ```
-     */
-    export interface P1444K {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** l = 5, required */
-        ['5']: ds.PK
-    }
-    export function P1444K$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PK): P1444K {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1444S {
-     *   required int8 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required uint32 p3 = 4;
-     *   required ds.PS l = 5;
-     * }
-     * ```
-     */
-    export interface P1444S {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** l = 5, required */
-        ['5']: ds.PS
-    }
-    export function P1444S$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PS): P1444S {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': l
         }
     }
 
@@ -2950,6 +778,344 @@ export namespace p1 {
     /**
      * ```
      * 
+     * message P111 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.P1 l = 3;
+     * }
+     * ```
+     */
+    export interface P111 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.P1
+    }
+    export function P111$$new(p0: number, p1: number, l: ds.P1): P111 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P114 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.P4 l = 3;
+     * }
+     * ```
+     */
+    export interface P114 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.P4
+    }
+    export function P114$$new(p0: number, p1: number, l: ds.P4): P114 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P118 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.P8 l = 3;
+     * }
+     * ```
+     */
+    export interface P118 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.P8
+    }
+    export function P118$$new(p0: number, p1: number, l: ds.P8): P118 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11D {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.PD l = 3;
+     * }
+     * ```
+     */
+    export interface P11D {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.PD
+    }
+    export function P11D$$new(p0: number, p1: number, l: ds.PD): P11D {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11K {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.PK l = 3;
+     * }
+     * ```
+     */
+    export interface P11K {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.PK
+    }
+    export function P11K$$new(p0: number, p1: number, l: ds.PK): P11K {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11S {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required ds.PS l = 3;
+     * }
+     * ```
+     */
+    export interface P11S {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.PS
+    }
+    export function P11S$$new(p0: number, p1: number, l: ds.PS): P11S {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
+     * message P1DK1 {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required bytes p2 = 3;
+     *   required ds.P1 l = 4;
+     * }
+     * ```
+     */
+    export interface P1DK1 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.P1
+    }
+    export function P1DK1$$new(p0: number, p1: number, p2: string, l: ds.P1): P1DK1 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1DK4 {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required bytes p2 = 3;
+     *   required ds.P4 l = 4;
+     * }
+     * ```
+     */
+    export interface P1DK4 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.P4
+    }
+    export function P1DK4$$new(p0: number, p1: number, p2: string, l: ds.P4): P1DK4 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1DK8 {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required bytes p2 = 3;
+     *   required ds.P8 l = 4;
+     * }
+     * ```
+     */
+    export interface P1DK8 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.P8
+    }
+    export function P1DK8$$new(p0: number, p1: number, p2: string, l: ds.P8): P1DK8 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1DKD {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required bytes p2 = 3;
+     *   required ds.PD l = 4;
+     * }
+     * ```
+     */
+    export interface P1DKD {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.PD
+    }
+    export function P1DKD$$new(p0: number, p1: number, p2: string, l: ds.PD): P1DKD {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1DKK {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required bytes p2 = 3;
+     *   required ds.PK l = 4;
+     * }
+     * ```
+     */
+    export interface P1DKK {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.PK
+    }
+    export function P1DKK$$new(p0: number, p1: number, p2: string, l: ds.PK): P1DKK {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1DKS {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required bytes p2 = 3;
+     *   required ds.PS l = 4;
+     * }
+     * ```
+     */
+    export interface P1DKS {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.PS
+    }
+    export function P1DKS$$new(p0: number, p1: number, p2: string, l: ds.PS): P1DKS {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
      * message P1D1111 {
      *   required int8 p0 = 1;
      *   required uint64 p1 = 2;
@@ -3172,368 +1338,6 @@ export namespace p1 {
             '4': p3,
             '5': p4,
             '6': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
-     * message P111141 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required int8 p3 = 4;
-     *   required uint32 p4 = 5;
-     *   required ds.P1 l = 6;
-     * }
-     * ```
-     */
-    export interface P111141 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** p4 = 5, required */
-        ['5']: number
-        /** l = 6, required */
-        ['6']: ds.P1
-    }
-    export function P111141$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P1): P111141 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': p4,
-            '6': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P111144 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required int8 p3 = 4;
-     *   required uint32 p4 = 5;
-     *   required ds.P4 l = 6;
-     * }
-     * ```
-     */
-    export interface P111144 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** p4 = 5, required */
-        ['5']: number
-        /** l = 6, required */
-        ['6']: ds.P4
-    }
-    export function P111144$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P4): P111144 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': p4,
-            '6': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P111148 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required int8 p3 = 4;
-     *   required uint32 p4 = 5;
-     *   required ds.P8 l = 6;
-     * }
-     * ```
-     */
-    export interface P111148 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** p4 = 5, required */
-        ['5']: number
-        /** l = 6, required */
-        ['6']: ds.P8
-    }
-    export function P111148$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P8): P111148 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': p4,
-            '6': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11114D {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required int8 p3 = 4;
-     *   required uint32 p4 = 5;
-     *   required ds.PD l = 6;
-     * }
-     * ```
-     */
-    export interface P11114D {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** p4 = 5, required */
-        ['5']: number
-        /** l = 6, required */
-        ['6']: ds.PD
-    }
-    export function P11114D$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PD): P11114D {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': p4,
-            '6': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11114K {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required int8 p3 = 4;
-     *   required uint32 p4 = 5;
-     *   required ds.PK l = 6;
-     * }
-     * ```
-     */
-    export interface P11114K {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** p4 = 5, required */
-        ['5']: number
-        /** l = 6, required */
-        ['6']: ds.PK
-    }
-    export function P11114K$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PK): P11114K {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': p4,
-            '6': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11114S {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required int8 p2 = 3;
-     *   required int8 p3 = 4;
-     *   required uint32 p4 = 5;
-     *   required ds.PS l = 6;
-     * }
-     * ```
-     */
-    export interface P11114S {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** p3 = 4, required */
-        ['4']: number
-        /** p4 = 5, required */
-        ['5']: number
-        /** l = 6, required */
-        ['6']: ds.PS
-    }
-    export function P11114S$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PS): P11114S {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': p3,
-            '5': p4,
-            '6': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
-     * message P11 {
-     *   required int8 p0 = 1;
-     *   required ds.P1 l = 2;
-     * }
-     * ```
-     */
-    export interface P11 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** l = 2, required */
-        ['2']: ds.P1
-    }
-    export function P11$$new(p0: number, l: ds.P1): P11 {
-        return {
-            '1': p0,
-            '2': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P14 {
-     *   required int8 p0 = 1;
-     *   required ds.P4 l = 2;
-     * }
-     * ```
-     */
-    export interface P14 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** l = 2, required */
-        ['2']: ds.P4
-    }
-    export function P14$$new(p0: number, l: ds.P4): P14 {
-        return {
-            '1': p0,
-            '2': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P18 {
-     *   required int8 p0 = 1;
-     *   required ds.P8 l = 2;
-     * }
-     * ```
-     */
-    export interface P18 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** l = 2, required */
-        ['2']: ds.P8
-    }
-    export function P18$$new(p0: number, l: ds.P8): P18 {
-        return {
-            '1': p0,
-            '2': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1D {
-     *   required int8 p0 = 1;
-     *   required ds.PD l = 2;
-     * }
-     * ```
-     */
-    export interface P1D {
-        /** p0 = 1, required */
-        ['1']: number
-        /** l = 2, required */
-        ['2']: ds.PD
-    }
-    export function P1D$$new(p0: number, l: ds.PD): P1D {
-        return {
-            '1': p0,
-            '2': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1K {
-     *   required int8 p0 = 1;
-     *   required ds.PK l = 2;
-     * }
-     * ```
-     */
-    export interface P1K {
-        /** p0 = 1, required */
-        ['1']: number
-        /** l = 2, required */
-        ['2']: ds.PK
-    }
-    export function P1K$$new(p0: number, l: ds.PK): P1K {
-        return {
-            '1': p0,
-            '2': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P1S {
-     *   required int8 p0 = 1;
-     *   required ds.PS l = 2;
-     * }
-     * ```
-     */
-    export interface P1S {
-        /** p0 = 1, required */
-        ['1']: number
-        /** l = 2, required */
-        ['2']: ds.PS
-    }
-    export function P1S$$new(p0: number, l: ds.PS): P1S {
-        return {
-            '1': p0,
-            '2': l
         }
     }
 
@@ -3770,15 +1574,172 @@ export namespace p1 {
     /**
      * ```
      * 
-     * message P1441 {
+     * message P1K1 {
      *   required int8 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
+     *   required bytes p1 = 2;
+     *   required ds.P1 l = 3;
+     * }
+     * ```
+     */
+    export interface P1K1 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: string
+        /** l = 3, required */
+        ['3']: ds.P1
+    }
+    export function P1K1$$new(p0: number, p1: string, l: ds.P1): P1K1 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1K4 {
+     *   required int8 p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.P4 l = 3;
+     * }
+     * ```
+     */
+    export interface P1K4 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: string
+        /** l = 3, required */
+        ['3']: ds.P4
+    }
+    export function P1K4$$new(p0: number, p1: string, l: ds.P4): P1K4 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1K8 {
+     *   required int8 p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.P8 l = 3;
+     * }
+     * ```
+     */
+    export interface P1K8 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: string
+        /** l = 3, required */
+        ['3']: ds.P8
+    }
+    export function P1K8$$new(p0: number, p1: string, l: ds.P8): P1K8 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1KD {
+     *   required int8 p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.PD l = 3;
+     * }
+     * ```
+     */
+    export interface P1KD {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: string
+        /** l = 3, required */
+        ['3']: ds.PD
+    }
+    export function P1KD$$new(p0: number, p1: string, l: ds.PD): P1KD {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1KK {
+     *   required int8 p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.PK l = 3;
+     * }
+     * ```
+     */
+    export interface P1KK {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: string
+        /** l = 3, required */
+        ['3']: ds.PK
+    }
+    export function P1KK$$new(p0: number, p1: string, l: ds.PK): P1KK {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1KS {
+     *   required int8 p0 = 1;
+     *   required bytes p1 = 2;
+     *   required ds.PS l = 3;
+     * }
+     * ```
+     */
+    export interface P1KS {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: string
+        /** l = 3, required */
+        ['3']: ds.PS
+    }
+    export function P1KS$$new(p0: number, p1: string, l: ds.PS): P1KS {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
+     * message P1D11 {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required int8 p2 = 3;
      *   required ds.P1 l = 4;
      * }
      * ```
      */
-    export interface P1441 {
+    export interface P1D11 {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
@@ -3788,7 +1749,7 @@ export namespace p1 {
         /** l = 4, required */
         ['4']: ds.P1
     }
-    export function P1441$$new(p0: number, p1: number, p2: number, l: ds.P1): P1441 {
+    export function P1D11$$new(p0: number, p1: number, p2: number, l: ds.P1): P1D11 {
         return {
             '1': p0,
             '2': p1,
@@ -3800,15 +1761,15 @@ export namespace p1 {
     /**
      * ```
      * 
-     * message P1444 {
+     * message P1D14 {
      *   required int8 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
+     *   required uint64 p1 = 2;
+     *   required int8 p2 = 3;
      *   required ds.P4 l = 4;
      * }
      * ```
      */
-    export interface P1444 {
+    export interface P1D14 {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
@@ -3818,7 +1779,7 @@ export namespace p1 {
         /** l = 4, required */
         ['4']: ds.P4
     }
-    export function P1444$$new(p0: number, p1: number, p2: number, l: ds.P4): P1444 {
+    export function P1D14$$new(p0: number, p1: number, p2: number, l: ds.P4): P1D14 {
         return {
             '1': p0,
             '2': p1,
@@ -3830,15 +1791,15 @@ export namespace p1 {
     /**
      * ```
      * 
-     * message P1448 {
+     * message P1D18 {
      *   required int8 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
+     *   required uint64 p1 = 2;
+     *   required int8 p2 = 3;
      *   required ds.P8 l = 4;
      * }
      * ```
      */
-    export interface P1448 {
+    export interface P1D18 {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
@@ -3848,7 +1809,7 @@ export namespace p1 {
         /** l = 4, required */
         ['4']: ds.P8
     }
-    export function P1448$$new(p0: number, p1: number, p2: number, l: ds.P8): P1448 {
+    export function P1D18$$new(p0: number, p1: number, p2: number, l: ds.P8): P1D18 {
         return {
             '1': p0,
             '2': p1,
@@ -3860,15 +1821,15 @@ export namespace p1 {
     /**
      * ```
      * 
-     * message P144D {
+     * message P1D1D {
      *   required int8 p0 = 1;
-     *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
+     *   required uint64 p1 = 2;
+     *   required int8 p2 = 3;
      *   required ds.PD l = 4;
      * }
      * ```
      */
-    export interface P144D {
+    export interface P1D1D {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
@@ -3878,7 +1839,7 @@ export namespace p1 {
         /** l = 4, required */
         ['4']: ds.PD
     }
-    export function P144D$$new(p0: number, p1: number, p2: number, l: ds.PD): P144D {
+    export function P1D1D$$new(p0: number, p1: number, p2: number, l: ds.PD): P1D1D {
         return {
             '1': p0,
             '2': p1,
@@ -3890,60 +1851,217 @@ export namespace p1 {
     /**
      * ```
      * 
-     * message P144K {
+     * message P1D1K {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required ds.PK l = 4;
+     * }
+     * ```
+     */
+    export interface P1D1K {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.PK
+    }
+    export function P1D1K$$new(p0: number, p1: number, p2: number, l: ds.PK): P1D1K {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1D1S {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required ds.PS l = 4;
+     * }
+     * ```
+     */
+    export interface P1D1S {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.PS
+    }
+    export function P1D1S$$new(p0: number, p1: number, p2: number, l: ds.PS): P1D1S {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
+     * message P141 {
      *   required int8 p0 = 1;
      *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required ds.PK l = 4;
+     *   required ds.P1 l = 3;
      * }
      * ```
      */
-    export interface P144K {
+    export interface P141 {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
         ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** l = 4, required */
-        ['4']: ds.PK
+        /** l = 3, required */
+        ['3']: ds.P1
     }
-    export function P144K$$new(p0: number, p1: number, p2: number, l: ds.PK): P144K {
+    export function P141$$new(p0: number, p1: number, l: ds.P1): P141 {
         return {
             '1': p0,
             '2': p1,
-            '3': p2,
-            '4': l
+            '3': l
         }
     }
 
     /**
      * ```
      * 
-     * message P144S {
+     * message P144 {
      *   required int8 p0 = 1;
      *   required uint32 p1 = 2;
-     *   required uint32 p2 = 3;
-     *   required ds.PS l = 4;
+     *   required ds.P4 l = 3;
      * }
      * ```
      */
-    export interface P144S {
+    export interface P144 {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
         ['2']: number
-        /** p2 = 3, required */
-        ['3']: number
-        /** l = 4, required */
-        ['4']: ds.PS
+        /** l = 3, required */
+        ['3']: ds.P4
     }
-    export function P144S$$new(p0: number, p1: number, p2: number, l: ds.PS): P144S {
+    export function P144$$new(p0: number, p1: number, l: ds.P4): P144 {
         return {
             '1': p0,
             '2': p1,
-            '3': p2,
-            '4': l
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P148 {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required ds.P8 l = 3;
+     * }
+     * ```
+     */
+    export interface P148 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.P8
+    }
+    export function P148$$new(p0: number, p1: number, l: ds.P8): P148 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P14D {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required ds.PD l = 3;
+     * }
+     * ```
+     */
+    export interface P14D {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.PD
+    }
+    export function P14D$$new(p0: number, p1: number, l: ds.PD): P14D {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P14K {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required ds.PK l = 3;
+     * }
+     * ```
+     */
+    export interface P14K {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.PK
+    }
+    export function P14K$$new(p0: number, p1: number, l: ds.PK): P14K {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P14S {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required ds.PS l = 3;
+     * }
+     * ```
+     */
+    export interface P14S {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.PS
+    }
+    export function P14S$$new(p0: number, p1: number, l: ds.PS): P14S {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
         }
     }
 
@@ -3951,361 +2069,228 @@ export namespace p1 {
     /**
      * ```
      * 
-     * message P1111 {
+     * message P111141 {
      *   required int8 p0 = 1;
      *   required int8 p1 = 2;
      *   required int8 p2 = 3;
-     *   required ds.P1 l = 4;
+     *   required int8 p3 = 4;
+     *   required uint32 p4 = 5;
+     *   required ds.P1 l = 6;
      * }
      * ```
      */
-    export interface P1111 {
+    export interface P111141 {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
         ['2']: number
         /** p2 = 3, required */
         ['3']: number
-        /** l = 4, required */
-        ['4']: ds.P1
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.P1
     }
-    export function P1111$$new(p0: number, p1: number, p2: number, l: ds.P1): P1111 {
+    export function P111141$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P1): P111141 {
         return {
             '1': p0,
             '2': p1,
             '3': p2,
-            '4': l
+            '4': p3,
+            '5': p4,
+            '6': l
         }
     }
 
     /**
      * ```
      * 
-     * message P1114 {
+     * message P111144 {
      *   required int8 p0 = 1;
      *   required int8 p1 = 2;
      *   required int8 p2 = 3;
-     *   required ds.P4 l = 4;
+     *   required int8 p3 = 4;
+     *   required uint32 p4 = 5;
+     *   required ds.P4 l = 6;
      * }
      * ```
      */
-    export interface P1114 {
+    export interface P111144 {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
         ['2']: number
         /** p2 = 3, required */
         ['3']: number
-        /** l = 4, required */
-        ['4']: ds.P4
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.P4
     }
-    export function P1114$$new(p0: number, p1: number, p2: number, l: ds.P4): P1114 {
+    export function P111144$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P4): P111144 {
         return {
             '1': p0,
             '2': p1,
             '3': p2,
-            '4': l
+            '4': p3,
+            '5': p4,
+            '6': l
         }
     }
 
     /**
      * ```
      * 
-     * message P1118 {
+     * message P111148 {
      *   required int8 p0 = 1;
      *   required int8 p1 = 2;
      *   required int8 p2 = 3;
-     *   required ds.P8 l = 4;
+     *   required int8 p3 = 4;
+     *   required uint32 p4 = 5;
+     *   required ds.P8 l = 6;
      * }
      * ```
      */
-    export interface P1118 {
+    export interface P111148 {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
         ['2']: number
         /** p2 = 3, required */
         ['3']: number
-        /** l = 4, required */
-        ['4']: ds.P8
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.P8
     }
-    export function P1118$$new(p0: number, p1: number, p2: number, l: ds.P8): P1118 {
+    export function P111148$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P8): P111148 {
         return {
             '1': p0,
             '2': p1,
             '3': p2,
-            '4': l
+            '4': p3,
+            '5': p4,
+            '6': l
         }
     }
 
     /**
      * ```
      * 
-     * message P111D {
+     * message P11114D {
      *   required int8 p0 = 1;
      *   required int8 p1 = 2;
      *   required int8 p2 = 3;
-     *   required ds.PD l = 4;
+     *   required int8 p3 = 4;
+     *   required uint32 p4 = 5;
+     *   required ds.PD l = 6;
      * }
      * ```
      */
-    export interface P111D {
+    export interface P11114D {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
         ['2']: number
         /** p2 = 3, required */
         ['3']: number
-        /** l = 4, required */
-        ['4']: ds.PD
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.PD
     }
-    export function P111D$$new(p0: number, p1: number, p2: number, l: ds.PD): P111D {
+    export function P11114D$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PD): P11114D {
         return {
             '1': p0,
             '2': p1,
             '3': p2,
-            '4': l
+            '4': p3,
+            '5': p4,
+            '6': l
         }
     }
 
     /**
      * ```
      * 
-     * message P111K {
+     * message P11114K {
      *   required int8 p0 = 1;
      *   required int8 p1 = 2;
      *   required int8 p2 = 3;
-     *   required ds.PK l = 4;
+     *   required int8 p3 = 4;
+     *   required uint32 p4 = 5;
+     *   required ds.PK l = 6;
      * }
      * ```
      */
-    export interface P111K {
+    export interface P11114K {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
         ['2']: number
         /** p2 = 3, required */
         ['3']: number
-        /** l = 4, required */
-        ['4']: ds.PK
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.PK
     }
-    export function P111K$$new(p0: number, p1: number, p2: number, l: ds.PK): P111K {
+    export function P11114K$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PK): P11114K {
         return {
             '1': p0,
             '2': p1,
             '3': p2,
-            '4': l
+            '4': p3,
+            '5': p4,
+            '6': l
         }
     }
 
     /**
      * ```
      * 
-     * message P111S {
+     * message P11114S {
      *   required int8 p0 = 1;
      *   required int8 p1 = 2;
      *   required int8 p2 = 3;
-     *   required ds.PS l = 4;
+     *   required int8 p3 = 4;
+     *   required uint32 p4 = 5;
+     *   required ds.PS l = 6;
      * }
      * ```
      */
-    export interface P111S {
+    export interface P11114S {
         /** p0 = 1, required */
         ['1']: number
         /** p1 = 2, required */
         ['2']: number
         /** p2 = 3, required */
         ['3']: number
-        /** l = 4, required */
-        ['4']: ds.PS
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.PS
     }
-    export function P111S$$new(p0: number, p1: number, p2: number, l: ds.PS): P111S {
+    export function P11114S$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PS): P11114S {
         return {
             '1': p0,
             '2': p1,
             '3': p2,
-            '4': l
-        }
-    }
-
-
-    /**
-     * ```
-     * 
-     * message P11S1 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required string p2 = 3;
-     *   required ds.P1 l = 4;
-     * }
-     * ```
-     */
-    export interface P11S1 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.P1
-    }
-    export function P11S1$$new(p0: number, p1: number, p2: string, l: ds.P1): P11S1 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11S4 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required string p2 = 3;
-     *   required ds.P4 l = 4;
-     * }
-     * ```
-     */
-    export interface P11S4 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.P4
-    }
-    export function P11S4$$new(p0: number, p1: number, p2: string, l: ds.P4): P11S4 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11S8 {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required string p2 = 3;
-     *   required ds.P8 l = 4;
-     * }
-     * ```
-     */
-    export interface P11S8 {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.P8
-    }
-    export function P11S8$$new(p0: number, p1: number, p2: string, l: ds.P8): P11S8 {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11SD {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required string p2 = 3;
-     *   required ds.PD l = 4;
-     * }
-     * ```
-     */
-    export interface P11SD {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.PD
-    }
-    export function P11SD$$new(p0: number, p1: number, p2: string, l: ds.PD): P11SD {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11SK {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required string p2 = 3;
-     *   required ds.PK l = 4;
-     * }
-     * ```
-     */
-    export interface P11SK {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.PK
-    }
-    export function P11SK$$new(p0: number, p1: number, p2: string, l: ds.PK): P11SK {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
-        }
-    }
-
-    /**
-     * ```
-     * 
-     * message P11SS {
-     *   required int8 p0 = 1;
-     *   required int8 p1 = 2;
-     *   required string p2 = 3;
-     *   required ds.PS l = 4;
-     * }
-     * ```
-     */
-    export interface P11SS {
-        /** p0 = 1, required */
-        ['1']: number
-        /** p1 = 2, required */
-        ['2']: number
-        /** p2 = 3, required */
-        ['3']: string
-        /** l = 4, required */
-        ['4']: ds.PS
-    }
-    export function P11SS$$new(p0: number, p1: number, p2: string, l: ds.PS): P11SS {
-        return {
-            '1': p0,
-            '2': p1,
-            '3': p2,
-            '4': l
+            '4': p3,
+            '5': p4,
+            '6': l
         }
     }
 
@@ -4518,6 +2503,621 @@ export namespace p1 {
     /**
      * ```
      * 
+     * message P144441 {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required uint32 p4 = 5;
+     *   required ds.P1 l = 6;
+     * }
+     * ```
+     */
+    export interface P144441 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.P1
+    }
+    export function P144441$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P1): P144441 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': p4,
+            '6': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P144444 {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required uint32 p4 = 5;
+     *   required ds.P4 l = 6;
+     * }
+     * ```
+     */
+    export interface P144444 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.P4
+    }
+    export function P144444$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P4): P144444 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': p4,
+            '6': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P144448 {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required uint32 p4 = 5;
+     *   required ds.P8 l = 6;
+     * }
+     * ```
+     */
+    export interface P144448 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.P8
+    }
+    export function P144448$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P8): P144448 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': p4,
+            '6': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P14444D {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required uint32 p4 = 5;
+     *   required ds.PD l = 6;
+     * }
+     * ```
+     */
+    export interface P14444D {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.PD
+    }
+    export function P14444D$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PD): P14444D {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': p4,
+            '6': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P14444K {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required uint32 p4 = 5;
+     *   required ds.PK l = 6;
+     * }
+     * ```
+     */
+    export interface P14444K {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.PK
+    }
+    export function P14444K$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PK): P14444K {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': p4,
+            '6': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P14444S {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required uint32 p4 = 5;
+     *   required ds.PS l = 6;
+     * }
+     * ```
+     */
+    export interface P14444S {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.PS
+    }
+    export function P14444S$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PS): P14444S {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': p4,
+            '6': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
+     * message P1111 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required ds.P1 l = 4;
+     * }
+     * ```
+     */
+    export interface P1111 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.P1
+    }
+    export function P1111$$new(p0: number, p1: number, p2: number, l: ds.P1): P1111 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1114 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required ds.P4 l = 4;
+     * }
+     * ```
+     */
+    export interface P1114 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.P4
+    }
+    export function P1114$$new(p0: number, p1: number, p2: number, l: ds.P4): P1114 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1118 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required ds.P8 l = 4;
+     * }
+     * ```
+     */
+    export interface P1118 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.P8
+    }
+    export function P1118$$new(p0: number, p1: number, p2: number, l: ds.P8): P1118 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P111D {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required ds.PD l = 4;
+     * }
+     * ```
+     */
+    export interface P111D {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.PD
+    }
+    export function P111D$$new(p0: number, p1: number, p2: number, l: ds.PD): P111D {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P111K {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required ds.PK l = 4;
+     * }
+     * ```
+     */
+    export interface P111K {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.PK
+    }
+    export function P111K$$new(p0: number, p1: number, p2: number, l: ds.PK): P111K {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P111S {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required ds.PS l = 4;
+     * }
+     * ```
+     */
+    export interface P111S {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.PS
+    }
+    export function P111S$$new(p0: number, p1: number, p2: number, l: ds.PS): P111S {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
+     * message P111K1 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required bytes p3 = 4;
+     *   required ds.P1 l = 5;
+     * }
+     * ```
+     */
+    export interface P111K1 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: string
+        /** l = 5, required */
+        ['5']: ds.P1
+    }
+    export function P111K1$$new(p0: number, p1: number, p2: number, p3: string, l: ds.P1): P111K1 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P111K4 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required bytes p3 = 4;
+     *   required ds.P4 l = 5;
+     * }
+     * ```
+     */
+    export interface P111K4 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: string
+        /** l = 5, required */
+        ['5']: ds.P4
+    }
+    export function P111K4$$new(p0: number, p1: number, p2: number, p3: string, l: ds.P4): P111K4 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P111K8 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required bytes p3 = 4;
+     *   required ds.P8 l = 5;
+     * }
+     * ```
+     */
+    export interface P111K8 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: string
+        /** l = 5, required */
+        ['5']: ds.P8
+    }
+    export function P111K8$$new(p0: number, p1: number, p2: number, p3: string, l: ds.P8): P111K8 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P111KD {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required bytes p3 = 4;
+     *   required ds.PD l = 5;
+     * }
+     * ```
+     */
+    export interface P111KD {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: string
+        /** l = 5, required */
+        ['5']: ds.PD
+    }
+    export function P111KD$$new(p0: number, p1: number, p2: number, p3: string, l: ds.PD): P111KD {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P111KK {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required bytes p3 = 4;
+     *   required ds.PK l = 5;
+     * }
+     * ```
+     */
+    export interface P111KK {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: string
+        /** l = 5, required */
+        ['5']: ds.PK
+    }
+    export function P111KK$$new(p0: number, p1: number, p2: number, p3: string, l: ds.PK): P111KK {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P111KS {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required bytes p3 = 4;
+     *   required ds.PS l = 5;
+     * }
+     * ```
+     */
+    export interface P111KS {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: string
+        /** l = 5, required */
+        ['5']: ds.PS
+    }
+    export function P111KS$$new(p0: number, p1: number, p2: number, p3: string, l: ds.PS): P111KS {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
      * message P11141 {
      *   required int8 p0 = 1;
      *   required int8 p1 = 2;
@@ -4710,6 +3310,1635 @@ export namespace p1 {
         ['5']: ds.PS
     }
     export function P1114S$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PS): P1114S {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
+     * message P14441 {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required ds.P1 l = 5;
+     * }
+     * ```
+     */
+    export interface P14441 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** l = 5, required */
+        ['5']: ds.P1
+    }
+    export function P14441$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P1): P14441 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P14444 {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required ds.P4 l = 5;
+     * }
+     * ```
+     */
+    export interface P14444 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** l = 5, required */
+        ['5']: ds.P4
+    }
+    export function P14444$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P4): P14444 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P14448 {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required ds.P8 l = 5;
+     * }
+     * ```
+     */
+    export interface P14448 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** l = 5, required */
+        ['5']: ds.P8
+    }
+    export function P14448$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P8): P14448 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1444D {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required ds.PD l = 5;
+     * }
+     * ```
+     */
+    export interface P1444D {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** l = 5, required */
+        ['5']: ds.PD
+    }
+    export function P1444D$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PD): P1444D {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1444K {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required ds.PK l = 5;
+     * }
+     * ```
+     */
+    export interface P1444K {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** l = 5, required */
+        ['5']: ds.PK
+    }
+    export function P1444K$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PK): P1444K {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1444S {
+     *   required int8 p0 = 1;
+     *   required uint32 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required ds.PS l = 5;
+     * }
+     * ```
+     */
+    export interface P1444S {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** l = 5, required */
+        ['5']: ds.PS
+    }
+    export function P1444S$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PS): P1444S {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
+     * message P181 {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.P1 l = 3;
+     * }
+     * ```
+     */
+    export interface P181 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.P1
+    }
+    export function P181$$new(p0: number, p1: number, l: ds.P1): P181 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P184 {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.P4 l = 3;
+     * }
+     * ```
+     */
+    export interface P184 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.P4
+    }
+    export function P184$$new(p0: number, p1: number, l: ds.P4): P184 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P188 {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.P8 l = 3;
+     * }
+     * ```
+     */
+    export interface P188 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.P8
+    }
+    export function P188$$new(p0: number, p1: number, l: ds.P8): P188 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P18D {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.PD l = 3;
+     * }
+     * ```
+     */
+    export interface P18D {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.PD
+    }
+    export function P18D$$new(p0: number, p1: number, l: ds.PD): P18D {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P18K {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.PK l = 3;
+     * }
+     * ```
+     */
+    export interface P18K {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.PK
+    }
+    export function P18K$$new(p0: number, p1: number, l: ds.PK): P18K {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P18S {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.PS l = 3;
+     * }
+     * ```
+     */
+    export interface P18S {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.PS
+    }
+    export function P18S$$new(p0: number, p1: number, l: ds.PS): P18S {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
+     * message P11S1 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required string p2 = 3;
+     *   required ds.P1 l = 4;
+     * }
+     * ```
+     */
+    export interface P11S1 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.P1
+    }
+    export function P11S1$$new(p0: number, p1: number, p2: string, l: ds.P1): P11S1 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11S4 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required string p2 = 3;
+     *   required ds.P4 l = 4;
+     * }
+     * ```
+     */
+    export interface P11S4 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.P4
+    }
+    export function P11S4$$new(p0: number, p1: number, p2: string, l: ds.P4): P11S4 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11S8 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required string p2 = 3;
+     *   required ds.P8 l = 4;
+     * }
+     * ```
+     */
+    export interface P11S8 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.P8
+    }
+    export function P11S8$$new(p0: number, p1: number, p2: string, l: ds.P8): P11S8 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11SD {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required string p2 = 3;
+     *   required ds.PD l = 4;
+     * }
+     * ```
+     */
+    export interface P11SD {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.PD
+    }
+    export function P11SD$$new(p0: number, p1: number, p2: string, l: ds.PD): P11SD {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11SK {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required string p2 = 3;
+     *   required ds.PK l = 4;
+     * }
+     * ```
+     */
+    export interface P11SK {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.PK
+    }
+    export function P11SK$$new(p0: number, p1: number, p2: string, l: ds.PK): P11SK {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11SS {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required string p2 = 3;
+     *   required ds.PS l = 4;
+     * }
+     * ```
+     */
+    export interface P11SS {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.PS
+    }
+    export function P11SS$$new(p0: number, p1: number, p2: string, l: ds.PS): P11SS {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
+     * message P11 {
+     *   required int8 p0 = 1;
+     *   required ds.P1 l = 2;
+     * }
+     * ```
+     */
+    export interface P11 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** l = 2, required */
+        ['2']: ds.P1
+    }
+    export function P11$$new(p0: number, l: ds.P1): P11 {
+        return {
+            '1': p0,
+            '2': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P14 {
+     *   required int8 p0 = 1;
+     *   required ds.P4 l = 2;
+     * }
+     * ```
+     */
+    export interface P14 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** l = 2, required */
+        ['2']: ds.P4
+    }
+    export function P14$$new(p0: number, l: ds.P4): P14 {
+        return {
+            '1': p0,
+            '2': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P18 {
+     *   required int8 p0 = 1;
+     *   required ds.P8 l = 2;
+     * }
+     * ```
+     */
+    export interface P18 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** l = 2, required */
+        ['2']: ds.P8
+    }
+    export function P18$$new(p0: number, l: ds.P8): P18 {
+        return {
+            '1': p0,
+            '2': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1D {
+     *   required int8 p0 = 1;
+     *   required ds.PD l = 2;
+     * }
+     * ```
+     */
+    export interface P1D {
+        /** p0 = 1, required */
+        ['1']: number
+        /** l = 2, required */
+        ['2']: ds.PD
+    }
+    export function P1D$$new(p0: number, l: ds.PD): P1D {
+        return {
+            '1': p0,
+            '2': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1K {
+     *   required int8 p0 = 1;
+     *   required ds.PK l = 2;
+     * }
+     * ```
+     */
+    export interface P1K {
+        /** p0 = 1, required */
+        ['1']: number
+        /** l = 2, required */
+        ['2']: ds.PK
+    }
+    export function P1K$$new(p0: number, l: ds.PK): P1K {
+        return {
+            '1': p0,
+            '2': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1S {
+     *   required int8 p0 = 1;
+     *   required ds.PS l = 2;
+     * }
+     * ```
+     */
+    export interface P1S {
+        /** p0 = 1, required */
+        ['1']: number
+        /** l = 2, required */
+        ['2']: ds.PS
+    }
+    export function P1S$$new(p0: number, l: ds.PS): P1S {
+        return {
+            '1': p0,
+            '2': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
+     * message P111411 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required int8 p4 = 5;
+     *   required ds.P1 l = 6;
+     * }
+     * ```
+     */
+    export interface P111411 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.P1
+    }
+    export function P111411$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P1): P111411 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': p4,
+            '6': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P111414 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required int8 p4 = 5;
+     *   required ds.P4 l = 6;
+     * }
+     * ```
+     */
+    export interface P111414 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.P4
+    }
+    export function P111414$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P4): P111414 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': p4,
+            '6': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P111418 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required int8 p4 = 5;
+     *   required ds.P8 l = 6;
+     * }
+     * ```
+     */
+    export interface P111418 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.P8
+    }
+    export function P111418$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.P8): P111418 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': p4,
+            '6': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11141D {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required int8 p4 = 5;
+     *   required ds.PD l = 6;
+     * }
+     * ```
+     */
+    export interface P11141D {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.PD
+    }
+    export function P11141D$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PD): P11141D {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': p4,
+            '6': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11141K {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required int8 p4 = 5;
+     *   required ds.PK l = 6;
+     * }
+     * ```
+     */
+    export interface P11141K {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.PK
+    }
+    export function P11141K$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PK): P11141K {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': p4,
+            '6': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11141S {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required uint32 p3 = 4;
+     *   required int8 p4 = 5;
+     *   required ds.PS l = 6;
+     * }
+     * ```
+     */
+    export interface P11141S {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** p4 = 5, required */
+        ['5']: number
+        /** l = 6, required */
+        ['6']: ds.PS
+    }
+    export function P11141S$$new(p0: number, p1: number, p2: number, p3: number, p4: number, l: ds.PS): P11141S {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': p4,
+            '6': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
+     * message P1141 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required ds.P1 l = 4;
+     * }
+     * ```
+     */
+    export interface P1141 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.P1
+    }
+    export function P1141$$new(p0: number, p1: number, p2: number, l: ds.P1): P1141 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1144 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required ds.P4 l = 4;
+     * }
+     * ```
+     */
+    export interface P1144 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.P4
+    }
+    export function P1144$$new(p0: number, p1: number, p2: number, l: ds.P4): P1144 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1148 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required ds.P8 l = 4;
+     * }
+     * ```
+     */
+    export interface P1148 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.P8
+    }
+    export function P1148$$new(p0: number, p1: number, p2: number, l: ds.P8): P1148 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P114D {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required ds.PD l = 4;
+     * }
+     * ```
+     */
+    export interface P114D {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.PD
+    }
+    export function P114D$$new(p0: number, p1: number, p2: number, l: ds.PD): P114D {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P114K {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required ds.PK l = 4;
+     * }
+     * ```
+     */
+    export interface P114K {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.PK
+    }
+    export function P114K$$new(p0: number, p1: number, p2: number, l: ds.PK): P114K {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P114S {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required uint32 p2 = 3;
+     *   required ds.PS l = 4;
+     * }
+     * ```
+     */
+    export interface P114S {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** l = 4, required */
+        ['4']: ds.PS
+    }
+    export function P114S$$new(p0: number, p1: number, p2: number, l: ds.PS): P114S {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
+     * message P1D1 {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.P1 l = 3;
+     * }
+     * ```
+     */
+    export interface P1D1 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.P1
+    }
+    export function P1D1$$new(p0: number, p1: number, l: ds.P1): P1D1 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1D4 {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.P4 l = 3;
+     * }
+     * ```
+     */
+    export interface P1D4 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.P4
+    }
+    export function P1D4$$new(p0: number, p1: number, l: ds.P4): P1D4 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1D8 {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.P8 l = 3;
+     * }
+     * ```
+     */
+    export interface P1D8 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.P8
+    }
+    export function P1D8$$new(p0: number, p1: number, l: ds.P8): P1D8 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1DD {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.PD l = 3;
+     * }
+     * ```
+     */
+    export interface P1DD {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.PD
+    }
+    export function P1DD$$new(p0: number, p1: number, l: ds.PD): P1DD {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1DK {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.PK l = 3;
+     * }
+     * ```
+     */
+    export interface P1DK {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.PK
+    }
+    export function P1DK$$new(p0: number, p1: number, l: ds.PK): P1DK {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1DS {
+     *   required int8 p0 = 1;
+     *   required uint64 p1 = 2;
+     *   required ds.PS l = 3;
+     * }
+     * ```
+     */
+    export interface P1DS {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** l = 3, required */
+        ['3']: ds.PS
+    }
+    export function P1DS$$new(p0: number, p1: number, l: ds.PS): P1DS {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
+     * message P11K1 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required bytes p2 = 3;
+     *   required ds.P1 l = 4;
+     * }
+     * ```
+     */
+    export interface P11K1 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.P1
+    }
+    export function P11K1$$new(p0: number, p1: number, p2: string, l: ds.P1): P11K1 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11K4 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required bytes p2 = 3;
+     *   required ds.P4 l = 4;
+     * }
+     * ```
+     */
+    export interface P11K4 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.P4
+    }
+    export function P11K4$$new(p0: number, p1: number, p2: string, l: ds.P4): P11K4 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11K8 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required bytes p2 = 3;
+     *   required ds.P8 l = 4;
+     * }
+     * ```
+     */
+    export interface P11K8 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.P8
+    }
+    export function P11K8$$new(p0: number, p1: number, p2: string, l: ds.P8): P11K8 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11KD {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required bytes p2 = 3;
+     *   required ds.PD l = 4;
+     * }
+     * ```
+     */
+    export interface P11KD {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.PD
+    }
+    export function P11KD$$new(p0: number, p1: number, p2: string, l: ds.PD): P11KD {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11KK {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required bytes p2 = 3;
+     *   required ds.PK l = 4;
+     * }
+     * ```
+     */
+    export interface P11KK {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.PK
+    }
+    export function P11KK$$new(p0: number, p1: number, p2: string, l: ds.PK): P11KK {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11KS {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required bytes p2 = 3;
+     *   required ds.PS l = 4;
+     * }
+     * ```
+     */
+    export interface P11KS {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: string
+        /** l = 4, required */
+        ['4']: ds.PS
+    }
+    export function P11KS$$new(p0: number, p1: number, p2: string, l: ds.PS): P11KS {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': l
+        }
+    }
+
+
+    /**
+     * ```
+     * 
+     * message P11111 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required int8 p3 = 4;
+     *   required ds.P1 l = 5;
+     * }
+     * ```
+     */
+    export interface P11111 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** l = 5, required */
+        ['5']: ds.P1
+    }
+    export function P11111$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P1): P11111 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11114 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required int8 p3 = 4;
+     *   required ds.P4 l = 5;
+     * }
+     * ```
+     */
+    export interface P11114 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** l = 5, required */
+        ['5']: ds.P4
+    }
+    export function P11114$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P4): P11114 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P11118 {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required int8 p3 = 4;
+     *   required ds.P8 l = 5;
+     * }
+     * ```
+     */
+    export interface P11118 {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** l = 5, required */
+        ['5']: ds.P8
+    }
+    export function P11118$$new(p0: number, p1: number, p2: number, p3: number, l: ds.P8): P11118 {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1111D {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required int8 p3 = 4;
+     *   required ds.PD l = 5;
+     * }
+     * ```
+     */
+    export interface P1111D {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** l = 5, required */
+        ['5']: ds.PD
+    }
+    export function P1111D$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PD): P1111D {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1111K {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required int8 p3 = 4;
+     *   required ds.PK l = 5;
+     * }
+     * ```
+     */
+    export interface P1111K {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** l = 5, required */
+        ['5']: ds.PK
+    }
+    export function P1111K$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PK): P1111K {
+        return {
+            '1': p0,
+            '2': p1,
+            '3': p2,
+            '4': p3,
+            '5': l
+        }
+    }
+
+    /**
+     * ```
+     * 
+     * message P1111S {
+     *   required int8 p0 = 1;
+     *   required int8 p1 = 2;
+     *   required int8 p2 = 3;
+     *   required int8 p3 = 4;
+     *   required ds.PS l = 5;
+     * }
+     * ```
+     */
+    export interface P1111S {
+        /** p0 = 1, required */
+        ['1']: number
+        /** p1 = 2, required */
+        ['2']: number
+        /** p2 = 3, required */
+        ['3']: number
+        /** p3 = 4, required */
+        ['4']: number
+        /** l = 5, required */
+        ['5']: ds.PS
+    }
+    export function P1111S$$new(p0: number, p1: number, p2: number, p3: number, l: ds.PS): P1111S {
         return {
             '1': p0,
             '2': p1,
