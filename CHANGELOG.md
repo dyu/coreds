@@ -1,3 +1,8 @@
+## 1.4.0 (2022-02-17)
+
+* node runtime interop for `src/util.ts` and `src/rpc/index.ts`
+* update `ds/prk/` genererated sources
+
 ## 1.0.5 (2018-03-02)
 
 * `page_vcount` optimization
